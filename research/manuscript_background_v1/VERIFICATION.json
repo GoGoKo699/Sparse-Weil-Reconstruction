@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-28",
+  "timezone": "Asia/Shanghai",
+  "date_utc": "2026-09-27",
+  "baseline_commit": "9b1738d0e8f243e0362e4c105328959d0cffce84",
+  "baseline_tree": "30bdef2613387a492e7ced72b87b4d33f59c58a2",
+  "scope": "Manuscript scientific background, primary-source comparison, claim map, bibliography, and navigation. Manuscript drafting remains on hold; no theorem, decoder, fixture, or pinned report changes.",
+  "before_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "imported_files_checked": 17,
+    "exact_reports_reproduced": 3,
+    "execution_record": "Executed on the clean baseline before background edits."
+  },
+  "preservation": {
+    "baseline_files_compared_byte_for_byte": 39,
+    "unchanged": true,
+    "allowed_existing_file_edits": [
+      "README.md",
+      "STATUS.md",
+      "work_orders/CURRENT.md"
+    ]
+  },
+  "bibliography": {
+    "entries": 17,
+    "primary_passages_inspected": 15,
+    "historical_original_full_text_unavailable": [
+      "Fried1988",
+      "Bezivin2007"
+    ],
+    "keyword_queries_recorded": 45,
+    "validation": "BibTeX plain style compiled all 17 entries in temporary storage with no warnings",
+    "bibtex_exit_code": 0
+  },
+  "not_run": [
+    "External author Sage, Python, or Lean code",
+    "External peer review or proof assistant verification",
+    "Count acquisition or geometric realization tests",
+    "New fixture campaign",
+    "Manuscript drafting or submission"
+  ],
+  "documentation_checks": {
+    "local_links_checked": 81,
+    "local_anchors_checked": 9,
+    "bibliography_keys_unique_and_resolved": true,
+    "whitespace_and_final_newlines": "passed"
+  },
+  "background_file_sha256": {
+    "research/manuscript_background_v1/ALGORITHMIC_CONTEXT.md": "d3942b85d1726e66fff6d65e9edf2c0921d245c586a3d30de6a3b28d74ad48b4",
+    "research/manuscript_background_v1/CLAIM_MAP.md": "fbe8f8c51723915cf727b7f2d9071d17d738ad6e6aabeb59df443ff5e141a5ee",
+    "research/manuscript_background_v1/CYCLIC_RESULTANTS.md": "0671983c1d62612ed0b90dd4818addbf090516dc1bd9855fd5ea9ffe829d6939",
+    "research/manuscript_background_v1/FOUNDATIONS.md": "1c04455be8d8d5922258d83858e7eba1d97cf1670400fad69a47ff2ed92b1be0",
+    "research/manuscript_background_v1/README.md": "fa7014363f26c725b55015c7272c3d0497868745ad0576262fc5b3c20a82cf88",
+    "research/manuscript_background_v1/REFERENCES.bib": "9dd8bd6c4b5572a4c122dc1cde0208c58886bc62c1141b1552cde9c132649fe7",
+    "research/manuscript_background_v1/SOURCE_RECORD.md": "2ff3d46de959b63b3a29d15e0a42b894f16f2967761012ac647aee6b65d39c91",
+    "research/manuscript_background_v1/WEIL_RECONSTRUCTION.md": "219d00fa7025858a79ed3d5836958ecb8f52cf7a378b97dea79aeb94ca7a07bf"
+  },
+  "python": "3.12.14",
+  "after_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "stdout": "Import integrity: 17 preserved files passed.\nAll-field reconstruction: source hashes and exact report passed.\n{\"finite_parameter_checks\": 4030, \"independent_determinant_checks\": 36, \"logarithm_spot_checks\": 7, \"malformed_controls\": 11, \"total_recovered_coefficients\": 489, \"total_recovered_traces\": 227}\nNo group-order acquisition, curve-realizability or quantum run is certified.\nReconstruction audit: hashes, irreducibility, all resultants and exact output passed.\nThe decoder remains a promised-input routine, not an order-authentication certificate.\nFirst-g reconstruction: source hashes, pinned logarithms, and exact report passed.\n{\"allowed_log_displacement_runs\": 2, \"independent_companion_determinants\": 18, \"malformed_input_rejections\": 7, \"recovered_coefficients\": 41, \"supplied_polynomial_controls\": 5}\nPromised-input reconstruction; no count authentication or curve realization is certified.\nAll three exact research reports reproduced. Input promises remain external.\n",
+    "stderr": "",
+    "elapsed_seconds": 51.261
+  }
+}

@@ -85,6 +85,7 @@ output size. See the [precise corollaries](research/finite_field_application_v1/
 
 | Purpose | Entry point |
 |---|---|
+| Scientific background, claim-to-source map, and reusable bibliography | [Manuscript background package](research/manuscript_background_v1/README.md) |
 | Current proof, implementation, and scope audit | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Fresh source check](research/consolidation_v1/SOURCES.md) |
 | First-$g$ theorem, contraction, and finite-precision proof | [Companion theorem](research/first_g_reconstruction_v1/THEOREM.md) |
 | Rational first-$g$ decoder and exact controls | [First-$g$ experiment](experiments/first_g_reconstruction_v1/README.md) |

@@ -1,6 +1,6 @@
 # Research status
 
-Updated 27 September 2026. Manuscript preparation remains on hold.
+Updated 28 September 2026. Manuscript preparation remains on hold.
 
 The project now has two complementary supplied-count reconstruction guarantees.
 Both concern reciprocal integral q-Weil polynomials, true exact cyclic
@@ -52,6 +52,23 @@ with exponentially many bits. These are standard consequences and output
 clarifications, not a third novelty claim. No decoder or reference output
 changed, and no additional scientific gap was found in this application check.
 
+## Manuscript background checkpoint
+
+The [background package](research/manuscript_background_v1/README.md) now
+collects the finite-field foundations, direct reconstruction predecessors,
+general cyclic-resultant theory, and analytic/bit-complexity context needed for
+future writing. A claim-to-source map connects the standard facts and comparison
+statements to the existing local proofs. The reusable bibliography has 17
+entries; relevant primary passages were inspected for 15, while two historical
+entries retain explicit full-text access limits and supported alternative
+citations. Versions, theorem locations, and the bounded search are recorded.
+
+The comparison retains Chidambaram–Keller's existing polynomial-time first-$g$
+result, Bézivin's linear generic determination bound, Hillar's erratum, and the
+distinction between generic and uniform Weil reconstruction. No newly inspected
+statement subsumes the two local guarantees. This is background preparation,
+not manuscript drafting, a new theorem, or universal priority certification.
+
 ## Contribution assessment
 
 The [primary-source comparison](research/contribution_assessment_v1/ASSESSMENT.md)
@@ -88,8 +105,8 @@ count-corruption example are retained. The new verifier reproduces its pinned
 report from fresh temporary storage.
 
 Run `python3 verify.py` for all three reports and import integrity.
-The [current receipt](research/finite_field_application_v1/VERIFICATION.json)
-records the application pass's executed checks. Earlier research and handoff
+The [current receipt](research/manuscript_background_v1/VERIFICATION.json)
+records the background pass's executed checks. Earlier research and handoff
 receipts remain at their versioned paths. No native point counter, author
 implementation, Lean proof, quantum circuit, or hardware was run.
 

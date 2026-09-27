@@ -1,8 +1,10 @@
-# Current scope: completed reconstruction and finite-field application
+# Current scope: reconstruction, application, and manuscript background
 
 Read README.md, STATUS.md, PROVENANCE.md, and
 `research/consolidation_v1/AUDIT.md`, and
 `research/finite_field_application_v1/COROLLARIES.md`.
+The source-supported background starts at
+`research/manuscript_background_v1/README.md`.
 Manuscript preparation remains on hold.
 No publication target is recorded in this repository.
 
@@ -33,14 +35,23 @@ a distinct input problem with the standard Newton reconstruction. These are
 application clarifications, not another novelty claim. No decoder, pinned
 report, or threshold changed.
 
+The manuscript background pass is complete: foundations, matched Weil
+reconstruction theorems, generic cyclic-resultant results, algorithmic methods,
+and claim-level citations are integrated with a reusable bibliography. The
+source record distinguishes primary-text inspection from metadata-only
+historical references. The remaining historical access gaps do not leave a
+used mathematical dependency unsupported. No additional matched competitor
+was found in the bounded search. This does not assert exhaustive priority.
+
 ## Next work
 
 The scientific package is complete within its stated scope at the level of
-written proofs, internal audit, explicit application, and executable evidence.
-Consolidation should
-lead with the quadratic-threshold theorem and retain the all-field result as
+written proofs, internal audit, explicit application, scientific background,
+and executable evidence. Consolidation should lead with the quadratic-threshold
+theorem and retain the all-field result as
 the complementary regime. An additional discovery is not required before
-presentation work. Manuscript drafting waits for the user's instruction.
+presentation work. The background package supplies the citation and attribution
+material for future writing; manuscript drafting waits for the user's instruction.
 
 Reopen scientific work when there is a concrete correctness concern, a
 competing primary theorem, or a clearly consequential extension. Do not
