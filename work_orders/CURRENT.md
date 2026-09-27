@@ -1,7 +1,9 @@
-# Current scope: consolidate the two reconstruction guarantees
+# Current scope: completed reconstruction and finite-field application
 
 Read README.md, STATUS.md, PROVENANCE.md, and
-`research/consolidation_v1/AUDIT.md`. Manuscript preparation remains on hold.
+`research/consolidation_v1/AUDIT.md`, and
+`research/finite_field_application_v1/COROLLARIES.md`.
+Manuscript preparation remains on hold.
 No publication target is recorded in this repository.
 
 ## Scientific checkpoint
@@ -23,14 +25,22 @@ single-radius small-norm proof cannot reach a subquadratic field-size regime.
 The note proves neither a necessary threshold for reconstruction nor failure
 of the actual iteration. No consequential extension was obtained in this pass.
 
+The finite-field application pass is also complete. It verifies both theorem
+hypotheses for general abelian varieties, states the Jacobian-to-curve-zeta
+corollary, and separates compact Frobenius reconstruction from exponentially
+large expanded abelian-variety zeta output. Ordinary curve point counts remain
+a distinct input problem with the standard Newton reconstruction. These are
+application clarifications, not another novelty claim. No decoder, pinned
+report, or threshold changed.
+
 ## Next work
 
 The scientific package is complete within its stated scope at the level of
-written proofs, internal audit, and executable evidence. Consolidation should
+written proofs, internal audit, explicit application, and executable evidence.
+Consolidation should
 lead with the quadratic-threshold theorem and retain the all-field result as
 the complementary regime. An additional discovery is not required before
-choosing a publication venue or a tutorial anchor; neither has been selected
-by this work order. Manuscript drafting waits for the user's instruction.
+presentation work. Manuscript drafting waits for the user's instruction.
 
 Reopen scientific work when there is a concrete correctness concern, a
 competing primary theorem, or a clearly consequential extension. Do not

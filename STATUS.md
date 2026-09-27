@@ -36,6 +36,22 @@ the level of written proofs, internal audits, and exact reproducibility.
 No known substantive gap remains from these checks. Further threshold or query
 improvements are optional; manuscript preparation remains on hold.
 
+## Finite-field application checkpoint
+
+The [application note](research/finite_field_application_v1/COROLLARIES.md)
+checks the hypotheses for every abelian variety over a finite field and states
+both recovery corollaries with the original thresholds. No simplicity,
+ordinarity, genericity, or polarization input is required. The recovered
+Frobenius polynomial determines the isogeny class over the given finite field.
+For a promised Jacobian it yields the curve zeta function in polynomial bit time.
+
+The note separates Jacobian cardinalities from ordinary curve point counts and
+compact Frobenius output from an expanded abelian-variety zeta function. It
+derives the latter's exponential output size, including a leading coefficient
+with exponentially many bits. These are standard consequences and output
+clarifications, not a third novelty claim. No decoder or reference output
+changed, and no additional scientific gap was found in this application check.
+
 ## Contribution assessment
 
 The [primary-source comparison](research/contribution_assessment_v1/ASSESSMENT.md)
@@ -72,8 +88,8 @@ count-corruption example are retained. The new verifier reproduces its pinned
 report from fresh temporary storage.
 
 Run `python3 verify.py` for all three reports and import integrity.
-The [current receipt](research/consolidation_v1/VERIFICATION.json)
-records this continuation's executed checks. Earlier research and handoff
+The [current receipt](research/finite_field_application_v1/VERIFICATION.json)
+records the application pass's executed checks. Earlier research and handoff
 receipts remain at their versioned paths. No native point counter, author
 implementation, Lean proof, quantum circuit, or hardware was run.
 

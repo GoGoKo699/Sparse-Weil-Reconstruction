@@ -12,7 +12,8 @@ project. Its research scope is classical reconstruction theory.
 
 **Status:** written proofs, exact executable controls, and a completed
 [internal consolidation audit](research/consolidation_v1/AUDIT.md) with no
-substantive gap found. The two-theorem research scope is ready for consolidation;
+substantive gap found. The two-theorem research scope includes explicit
+[finite-field corollaries and output bounds](research/finite_field_application_v1/COROLLARIES.md);
 publication priority remains a bounded assessment and optimality is unproved.
 Manuscript preparation is on hold.
 
@@ -71,9 +72,14 @@ threshold**, with polynomial bit time retained. See the
 [matched source assessment](research/contribution_assessment_v1/ASSESSMENT.md).
 This complements the all-field guarantee rather than replacing it.
 
-For a curve over $\mathbb F_q$, where $q$ is a prime power, $P$ is its zeta
-numerator and $K_m=|J_C(\mathbb F_{q^m})|$ counts **Jacobian elements**.
-Ordinary curve point counts are a different input problem.
+For an abelian variety $A/\mathbb F_q$, where $q$ is a prime power,
+$K_m=|A(\mathbb F_{q^m})|$ and the recovered $P_A$ determines its
+$\mathbb F_q$-isogeny class. For $A=J_C$, it is the numerator of the **curve**
+zeta function $Z_C(T)=P_A(T)/((1-T)(1-qT))$; the inputs count Jacobian elements.
+The first $g$ ordinary curve point counts already suffice over every finite
+field by Newton identities. The full abelian-variety zeta function is determined
+compactly by $P_A$, but its expanded numerator and denominator have exponential
+output size. See the [precise corollaries](research/finite_field_application_v1/COROLLARIES.md).
 
 ## Read and reproduce
 
@@ -82,6 +88,7 @@ Ordinary curve point counts are a different input problem.
 | Current proof, implementation, and scope audit | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Fresh source check](research/consolidation_v1/SOURCES.md) |
 | First-$g$ theorem, contraction, and finite-precision proof | [Companion theorem](research/first_g_reconstruction_v1/THEOREM.md) |
 | Rational first-$g$ decoder and exact controls | [First-$g$ experiment](experiments/first_g_reconstruction_v1/README.md) |
+| Abelian-variety/curve corollaries and exact output claims | [Finite-field application](research/finite_field_application_v1/COROLLARIES.md) |
 | Why the present norm argument has a quadratic scale | [Method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
 | Current predecessor and significance assessment | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Primary sources](research/contribution_assessment_v1/SOURCES.md) |
 | Full theorem, cancellation, uniform tail proof, and rounding | [Note 28](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) |

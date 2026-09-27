@@ -1,0 +1,44 @@
+{
+  "date_utc": "2026-09-27",
+  "baseline_commit": "0c082a9ed8533a00cd6d3834db4a5db4d79d784c",
+  "baseline_tree": "cf171b27b8d54929048b4ecbd0bf73f5824120e8",
+  "python": "3.12.14",
+  "scope": "Finite-field application corollaries and exact output-size clarification. No proof-threshold, decoder, fixture, or reference-report changes.",
+  "before_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "imported_files_checked": 17,
+    "exact_reports_reproduced": 3,
+    "execution_record": "Executed successfully in the clean baseline checkout before this application pass."
+  },
+  "internal_review": [
+    "Independent finite-field bridge check against Milne and Tate, including general abelian varieties and the curve hypotheses",
+    "Independent derivation of full abelian-variety zeta degrees, noncancellation, and leading-coefficient bit length",
+    "Direct Newton-identity comparison for ordinary curve point counts"
+  ],
+  "preserved_first_g_checkpoint": {
+    "hash_manifest": "research/consolidation_v1/VERIFICATION.json#preserved_first_g_files",
+    "files_checked": 7,
+    "byte_identical": true
+  },
+  "after_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "stdout": "Import integrity: 17 preserved files passed.\nAll-field reconstruction: source hashes and exact report passed.\n{\"finite_parameter_checks\": 4030, \"independent_determinant_checks\": 36, \"logarithm_spot_checks\": 7, \"malformed_controls\": 11, \"total_recovered_coefficients\": 489, \"total_recovered_traces\": 227}\nNo group-order acquisition, curve-realizability or quantum run is certified.\nReconstruction audit: hashes, irreducibility, all resultants and exact output passed.\nThe decoder remains a promised-input routine, not an order-authentication certificate.\nFirst-g reconstruction: source hashes, pinned logarithms, and exact report passed.\n{\"allowed_log_displacement_runs\": 2, \"independent_companion_determinants\": 18, \"malformed_input_rejections\": 7, \"recovered_coefficients\": 41, \"supplied_polynomial_controls\": 5}\nPromised-input reconstruction; no count authentication or curve realization is certified.\nAll three exact research reports reproduced. Input promises remain external.\n",
+    "stderr": "",
+    "elapsed_seconds": 51.238
+  },
+  "not_run": [
+    "New fixture campaign or changed decoder",
+    "External peer review or proof assistant",
+    "Native point counter, count authentication, or geometric realizability certification",
+    "Manuscript preparation or submission"
+  ],
+  "application_note_sha256": "24f816c74cbf3dc09f464a96b82d42ae0f7ffa69aa35a538ec881bab7a4f1d24",
+  "documentation_checks": {
+    "local_links_checked": 34,
+    "missing_local_targets": 0,
+    "trailing_whitespace": "none",
+    "final_newlines": "present"
+  }
+}
