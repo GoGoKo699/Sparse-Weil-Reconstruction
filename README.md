@@ -10,8 +10,10 @@ implementation, and exact verification reports from the parent
 [Quantum Assisted Algorithm Discovery](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery)
 project. Its research scope is classical reconstruction theory.
 
-**Status:** written proofs, internal mathematical checks, and exact executable
-controls. Publication priority and query optimality remain open.
+**Status:** written proofs, exact executable controls, and a completed
+[internal consolidation audit](research/consolidation_v1/AUDIT.md) with no
+substantive gap found. The two-theorem research scope is ready for consolidation;
+publication priority remains a bounded assessment and optimality is unproved.
 Manuscript preparation is on hold.
 
 ## The polynomial and supplied data
@@ -77,8 +79,10 @@ Ordinary curve point counts are a different input problem.
 
 | Purpose | Entry point |
 |---|---|
+| Current proof, implementation, and scope audit | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Fresh source check](research/consolidation_v1/SOURCES.md) |
 | First-$g$ theorem, contraction, and finite-precision proof | [Companion theorem](research/first_g_reconstruction_v1/THEOREM.md) |
 | Rational first-$g$ decoder and exact controls | [First-$g$ experiment](experiments/first_g_reconstruction_v1/README.md) |
+| Why the present norm argument has a quadratic scale | [Method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
 | Current predecessor and significance assessment | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Primary sources](research/contribution_assessment_v1/SOURCES.md) |
 | Full theorem, cancellation, uniform tail proof, and rounding | [Note 28](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) |
 | Proof audit and explicit bit complexity | [Note 29](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
@@ -115,9 +119,9 @@ and the quadratic-threshold first-$g$ decoder.
 The source comparison is bounded; it does not establish publication priority.
 No quantum speedup or minimum-query theorem is claimed here.
 
-The two numbered notes and two inherited experiment directories are preserved historical
-records. Statements inside them about a proposed repository or past verification
-runs refer to their original checkpoints. This README, [STATUS.md](STATUS.md),
-and the [work order](work_orders/CURRENT.md) describe the current project.
+Versioned research notes, assessments, and experiment directories are retained
+as checkpoints. Their proposed next steps and verification statements refer to
+the time they were written. This README, [STATUS.md](STATUS.md), and the
+[work order](work_orders/CURRENT.md) describe the current project.
 
 MIT license, Copyright (c) 2026 Ruge Lin.

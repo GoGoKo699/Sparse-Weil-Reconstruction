@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-27",
+  "baseline_commit": "08a1199cfc52befc3bd47bf1f758612cdf650445",
+  "baseline_tree": "94bacb3dabbdc5f7642fb6513fe825c18731fba4",
+  "python": "3.12.14",
+  "scope": "Internal proof/implementation audit, bounded source check, and analytic norm-method boundary. No decoder or reference-report changes.",
+  "before_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "imported_files_checked": 17,
+    "exact_reports_reproduced": 3,
+    "execution_record": "Executed in the clean audited checkout before changes; all three verifiers completed successfully."
+  },
+  "preserved_first_g_files": [
+    {
+      "path": "research/first_g_reconstruction_v1/THEOREM.md",
+      "size_bytes": 19260,
+      "sha256": "0bc286e15e2bb397346282cc31cf7d792b022da2a17cbdd372f23eef01d6eccb",
+      "git_blob": "bbe0dc47e6e57186c8e2be4d12db288b3269bee5"
+    },
+    {
+      "path": "experiments/first_g_reconstruction_v1/MANIFEST.json",
+      "size_bytes": 697,
+      "sha256": "3fa6dbb4d2dd247400fc0278a705874bdf775dc81b1657edb5010dcab6636be7",
+      "git_blob": "10c039db56c3d7eea26b10d1a83dbbb3664a5676"
+    },
+    {
+      "path": "experiments/first_g_reconstruction_v1/README.md",
+      "size_bytes": 3178,
+      "sha256": "57f1d470da5dc99634fb3530fac674df70b009139258f517636971511c23ad62",
+      "git_blob": "ddbc94bef6cfc321f472eb8359911cf9e5adfaa2"
+    },
+    {
+      "path": "experiments/first_g_reconstruction_v1/REPORT.json",
+      "size_bytes": 2021,
+      "sha256": "ae37772fabd2a6bffc2d1eeb17584a3963d4911457ccedc7ba9ae9af4e117459",
+      "git_blob": "05bd735dfc627ffb9faadfb89c3c3df1becfbc98"
+    },
+    {
+      "path": "experiments/first_g_reconstruction_v1/experiment.py",
+      "size_bytes": 8565,
+      "sha256": "df152113c952e42dc4a706301641b19d3f0a15be2fa4fadfbb545a2e227e5b79",
+      "git_blob": "301bfaaee9b409992487aa413312812947ad9310"
+    },
+    {
+      "path": "experiments/first_g_reconstruction_v1/reconstruct.py",
+      "size_bytes": 4248,
+      "sha256": "4aefd004ca418f14ff511a264cea2f5ea238b0c48cd9e7c2fe7c251b3622a8d3",
+      "git_blob": "01c7037be5307a373d4647b4e8523f0dadc337c2"
+    },
+    {
+      "path": "experiments/first_g_reconstruction_v1/verify.py",
+      "size_bytes": 2542,
+      "sha256": "bead89f36b63518a1cd65f69816b773c4ef03a41c59be518308717c15b99cc08",
+      "git_blob": "881a08a2c875ad311879a1f580968ca91573371a"
+    }
+  ],
+  "internal_review": [
+    "Independent analytic audit of theorem Sections 1-7",
+    "Independent finite-arithmetic and proof-code audit of Sections 6-9",
+    "Independent check of restricted norm-method boundary proposition",
+    "Focused primary-source novelty recheck; no universal priority claim"
+  ],
+  "not_run": [
+    "External peer review",
+    "Proof assistant or external author code",
+    "Native point counter or Jacobian-realizability certification",
+    "Quantum acquisition, circuit, or hardware"
+  ],
+  "after_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "stdout": "Import integrity: 17 preserved files passed.\nAll-field reconstruction: source hashes and exact report passed.\n{\"finite_parameter_checks\": 4030, \"independent_determinant_checks\": 36, \"logarithm_spot_checks\": 7, \"malformed_controls\": 11, \"total_recovered_coefficients\": 489, \"total_recovered_traces\": 227}\nNo group-order acquisition, curve-realizability or quantum run is certified.\nReconstruction audit: hashes, irreducibility, all resultants and exact output passed.\nThe decoder remains a promised-input routine, not an order-authentication certificate.\nFirst-g reconstruction: source hashes, pinned logarithms, and exact report passed.\n{\"allowed_log_displacement_runs\": 2, \"independent_companion_determinants\": 18, \"malformed_input_rejections\": 7, \"recovered_coefficients\": 41, \"supplied_polynomial_controls\": 5}\nPromised-input reconstruction; no count authentication or curve realization is certified.\nAll three exact research reports reproduced. Input promises remain external.\n",
+    "stderr": "",
+    "elapsed_seconds": 50.224
+  },
+  "documentation_checks": {
+    "local_links_checked": 34,
+    "missing_local_targets": 0,
+    "git_diff_check": "passed",
+    "review_clarifications": [
+      "Method-boundary polynomial class explicitly omits the main theorem field-size restriction",
+      "Common denominator statement explicitly concerns reduced exponential-recurrence fractions"
+    ]
+  }
+}

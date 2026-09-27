@@ -16,6 +16,26 @@ a contraction on a weighted coefficient ball and an explicit finite rational
 implementation. Quantization after each iteration controls denominator growth.
 The constants are sufficient, not optimal.
 
+## Consolidation checkpoint
+
+The [fresh internal audit](research/consolidation_v1/AUDIT.md) found no
+substantive gap in the analytic proof, finite-error schedule, rational
+implementation, or polynomial denominator bounds. It records an explicit
+common denominator and clarifies that the experiment's `max_intermediate_bits`
+field samples selected coefficients, rather than all arithmetic temporaries.
+No decoder or pinned expected output was changed.
+
+The [bounded extension note](research/consolidation_v1/METHOD_BOUNDARY.md)
+proves a limitation of the current single-radius norm argument: covering every
+true polynomial by a fixed small ball and bounding the alias operator on the
+whole algebra requires a quadratic field-size scale. This is not a lower bound
+for reconstruction and does not show failure of the actual iteration.
+
+The core scientific work within the stated two-theorem scope is complete at
+the level of written proofs, internal audits, and exact reproducibility.
+No known substantive gap remains from these checks. Further threshold or query
+improvements are optional; manuscript preparation remains on hold.
+
 ## Contribution assessment
 
 The [primary-source comparison](research/contribution_assessment_v1/ASSESSMENT.md)
@@ -27,6 +47,10 @@ The companion's candidate contribution is the quadratic sufficient field-size
 threshold, retaining polynomial bit time. The all-field theorem is a selected
 support refinement of Kedlaya's framework. No minimum-query theorem or blanket
 advantage over every predecessor is claimed.
+
+A [fresh focused source check](research/consolidation_v1/SOURCES.md) reconfirmed
+the current predecessor and found no additional theorem subsuming the quadratic
+guarantee. Its actual queries and access limits are recorded.
 
 The written proofs have internal mathematical checks and executable evidence.
 External peer review, publication priority, optimality, and Jacobian realizability
@@ -48,11 +72,11 @@ count-corruption example are retained. The new verifier reproduces its pinned
 report from fresh temporary storage.
 
 Run `python3 verify.py` for all three reports and import integrity.
-The [current receipt](research/contribution_assessment_v1/VERIFICATION.json)
-records this continuation's executed checks. Historical handoff receipts remain
-in `provenance/`. No native point counter, author implementation, Lean proof,
-quantum circuit, or hardware was run.
+The [current receipt](research/consolidation_v1/VERIFICATION.json)
+records this continuation's executed checks. Earlier research and handoff
+receipts remain at their versioned paths. No native point counter, author
+implementation, Lean proof, quantum circuit, or hardware was run.
 
 Successful decoding is not count authentication or certification of a claimed
-curve. See the [work order](work_orders/CURRENT.md) for the remaining scientific
-question and bounded next step.
+curve. See the [work order](work_orders/CURRENT.md) for the consolidation scope
+and the conditions for reopening scientific work.

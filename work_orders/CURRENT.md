@@ -1,57 +1,59 @@
-# Next task: assess the remaining field/query trade-off
+# Current scope: consolidate the two reconstruction guarantees
 
-Read README.md, STATUS.md, PROVENANCE.md, the contribution assessment, and
-`research/first_g_reconstruction_v1/THEOREM.md`. Manuscript preparation remains
-on hold. No publication target is recorded in this repository.
+Read README.md, STATUS.md, PROVENANCE.md, and
+`research/consolidation_v1/AUDIT.md`. Manuscript preparation remains on hold.
+No publication target is recorded in this repository.
 
-## Completed scientific checkpoint
+## Scientific checkpoint
 
-The predecessor comparison is concrete. Chidambaram–Keller is
-arXiv:2606.28989v2, with first-g reconstruction and polynomial bit time under a
-large explicit field-size threshold. Its existence, current version, and
-complexity statement are resolved. Bézivin's generic first-(d+1) result and
-Hillar's erratum are included. Source-search limitations remain explicit.
+The first-g theorem supplies a quadratic sufficient field-size threshold,
+`q >= 65536*g^2`, with a finite rational decoder and polynomial bit time.
+The preserved selected-data theorem works over every field for `g >= 32`.
+The fresh internal mathematical and implementation audits found no substantive
+gap. All three pinned research reports reproduce.
 
-The companion theorem now proves first-g supplied-count reconstruction for
-q >= 65536*g^2, g >= 1, with a contraction and an explicit rational finite
-algorithm. The internal audit checked normalization, repeated divisors, the
-invariant domain, finite-series errors, final integer rounding, and polynomial
-intermediate sizes. Five exact controls and independent determinant routes pass.
-The original all-field sparse theorem for g >= 32 is retained unchanged.
+The focused source comparison found no inspected result subsuming the quadratic
+guarantee. It includes the closest predecessor's polynomial-time algorithm and
+its suggested superpolynomial threshold refinement. Search and access limits
+are recorded; this is not universal priority certification.
 
-## Focused question
+The previous bounded extension question is closed by
+`research/consolidation_v1/METHOD_BOUNDARY.md`: the present whole-algebra,
+single-radius small-norm proof cannot reach a subquadratic field-size regime.
+The note proves neither a necessary threshold for reconstruction nor failure
+of the actual iteration. No consequential extension was obtained in this pass.
 
-What can be established about the gap between the all-field sparse schedule
-and first-g recovery below the quadratic sufficient threshold?
+## Next work
 
-First distinguish three claims: failure of this sufficient norm estimate,
-failure of this particular iteration, and nonuniqueness of the supplied data.
-They are not equivalent. Do not imply that q >= 65536*g^2 is necessary.
+The scientific package is complete within its stated scope at the level of
+written proofs, internal audit, and executable evidence. Consolidation should
+lead with the quadratic-threshold theorem and retain the all-field result as
+the complementary regime. An additional discovery is not required before
+choosing a publication venue or a tutorial anchor; neither has been selected
+by this work order. Manuscript drafting waits for the user's instruction.
 
-The next bounded deliverable is an analytic obstruction-or-extension note.
-Inspect whether a change of norm/domain gives a qualitative extension of the
-field-size regime, or whether an explicit family demonstrates a limitation of
-the recovery map or the data themselves. A limitation of the map must not be
-reported as a limitation of all decoders. Explain whether the additional result
-would materially strengthen the current two-theorem package before implementing
-another experiment. Merely reducing the constant 65536 is not the objective.
+Reopen scientific work when there is a concrete correctness concern, a
+competing primary theorem, or a clearly consequential extension. Do not
+automatically restart the same audit, optimize the constant, or launch a
+small-parameter census. All-field first-g reconstruction, optimal query counts,
+and other recovery norms are optional future projects, not unfinished gates
+for the present result.
 
-If no consequential extension or obstruction follows from this focused pass,
-record that outcome and assess the current mathematical scope for consolidation.
-Do not turn this into an open-ended search or a broad small-parameter census.
-Publication priority remains a qualified literature assessment, not a guarantee
-that every paper, thesis, implementation, or unpublished argument was found.
+External peer review, universal publication priority, query optimality, and
+Jacobian realization of the controls remain unestablished. These limits must
+stay separate from the completed internal checks.
 
 ## Preserve and reproduce
 
-Keep all 17 files in `provenance/import-manifest.json` unchanged. Keep the
-first-g proof and experiment as a versioned checkpoint as well. New scientific
-changes belong in a successor directory. Never overwrite expected output to
+Keep the 17 files in `provenance/import-manifest.json` unchanged. Retain the
+first-g theorem and experiment as a versioned checkpoint. New scientific
+changes belong in a successor directory. Never change reference outputs to
 make a modified decoder pass. Run `python3 verify.py` before and after changes
 affecting proofs, decoder, or verification, and report what actually ran.
 
-Keep the precise input promises, selected versus consecutive indices, and
-count acquisition/authentication boundaries visible. Controls are Weil
-polynomials, not asserted Jacobians. No quantum implementation, external
-messages, paid computation, manuscript drafting, or unrelated repository
-changes are part of this work order.
+Keep the true-count promise, selected versus consecutive indices, q-reciprocity,
+integrality, inverse-root modulus, and genus/field thresholds visible. Preserve
+the distinctions between reconstruction, acquisition, authentication, and
+curve realization. No quantum implementation, external messages, paid
+computation, manuscript drafting, release tags, or unrelated changes are part
+of this work order.
