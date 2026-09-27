@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-27",
+  "python": "3.12.14",
+  "source_commit": "9ef56e5af6c7af452750b8cd035da6745f1d00c0",
+  "scope": "Standalone handoff: import integrity and exact-report reproduction, not a fresh mathematical proof audit.",
+  "runs": [
+    {
+      "command": "python3 experiments/all_field_reconstruction_v1/verify.py",
+      "exit_code": 0,
+      "stdout": "All-field reconstruction: source hashes and exact report passed.\n{\"finite_parameter_checks\": 4030, \"independent_determinant_checks\": 36, \"logarithm_spot_checks\": 7, \"malformed_controls\": 11, \"total_recovered_coefficients\": 489, \"total_recovered_traces\": 227}\nNo group-order acquisition, curve-realizability or quantum run is certified.\n"
+    },
+    {
+      "command": "python3 experiments/reconstruction_audit_v1/verify.py",
+      "exit_code": 0,
+      "stdout": "Reconstruction audit: hashes, irreducibility, all resultants and exact output passed.\nThe decoder remains a promised-input routine, not an order-authentication certificate.\n"
+    }
+  ],
+  "import_integrity": {
+    "preserved_files": 17,
+    "source_blob_ids_match": true
+  },
+  "not_run": [
+    "Parent root and 164-curve suites",
+    "Quantum order acquisition",
+    "Native point counter",
+    "Quantum circuit or hardware"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "source_repository": "https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery",
+  "source_commit": "9ef56e5af6c7af452750b8cd035da6745f1d00c0",
+  "source_branch_at_import": "research/prx-quantum-phase2",
+  "source_root_tree": "5761f2784a6aa97d0377eb3b4e56b83ae85e100f",
+  "source_archive": "Quantum_Discovery_Reconstruction_Audit_Checkpoint.zip",
+  "archive_sha256": "ae3ccd524af3bf75a4a21f5378e19738f7b1c5848ede362fef8958084e20bf65",
+  "target_initial_commit": "6a1954a35f2e24dbdc7485c4e8ec301702cd9d9d",
+  "preservation": "All listed files imported byte-for-byte; LICENSE already identical in target.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "source_path": "LICENSE",
+      "size_bytes": 1065,
+      "sha256": "a92600540b1ab7a18301e2632a29334b3df227ad836e88df9967d69e3c86db66",
+      "git_blob": "e17a781bf47c4aadf18b68fc593846a1193b86c1"
+    },
+    {
+      "path": "exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md",
+      "source_path": "exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md",
+      "size_bytes": 13262,
+      "sha256": "3249bda2edfa3353751eae61067ce3349d22aa39bdcb02a87f22684fddd240ec",
+      "git_blob": "fdc9f0f5bdf5a101359cb39e21c815922e398a47"
+    },
+    {
+      "path": "exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md",
+      "source_path": "exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md",
+      "size_bytes": 16143,
+      "sha256": "88a8f07fee7567b4f28c189387f7a41f4b80744f74121927ce24e9d17f595182",
+      "git_blob": "091850ca19221afd0837481aa6796d7c6a224454"
+    },
+    {
+      "path": "experiments/all_field_reconstruction_v1/MANIFEST.json",
+      "source_path": "experiments/all_field_reconstruction_v1/MANIFEST.json",
+      "size_bytes": 554,
+      "sha256": "1ac983d394081215a5e22d9d1f53d89ede112fbba1288c15349ddcd9a33d9a4c",
+      "git_blob": "0edec53953626ec7958e3bfade664ff0ccf720d4"
+    },
+    {
+      "path": "experiments/all_field_reconstruction_v1/README.md",
+      "source_path": "experiments/all_field_reconstruction_v1/README.md",
+      "size_bytes": 2419,
+      "sha256": "4a6b59198d7034ff4b4ef65ac4336251b062cf15567075ee79ee93f67c907135",
+      "git_blob": "513b55d567a390222034c10326062d18febd31e8"
+    },
+    {
+      "path": "experiments/all_field_reconstruction_v1/REPORT.json",
+      "source_path": "experiments/all_field_reconstruction_v1/REPORT.json",
+      "size_bytes": 6038,
+      "sha256": "56df2bdb5d8ba0959a1d0919a98338f25c2334ec088332a325a5a350b6f463ff",
+      "git_blob": "11e1b775a0a8ea682f9e8047535e549be5636886"
+    },
+    {
+      "path": "experiments/all_field_reconstruction_v1/SOURCES.md",
+      "source_path": "experiments/all_field_reconstruction_v1/SOURCES.md",
+      "size_bytes": 5559,
+      "sha256": "170b5825ce88ceb20d2c2c54052118c09d617045f6258e6b340c0a18552d9438",
+      "git_blob": "7d8106e8fd7f1193651689340f4dc10863137b8e"
+    },
+    {
+      "path": "experiments/all_field_reconstruction_v1/checks.py",
+      "source_path": "experiments/all_field_reconstruction_v1/checks.py",
+      "size_bytes": 9188,
+      "sha256": "03c7e76c505f311cb92c7826086afe46999d507a10af7ca5912d20b2d3c092e1",
+      "git_blob": "14bbb63de807123e3e5a61c7c773a50cabc6c7af"
+    },
+    {
+      "path": "experiments/all_field_reconstruction_v1/reconstruct.py",
+      "source_path": "experiments/all_field_reconstruction_v1/reconstruct.py",
+      "size_bytes": 6693,
+      "sha256": "b187354cf97eedbd078e6efbdf0dd39a86462058f59eb52580221d01bf6e56cf",
+      "git_blob": "2a1c871af6d9da28c98bbf5a0be8409aab67aa50"
+    },
+    {
+      "path": "experiments/all_field_reconstruction_v1/verify.py",
+      "source_path": "experiments/all_field_reconstruction_v1/verify.py",
+      "size_bytes": 1667,
+      "sha256": "a448bca42a42851754dd88b8cab3e11640352f6dd2a8a0ee144de80a40e6ce9a",
+      "git_blob": "737e91e2c95125f8ca94ee04230b8ce41eefe14b"
+    },
+    {
+      "path": "experiments/reconstruction_audit_v1/CONTROL.json",
+      "source_path": "experiments/reconstruction_audit_v1/CONTROL.json",
+      "size_bytes": 2030,
+      "sha256": "65f9dc2fb5a230a52d63e2c54c299d1e8a0d8cd2ad16e25b446e028e53172349",
+      "git_blob": "629cdb98f8cd9af512b478417a8fc525afbfc64a"
+    },
+    {
+      "path": "experiments/reconstruction_audit_v1/MANIFEST.json",
+      "source_path": "experiments/reconstruction_audit_v1/MANIFEST.json",
+      "size_bytes": 776,
+      "sha256": "a45bf26d2c38c03008cc2f296f6b3653befb564348876cca3663ad2d9d276d55",
+      "git_blob": "91c0106d411f4f6053a390f812f7efc54e97a3af"
+    },
+    {
+      "path": "experiments/reconstruction_audit_v1/README.md",
+      "source_path": "experiments/reconstruction_audit_v1/README.md",
+      "size_bytes": 2180,
+      "sha256": "2d7d86bc928397816f6747d393052cbb07b8a39f20f11cd17fff06a5d8ae66a9",
+      "git_blob": "b8139305b27b514f2889f33eb86d614c02170a9c"
+    },
+    {
+      "path": "experiments/reconstruction_audit_v1/REPORT.json",
+      "source_path": "experiments/reconstruction_audit_v1/REPORT.json",
+      "size_bytes": 1125,
+      "sha256": "340f96321659a664aafbbfa1d17e6b4de4df870ae88cebf681c8766595b7b843",
+      "git_blob": "076145e3712266deb658243e68a9c0b02f534b1b"
+    },
+    {
+      "path": "experiments/reconstruction_audit_v1/SOURCES.md",
+      "source_path": "experiments/reconstruction_audit_v1/SOURCES.md",
+      "size_bytes": 5707,
+      "sha256": "09dd7a45d7711ef6b1e11a737b1b34a10ade7405e096a8585f83cd28c5c48fe1",
+      "git_blob": "b77a23a3ec7280f855a4905fb52345a420bc54af"
+    },
+    {
+      "path": "experiments/reconstruction_audit_v1/audit.py",
+      "source_path": "experiments/reconstruction_audit_v1/audit.py",
+      "size_bytes": 9655,
+      "sha256": "a7c1d5c87bda5897a3a8c49047547d38703db663374f511dbaed50fc172dc328",
+      "git_blob": "a3866f3537ac8d79187d55a597d596543e25a02f"
+    },
+    {
+      "path": "experiments/reconstruction_audit_v1/verify.py",
+      "source_path": "experiments/reconstruction_audit_v1/verify.py",
+      "size_bytes": 2030,
+      "sha256": "ac3e145deee6e19a2b944c739a88c69396676118c6b59c2d33bfd7a61f68c5a4",
+      "git_blob": "8bbe05b7e6ef2d04e963433d4ce9444fd40a6021"
+    }
+  ]
+}
