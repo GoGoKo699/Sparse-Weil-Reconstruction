@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-27",
+  "baseline_commit": "5d11ec4a91890436e7e20e176f5ebb0087b6084b",
+  "python": "3.12.14",
+  "scope": "Preserved baseline reproduction and first-g successor exact controls; mathematical uniformity is established by the written proof, not finite tests.",
+  "before_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "imported_files_checked": 17,
+    "inherited_reports_reproduced": 2,
+    "execution_record": "Executed in the original clean checkout before this continuation modified files."
+  },
+  "after_changes": {
+    "command": "python3 verify.py",
+    "exit_code": 0,
+    "stdout": "Import integrity: 17 preserved files passed.\nAll-field reconstruction: source hashes and exact report passed.\n{\"finite_parameter_checks\": 4030, \"independent_determinant_checks\": 36, \"logarithm_spot_checks\": 7, \"malformed_controls\": 11, \"total_recovered_coefficients\": 489, \"total_recovered_traces\": 227}\nNo group-order acquisition, curve-realizability or quantum run is certified.\nReconstruction audit: hashes, irreducibility, all resultants and exact output passed.\nThe decoder remains a promised-input routine, not an order-authentication certificate.\nFirst-g reconstruction: source hashes, pinned logarithms, and exact report passed.\n{\"allowed_log_displacement_runs\": 2, \"independent_companion_determinants\": 18, \"malformed_input_rejections\": 7, \"recovered_coefficients\": 41, \"supplied_polynomial_controls\": 5}\nPromised-input reconstruction; no count authentication or curve realization is certified.\nAll three exact research reports reproduced. Input promises remain external.\n",
+    "stderr": "",
+    "elapsed_seconds": 52.985
+  },
+  "internal_mathematical_review": [
+    "Independent rederivation of weighted alias and completion bounds",
+    "Invariant domain and contraction constants",
+    "Finite-precision schedule and final integer recovery",
+    "Rational nonsquare-q implementation and polynomial denominator bounds"
+  ],
+  "not_run": [
+    "External author code or Lean formalization",
+    "Native curve point counter",
+    "Jacobian-realizability certification",
+    "Quantum order acquisition, circuit, or hardware",
+    "External peer review"
+  ]
+}

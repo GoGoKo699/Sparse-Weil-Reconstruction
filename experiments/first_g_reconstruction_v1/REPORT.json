@@ -1,0 +1,78 @@
+{
+  "allowed_log_displacement_runs": 2,
+  "altered_count_observation": {
+    "accepted": true,
+    "original_polynomial_returned": true,
+    "supplied_resultants_match": false
+  },
+  "controls": [
+    {
+      "alias_cutoff": 8,
+      "coefficient_bits": 30,
+      "final_error_less_than_one_over_32": true,
+      "g": 1,
+      "iterations": 25,
+      "log_bits": 48,
+      "max_input_bits": 16,
+      "max_intermediate_bits": 371,
+      "name": "quadratic_g1",
+      "q": 65536,
+      "recovered_coefficients": 3
+    },
+    {
+      "alias_cutoff": 14,
+      "coefficient_bits": 56,
+      "final_error_less_than_one_over_32": true,
+      "g": 2,
+      "iterations": 51,
+      "log_bits": 96,
+      "max_input_bits": 73,
+      "max_intermediate_bits": 2077,
+      "name": "quadratic_g2",
+      "q": 262145,
+      "recovered_coefficients": 5
+    },
+    {
+      "alias_cutoff": 21,
+      "coefficient_bits": 83,
+      "final_error_less_than_one_over_32": true,
+      "g": 3,
+      "iterations": 78,
+      "log_bits": 145,
+      "max_input_bits": 173,
+      "max_intermediate_bits": 6469,
+      "name": "quadratic_g3",
+      "q": 589824,
+      "recovered_coefficients": 7
+    },
+    {
+      "alias_cutoff": 56,
+      "coefficient_bits": 235,
+      "final_error_less_than_one_over_32": true,
+      "g": 8,
+      "iterations": 230,
+      "log_bits": 416,
+      "max_input_bits": 1408,
+      "max_intermediate_bits": 115668,
+      "name": "quadratic_g8",
+      "q": 4194304,
+      "recovered_coefficients": 17
+    },
+    {
+      "alias_cutoff": 27,
+      "coefficient_bits": 112,
+      "final_error_less_than_one_over_32": true,
+      "g": 4,
+      "iterations": 107,
+      "log_bits": 197,
+      "max_input_bits": 321,
+      "max_intermediate_bits": 14330,
+      "name": "irreducible_degree8",
+      "q": 1048577,
+      "recovered_coefficients": 9
+    }
+  ],
+  "independent_companion_determinants": 18,
+  "malformed_input_rejections": 7,
+  "scope": "Targeted exact prototype controls; no curve realization or priority claim."
+}

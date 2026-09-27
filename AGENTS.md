@@ -8,6 +8,7 @@ advantage objective or its publication target.
 Preserve LICENSE and the 17 baseline files listed in
 provenance/import-manifest.json. Put substantive scientific changes in a versioned
 successor directory. Never overwrite reference data to obtain a passing check.
+Also retain the versioned first-g proof and experiment when developing successors.
 Run `python3 verify.py` for changes affecting the handoff or decoder, and report
 which checks actually ran. Do not use Python optimization flags.
 

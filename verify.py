@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the preserved import and replay its two exact research reports."""
+"""Verify the preserved import and replay all three exact research reports."""
 import argparse
 import hashlib
 import json
@@ -28,10 +28,11 @@ def main():
     print(f"Import integrity: {len(manifest['files'])} preserved files passed.", flush=True)
     if args.integrity_only:
         return
-    for name in ('all_field_reconstruction_v1', 'reconstruction_audit_v1'):
+    for name in ('all_field_reconstruction_v1', 'reconstruction_audit_v1',
+                 'first_g_reconstruction_v1'):
         script = root / 'experiments' / name / 'verify.py'
         subprocess.run([sys.executable, str(script)], cwd=root, check=True)
-    print('Both exact research reports reproduced. Input promises remain external.')
+    print('All three exact research reports reproduced. Input promises remain external.')
 
 
 if __name__ == '__main__':

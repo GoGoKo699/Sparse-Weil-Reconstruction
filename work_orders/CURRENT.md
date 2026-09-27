@@ -1,48 +1,57 @@
-# Next task: establish the theorem's contribution on its own terms
+# Next task: assess the remaining field/query trade-off
 
-The standalone handoff is complete. Start with README.md, STATUS.md, and
-PROVENANCE.md, then Notes 28 and 29 and both archived source records.
-Manuscript preparation remains on hold.
+Read README.md, STATUS.md, PROVENANCE.md, the contribution assessment, and
+`research/first_g_reconstruction_v1/THEOREM.md`. Manuscript preparation remains
+on hold. No publication target is recorded in this repository.
 
-## Focused research question
+## Completed scientific checkpoint
 
-Does the audited selected-query, all-field reconstruction guarantee provide an
-independently useful improvement over the closest known reconstruction results,
-under precisely matched input and complexity assumptions?
+The predecessor comparison is concrete. Chidambaram–Keller is
+arXiv:2606.28989v2, with first-g reconstruction and polynomial bit time under a
+large explicit field-size threshold. Its existence, current version, and
+complexity statement are resolved. Bézivin's generic first-(d+1) result and
+Hillar's erratum are included. Source-search limitations remain explicit.
 
-The starting statement is fixed: reciprocal integral q-Weil input, g>=32,
-true K_m values on D_(g-2), deterministic polynomial bit time, no genericity,
-no supplied factorization or curve equation. Distinguish the number of queries
-from their largest index and total bit length. Do not compare Jacobian orders
-with curve point counts as though they were the same oracle.
+The companion theorem now proves first-g supplied-count reconstruction for
+q >= 65536*g^2, g >= 1, with a contraction and an explicit rational finite
+algorithm. The internal audit checked normalization, repeated divisors, the
+invariant domain, finite-series errors, final integer rounding, and polynomial
+intermediate sizes. Five exact controls and independent determinant routes pass.
+The original all-field sparse theorem for g >= 32 is retained unchanged.
 
-## Concrete next deliverable
+## Focused question
 
-Produce a primary-source comparison with exact theorem locations, domains,
-index schedules, uniformity in q and g, algorithmic complexity, and implications
-for the present theorem. Clearly separate an explicit predecessor theorem from
-an easy corollary, an adaptable argument, a conjecture, and an unresolved lead.
+What can be established about the gap between the all-field sparse schedule
+and first-g recovery below the quadratic sufficient threshold?
 
-Extend the preserved audit through relevant citation trails and author-hosted
-texts. A prior conversational remark named a possible Chidambaram–Keller result,
-but neither archived source list identifies it, and the two focused searches at
-handoff did not resolve it. This is an unverified lead, not an established paper
-or theorem. Recover an exact primary identifier before relying on it; otherwise
-record the unresolved search boundary. Do not manufacture a bibliographic entry.
+First distinguish three claims: failure of this sufficient norm estimate,
+failure of this particular iteration, and nonuniqueness of the supplied data.
+They are not equivalent. Do not imply that q >= 65536*g^2 is necessary.
 
-Explain what the sparse guarantee changes mathematically and what it does not.
-Prior Möbius/Newton machinery and endpoint arguments must remain attributed.
-A proof assembled from known ingredients may still yield a useful new guarantee;
-query-count arithmetic alone does not establish that significance.
+The next bounded deliverable is an analytic obstruction-or-extension note.
+Inspect whether a change of norm/domain gives a qualitative extension of the
+field-size regime, or whether an explicit family demonstrates a limitation of
+the recovery map or the data themselves. A limitation of the map must not be
+reported as a limitation of all decoders. Explain whether the additional result
+would materially strengthen the current two-theorem package before implementing
+another experiment. Merely reducing the constant 65536 is not the objective.
 
-## Preserve the baseline
+If no consequential extension or obstruction follows from this focused pass,
+record that outcome and assess the current mathematical scope for consolidation.
+Do not turn this into an open-ended search or a broad small-parameter census.
+Publication priority remains a qualified literature assessment, not a guarantee
+that every paper, thesis, implementation, or unpublished argument was found.
 
-Run `python3 verify.py` before and after substantive changes. Put any revised
-decoder, new fixture, or proof development in a versioned successor rather than
-editing the preserved files. Retain the accepted-corruption control: reconstruction
-does not authenticate a transcript or bind it to a curve.
+## Preserve and reproduce
 
-Do not lower the numerical genus threshold, build a quantum arithmetic framework,
-or add a census as a substitute for this contribution assessment. Once the
-comparison is concrete, choose the next theorem or implementation task by the
-remaining scientific gap. No publication target is recorded here.
+Keep all 17 files in `provenance/import-manifest.json` unchanged. Keep the
+first-g proof and experiment as a versioned checkpoint as well. New scientific
+changes belong in a successor directory. Never overwrite expected output to
+make a modified decoder pass. Run `python3 verify.py` before and after changes
+affecting proofs, decoder, or verification, and report what actually ran.
+
+Keep the precise input promises, selected versus consecutive indices, and
+count acquisition/authentication boundaries visible. Controls are Weil
+polynomials, not asserted Jacobians. No quantum implementation, external
+messages, paid computation, manuscript drafting, or unrelated repository
+changes are part of this work order.
