@@ -60,12 +60,14 @@ search-engine or model indexing.
 ## Canonical results
 
 - [First-g theorem](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/first_g_reconstruction_v1/THEOREM.md): Quadratic threshold, contraction, precision, and bit complexity.
-- [All-field theorem](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md): Selected support, uniform tail estimate, and endpoint completion.
+- [All-field reading edition](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/ALL_FIELD_PROOF.md): Typeset theorem, full proof, and explicit bit-complexity argument; start here for the all-field result.
+- [Preserved all-field theorem](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md): Selected support, uniform tail estimate, and endpoint completion.
 - [All-field proof review](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md): Finite precision and rational bit complexity.
 - [Finite-field corollaries](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/finite_field_application_v1/COROLLARIES.md): Abelian varieties, isogeny classes, Jacobians, and output size.
 
 ## Reproduce and cite
 
+- [Experiment reading guide](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/EXPERIMENTS.md): Typeset regimes, controls, reproduction commands, and links to the preserved experiment packages.
 - [Verification entry point](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/verify.py): Run python3 verify.py with Python 3.10+ and its standard library; no -O or -OO. Replays three pinned reports and checks 17 preserved files.
 - [First-g experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/first_g_reconstruction_v1/README.md): Exact decoder, controls, logarithm perturbations, and input limits.
 - [All-field experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/all_field_reconstruction_v1/README.md): Exact decoder, parameter checks, and independent determinants.

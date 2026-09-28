@@ -62,7 +62,7 @@ infer a new revision from the HTML date.
 |---|---|
 | Coefficient contraction, its invariant domain, and quadratic sufficient threshold | [First-$`g`$ theorem, §§1–5](../research/first_g_reconstruction_v1/THEOREM.md) |
 | Truncation, logarithm error, quantization, exact rounding, and polynomial bit time | [First-$`g`$ theorem, §§6–9](../research/first_g_reconstruction_v1/THEOREM.md) |
-| Sparse selected indices and uniform all-field tail bound | [Note 28](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and [Note 29](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
+| Sparse selected indices, uniform all-field tail bound, and bit complexity | [All-field reading edition](ALL_FIELD_PROOF.md), from [Note 28](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and [Note 29](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
 | Geometric applications and compact-output distinction | [Finite-field corollaries](../research/finite_field_application_v1/COROLLARIES.md) |
 
 Kedlaya's reconstruction framework and the endpoint precedents remain

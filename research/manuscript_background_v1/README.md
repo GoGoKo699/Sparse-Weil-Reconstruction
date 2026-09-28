@@ -15,9 +15,9 @@ separate computational task.
 
 The literature already supplies full-sequence uniqueness results, finite
 generic determination bounds, all-field consecutive-count reconstruction, and
-efficient first-$g$ reconstruction in a large-field regime. The main candidate
+efficient first-$`g`$ reconstruction in a large-field regime. The main candidate
 contribution here is the **quadratic sufficient field-size threshold** for
-first-$g$ reconstruction, with deterministic polynomial bit time. The selected
+first-$`g`$ reconstruction, with deterministic polynomial bit time. The selected
 all-field schedule is a complementary refinement of existing machinery.
 The comparison must keep the input class, indices, threshold, and computational
 model together; query count alone does not describe the result.
@@ -44,9 +44,9 @@ was read. Sources are linked, not copied into the repository.
 
 | Eventual manuscript component | Canonical material already present |
 |---|---|
-| Exact input model and main theorem | [First-$g$ theorem, Section 1](../first_g_reconstruction_v1/THEOREM.md#1-theorem-and-exact-promises) |
-| Contraction, finite precision, rational algorithm, and bit bounds | [First-$g$ theorem, Sections 2–9](../first_g_reconstruction_v1/THEOREM.md) |
-| Complementary all-field theorem | [Note 28](../../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and [proof/complexity audit](../../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
+| Exact input model and main theorem | [First-$`g`$ theorem, Section 1](../first_g_reconstruction_v1/THEOREM.md#1-theorem-and-exact-promises) |
+| Contraction, finite precision, rational algorithm, and bit bounds | [First-$`g`$ theorem, Sections 2–9](../first_g_reconstruction_v1/THEOREM.md) |
+| Complementary all-field theorem | [Proof and bit complexity](../../docs/ALL_FIELD_PROOF.md), with links to the preserved records |
 | Geometric corollaries and exact output-size boundary | [Finite-field application](../finite_field_application_v1/COROLLARIES.md) |
 | Evidence and limitations of internal verification | [Consolidation audit](../consolidation_v1/AUDIT.md) and the three experiment directories linked from the [root README](../../README.md#read-and-reproduce) |
 | Restricted limitation of the current norm argument | [Method boundary](../consolidation_v1/METHOD_BOUNDARY.md) |

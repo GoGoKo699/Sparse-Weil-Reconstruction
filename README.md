@@ -18,7 +18,7 @@ in deterministic polynomial bit time.
 |---|---|---|
 | 5 minutes | This page | Problem and two guarantees |
 | About 30 minutes | [Galbraith reading guide](docs/READING_GUIDE.md) | Objects, examples, and proof ideas |
-| Full study | [First-g proof](research/first_g_reconstruction_v1/THEOREM.md) · [All-field proof](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) | Estimates, exact rounding, and bit complexity |
+| Full study | [First-g proof](research/first_g_reconstruction_v1/THEOREM.md) · [All-field proof](docs/ALL_FIELD_PROOF.md) | Estimates, exact rounding, and bit complexity |
 
 **Galbraith is the primary teaching anchor.** Begin with the
 [polynomial and its counts](docs/TUTORIAL.md), then follow
@@ -116,8 +116,8 @@ mixtures. A uniform tail bound permits exact coefficient rounding, and two
 endpoint equations complete the polynomial. This refines Kedlaya's
 reconstruction framework, with the endpoint precedents recorded in the
 [background comparison](research/manuscript_background_v1/WEIL_RECONSTRUCTION.md).
-The [proof](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and
-[bit-complexity audit](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md)
+The [proof](docs/ALL_FIELD_PROOF.md) and
+[bit-complexity argument](docs/ALL_FIELD_PROOF.md#6-explicit-numerical-bit-complexity-audit)
 give the complete argument.
 
 Both regimes recover $`P`$ in deterministic time polynomial in $`g`$ and
@@ -159,8 +159,8 @@ For import integrity alone, use `python3 verify.py --integrity-only`.
 | Scientific material | Entry point |
 |---|---|
 | Teaching path and source locations | [Reading guide](docs/READING_GUIDE.md) · [Source map](docs/SOURCES.md) |
-| Exact implementations and controls | [First-g experiment](experiments/first_g_reconstruction_v1/README.md) · [All-field experiment](experiments/all_field_reconstruction_v1/README.md) |
-| Irreducible control and count-corruption example | [Audit experiment](experiments/reconstruction_audit_v1/README.md) |
+| Exact implementations and controls | [First-g experiment](docs/EXPERIMENTS.md#first-g-reconstruction) · [All-field experiment](docs/EXPERIMENTS.md#all-field-reconstruction) |
+| Irreducible control and count-corruption example | [Audit experiment](docs/EXPERIMENTS.md#independent-reconstruction-audit) |
 | Claim-level citations and bibliography | [Scientific background](research/manuscript_background_v1/README.md) |
 | Mathematical checks and method boundary | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Norm-method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
 | Detailed literature comparison | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Source check](research/consolidation_v1/SOURCES.md) |
