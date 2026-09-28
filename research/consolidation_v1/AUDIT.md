@@ -66,7 +66,7 @@ For `kappa=p/r`, a fixed coefficient of degree `m` contributes at every proper
 divisor `n <= g` of `m`. Its total relative weight is bounded by
 
 ```math
-\sum_{\substack{n\mid m\\n\le g,\ n<m}}\kappa^{m-n}
+\sum_{\substack{n\mid m\\n\le g,\ n\lt m}}\kappa^{m-n}
 \le\sum_{j=\lceil m/2\rceil}^{m-1}\kappa^j
 \le\frac{\kappa}{1-\kappa}.
 ```
@@ -76,7 +76,7 @@ constants independently reproduce as
 
 ```math
 \mathrm{Lip}(H)\le\frac{65}{744},\qquad
-\mathrm{Lip}(T)\le\frac{65}{434}<\frac16.
+\mathrm{Lip}(T)\le\frac{65}{434}\lt \frac16.
 ```
 
 The exponent bound uses the promised true polynomial before invariance is

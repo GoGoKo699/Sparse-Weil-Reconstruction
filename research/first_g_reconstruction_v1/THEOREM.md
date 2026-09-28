@@ -72,7 +72,7 @@ Its inverse roots have modulus one. Thus
 ```math
 |a_j|\le {2g\choose j},\qquad
 \|F-1\|_r:=\sum_{j=1}^{2g}|a_j|r^j
-\le(1+r)^{2g}-1<\frac13.
+\le(1+r)^{2g}-1\lt \frac13.
 ```
 
 Indeed `(1+r)^(2g) <= exp(1/4) < 4/3`; the latter strict bound follows by
@@ -87,7 +87,7 @@ Let
 
 ```math
 \mathcal A_r=\left\{H(z)=\sum_{m\ge0}h_mz^m:
-                    \|H\|_r=\sum_{m\ge0}|h_m|r^m<\infty\right\}.
+                    \|H\|_r=\sum_{m\ge0}|h_m|r^m\lt \infty\right\}.
 ```
 
 This is a commutative Banach algebra, and its norm is submultiplicative.
@@ -119,7 +119,7 @@ For `a in B`,
 \|F_a-1\|_r
 &\le(1+r^2)\|a\|_r+r^{2g}\\
 &\le\frac{65}{128}+\frac1{64}
- =\frac{67}{128}<\frac58.
+ =\frac{67}{128}\lt \frac58.
 \end{split}
 ```
 
@@ -150,7 +150,7 @@ For `a,b in B`, telescoping the powers gives
 Also
 
 ```math
-\|\log F_a\|_r\le\log(8/3)<1.
+\|\log F_a\|_r\le\log(8/3)\lt 1.
 ```
 
 The final strict inequality follows, for example, from
@@ -223,7 +223,7 @@ For a fixed `m>=2`, each contributing `n` is a proper divisor of `m`, with
 \begin{split}
 \|AH\|_r
 &\le\sum_{m\ge2}|h_m|r^m
-       \sum_{\substack{n\mid m\\1\le n\le g,\ n<m}}
+       \sum_{\substack{n\mid m\\1\le n\le g,\ n\lt m}}
                     \kappa^{m-n}\\
 &\le\sum_{m\ge2}|h_m|r^m
        \sum_{n=1}^{\lfloor m/2\rfloor}\kappa^{m-n}\\
@@ -285,22 +285,22 @@ Also
 \begin{split}
 \|H_a-\pi_g\log F_{a_*}\|_r
 &\le\frac{65}{744}\|a-a_*\|_r\\
-&<\frac{65}{744}\left(\frac12+\frac13\right)
-=\frac{325}{4464}<\frac18.
+&\lt \frac{65}{744}\left(\frac12+\frac13\right)
+=\frac{325}{4464}\lt \frac18.
 \end{split}
 ```
 
 The true-polynomial bound from Section 2 gives
 
 ```math
-\|\pi_g\log F_{a_*}\|_r<\log(3/2).
+\|\pi_g\log F_{a_*}\|_r\lt \log(3/2).
 ```
 
 Consequently every `H_a`, for `a in B`, has norm less than
 `log(3/2)+1/8`. Its exponential norm is at most
 
 ```math
-\frac32e^{1/8}<\frac32\frac{1}{1-1/8}=\frac{12}{7}.
+\frac32e^{1/8}\lt \frac32\frac{1}{1-1/8}=\frac{12}{7}.
 ```
 
 Therefore
@@ -309,7 +309,7 @@ Therefore
 \|T(a)-T(b)\|_r
 \le\frac{12}{7}\frac{65}{744}\|a-b\|_r
 =\frac{65}{434}\|a-b\|_r
-<\frac16\|a-b\|_r.
+\lt \frac16\|a-b\|_r.
 ```
 
 This estimate is not circular: the domain bound on `H_a` used the existence
@@ -320,7 +320,7 @@ Finally
 ```math
 \|T(a)\|_r
 \le\|a_*\|_r+\frac16\|a-a_*\|_r
-<\frac13+\frac16\frac56=\frac{17}{36}<\frac12.
+\lt \frac13+\frac16\frac56=\frac{17}{36}\lt \frac12.
 ```
 
 Thus `T` maps `B` into itself and is a contraction there. Starting at zero,
@@ -392,9 +392,9 @@ of `M` give
 ```math
 \begin{split}
 \|(A-A^{(M)})\log F_a\|_r
-&<g32^{-(M+1-g)}\\
+&\lt g32^{-(M+1-g)}\\
 &\le 2^u\,2^{-(N+u+11)}
-=\theta/2048<\theta/64.
+=\theta/2048\lt \theta/64.
 \end{split}
 ```
 
@@ -406,7 +406,7 @@ The finite exponent differs from `H_a` in norm by less than `theta/32`.
 Both exponent norms are bounded above by
 
 ```math
-\log(3/2)+1/8+\theta/32<\log(3/2)+1/4.
+\log(3/2)+1/8+\theta/32\lt \log(3/2)+1/4.
 ```
 
 Their exponential Lipschitz factor is therefore less than
@@ -416,7 +416,7 @@ than `theta/16`.
 The raw-coefficient norm has weight
 
 ```math
-\rho=rp=\frac1{8g\sqrt q}<\frac18,
+\rho=rp=\frac1{8g\sqrt q}\lt \frac18,
 \qquad
 \|c\|_\rho=\sum_{j=1}^{g}|c_j|\rho^j=\|a\|_r.
 ```
@@ -426,7 +426,7 @@ norm by at most
 
 ```math
 2^{-B-1}\sum_{j=1}^{g}\rho^j
-<2^{-B}/14=\theta/448<\theta/32.
+\lt 2^{-B}/14=\theta/448\lt \theta/32.
 ```
 
 Thus the entire finite step, including quantization, differs from its exact
@@ -450,9 +450,9 @@ After `I=N` steps,
 ```math
 \begin{split}
 \|\widehat a^{(N)}-a_*\|_r
-&<\frac13 6^{-N}+\frac65\theta\\
+&\lt \frac13 6^{-N}+\frac65\theta\\
 &\le\frac13\theta+\frac65\theta
-=\frac{23}{15}\theta<2\theta.
+=\frac{23}{15}\theta\lt 2\theta.
 \end{split}
 ```
 
@@ -545,7 +545,7 @@ is polynomial in `g` and `log q`.
 The Weil bound gives
 
 ```math
-0<K_n\le(q^{n/2}+1)^{2g}\le2^{2g}q^{gn}.
+0\lt K_n\le(q^{n/2}+1)^{2g}\le2^{2g}q^{gn}.
 ```
 
 Thus each requested integer has `O(g^2 b)` bits and the complete transcript has

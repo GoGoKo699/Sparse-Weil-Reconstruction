@@ -12,7 +12,7 @@ For a radius `r > 0`, use the weighted algebra
 
 ```math
 \mathcal A_r=\left\{H(z)=\sum_{m\ge0}h_mz^m:
-  \|H\|_r=\sum_{m\ge0}|h_m|r^m<\infty\right\}.
+  \|H\|_r=\sum_{m\ge0}|h_m|r^m\lt \infty\right\}.
 ```
 
 Suppose both conditions hold:

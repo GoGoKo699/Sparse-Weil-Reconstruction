@@ -50,7 +50,7 @@ $`P_A`$ in time polynomial in $`g`$ and $`\log q`$:
 | Regime | Supplied indices | Number of supplied values |
 |---|---|---:|
 | $`g\ge1`$, $`q\ge65{,}536g^2`$ | $`1,\ldots,g`$ | $`g`$ |
-| $`g\ge32`$, every prime-power $`q`$ | $`D_{g-2}=\{1,\ldots,g-2\}\cup\{2,4,\ldots,2g-4\}`$ | $`g-2+\lceil(g-2)/2\rceil<2g`$ |
+| $`g\ge32`$, every prime-power $`q`$ | $`D_{g-2}=\{1,\ldots,g-2\}\cup\{2,4,\ldots,2g-4\}`$ | $`g-2+\lceil(g-2)/2\rceil\lt 2g`$ |
 
 **Proof.** Substitute the displayed Frobenius properties and cardinality
 identity into the [first-$`g`$ theorem](../first_g_reconstruction_v1/THEOREM.md)

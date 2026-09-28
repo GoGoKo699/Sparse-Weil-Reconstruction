@@ -50,7 +50,7 @@ L_n=\log(K_n/q^{gn})
    =-\sum_{k\ge1}\frac{s_{nk}}{kq^{nk}}.
 ```
 
-The sum converges absolutely because $`|\alpha_i/q|=q^{-1/2}<1`$.
+The sum converges absolutely because $`|\alpha_i/q|=q^{-1/2}\lt 1`$.
 Positivity and the absence of a logarithm-branch ambiguity are established in
 the [audit](../consolidation_v1/AUDIT.md), Section 2. This distinction between
 a power sum and its mixture with higher indices is the reconstruction problem.
@@ -75,7 +75,7 @@ For $`r>0`$, the space
 
 ```math
 \mathcal A_r=\left\{\sum_{m\ge0}h_mz^m:
-               \sum_{m\ge0}|h_m|r^m<\infty\right\}
+               \sum_{m\ge0}|h_m|r^m\lt \infty\right\}
 ```
 
 is isometric to $`\ell^1`$ under $`h_m\mapsto h_mr^m`$, so it is complete.
@@ -88,7 +88,7 @@ Its Cauchy product satisfies
 ```
 
 Coefficient truncation has norm at most one. If
-$`\|U\|_r,\|V\|_r\le s<1`$, telescoping $`U^j-V^j`$ inside the logarithm
+$`\|U\|_r,\|V\|_r\le s\lt 1`$, telescoping $`U^j-V^j`$ inside the logarithm
 series gives
 
 ```math
@@ -101,7 +101,7 @@ $`\|\exp H-\exp G\|_r\le e^R\|H-G\|_r`$.
 These elementary bounds require no theorem about the roots of intermediate
 polynomials and no root-separation hypothesis.
 
-A contraction $`T`$ with factor $`0\le\lambda<1`$ on a closed invariant ball
+A contraction $`T`$ with factor $`0\le\lambda\lt 1`$ on a closed invariant ball
 has a unique fixed point: successive differences form a geometric bound,
 completeness gives a limit, continuity makes it fixed, and
 $`\|a-b\|\le\lambda\|a-b\|`$ proves uniqueness. When a true fixed point
@@ -132,8 +132,8 @@ series provide standard numerical background [BrentZimmermann2010]. The
 repository uses the following explicit specialization, whose error and operand
 sizes are proved in theorem Section 9.1 and [Note 29](../../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md), Section 3.
 
-For positive rational $`x`$, exact comparisons give $`x=2^eu`$ with $`1\le u<2`$.
-Set $`z=(u-1)/(u+1)`$, so $`0\le z<1/3`$. Then
+For positive rational $`x`$, exact comparisons give $`x=2^eu`$ with $`1\le u\lt 2`$.
+Set $`z=(u-1)/(u+1)`$, so $`0\le z\lt 1/3`$. Then
 
 ```math
 \log x=e\log2+
