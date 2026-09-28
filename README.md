@@ -2,18 +2,15 @@
 
 ### Exact reconstruction from selected extension-field counts
 
-An abelian variety's Frobenius polynomial determines its cardinalities over
-every finite extension. This project studies the reverse direction:
-**recovering that polynomial from a small set of exact cardinalities**.
+An abelian variety's Frobenius polynomial encodes its cardinalities over
+every finite extension. Sparse Weil Reconstruction asks how much of that
+data is needed to **recover the polynomial exactly**.
 
-There are two reconstruction regimes. The first uses exactly the first $`g`$
-counts under a quadratic sufficient field-size bound. The second uses a sparse
-selection of additional counts and covers every field when $`g\ge32`$.
-Both algorithms have deterministic polynomial bit complexity.
-
-<p align="center">
-  <img src="assets/reconstruction-map.svg" width="840" alt="Two reconstruction routes for promised integral reciprocal Weil polynomials: first-g counts for g at least 1 and q at least 65,536 g squared, or the selected set D_(g-2) for g at least 32 and every integer q at least 2. Both recover all polynomial coefficients in deterministic polynomial bit time." />
-</p>
+The project gives two complementary guarantees. In dimension $`g`$, the first
+$`g`$ cardinalities suffice when the field size meets an explicit quadratic
+bound in $`g`$. For $`g\ge32`$, a selected set of fewer than $`2g`$ cardinalities
+suffices over every finite field. Both algorithms recover every coefficient
+in deterministic polynomial bit time.
 
 ## Read the repository in three passes
 
@@ -182,7 +179,7 @@ When citing a result or computation, include the repository commit and the
 specific theorem or experiment path. The [release check](docs/RELEASE_CHECK.md)
 records the scope and results of the pre-release audit.
 
-## Scope and provenance
+## Scope
 
 The theorems assume the supplied counts are correct. Count acquisition and
 authentication are separate tasks; successful decoding alone does not verify
@@ -196,10 +193,7 @@ and the selected-data all-field refinement. The
 records the inspected predecessors and search limits. Optimal thresholds and
 minimum query counts remain open in the general setting studied here.
 
-This classical reconstruction project originated in
-[Quantum Assisted Algorithm Discovery](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery).
-The imported theorem, audit, implementation, and reports are preserved byte
-for byte. Versioned notes describe their own checkpoints; this overview,
+Versioned research notes describe their own checkpoints; this overview,
 [STATUS.md](STATUS.md), and the [work order](work_orders/CURRENT.md) describe
 the current project.
 
