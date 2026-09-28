@@ -1,5 +1,7 @@
 # Teaching anchors and passage map
 
+[← Comparison](COMPARISON.md) · [Reading guide](READING_GUIDE.md) · [Overview →](../README.md)
+
 Checked 28 September 2026. The guide uses Galbraith as its primary textbook
 and Chidambaram–Keller as the secondary research anchor. The existing
 [scientific bibliography](../research/manuscript_background_v1/REFERENCES.bib)
@@ -42,7 +44,7 @@ Citation key: `ChidambaramKeller2026`.
 
 | Passage inspected | Use in the comparison |
 |---|---|
-| Theorem 1.1 | First-$g$ determination and the stated sufficient threshold |
+| Theorem 1.1 | First-$`g`$ determination and the stated sufficient threshold |
 | §2 | Reciprocity, Weil bounds, integrality, and Newton identities |
 | §3 | Supplied counts as logarithmic mixtures of inverse power sums |
 | §§4–6 | Reconstruction argument and polynomial bit complexity |
@@ -58,8 +60,8 @@ infer a new revision from the HTML date.
 
 | Exposition | Canonical mathematical source |
 |---|---|
-| Coefficient contraction, its invariant domain, and quadratic sufficient threshold | [First-$g$ theorem, §§1–5](../research/first_g_reconstruction_v1/THEOREM.md) |
-| Truncation, logarithm error, quantization, exact rounding, and polynomial bit time | [First-$g$ theorem, §§6–9](../research/first_g_reconstruction_v1/THEOREM.md) |
+| Coefficient contraction, its invariant domain, and quadratic sufficient threshold | [First-$`g`$ theorem, §§1–5](../research/first_g_reconstruction_v1/THEOREM.md) |
+| Truncation, logarithm error, quantization, exact rounding, and polynomial bit time | [First-$`g`$ theorem, §§6–9](../research/first_g_reconstruction_v1/THEOREM.md) |
 | Sparse selected indices and uniform all-field tail bound | [Note 28](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and [Note 29](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
 | Geometric applications and compact-output distinction | [Finite-field corollaries](../research/finite_field_application_v1/COROLLARIES.md) |
 
@@ -68,4 +70,6 @@ attributed in the [existing source comparison](../research/manuscript_background
 They support the literature record without becoming additional required
 teaching anchors. Primary papers and book chapters are linked, not redistributed.
 
-[Return to the reading guide](READING_GUIDE.md).
+---
+
+[← Comparison](COMPARISON.md) · [Reading guide](READING_GUIDE.md) · [Overview →](../README.md)
