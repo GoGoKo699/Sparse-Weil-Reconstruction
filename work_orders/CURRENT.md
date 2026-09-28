@@ -1,4 +1,4 @@
-# Current scope: reconstruction and reader preparation
+# Current scope: release readiness and reader preparation
 
 Read README.md, STATUS.md, PROVENANCE.md, and
 `research/consolidation_v1/AUDIT.md`, and
@@ -9,49 +9,21 @@ The source-supported background starts at
 `research/manuscript_background_v1/README.md`.
 Manuscript preparation remains on hold.
 
-## Scientific checkpoint
+## Current checkpoint
 
-The first-g theorem supplies a quadratic sufficient field-size threshold,
-`q >= 65536*g^2`, with a finite rational decoder and polynomial bit time.
-The preserved selected-data theorem works over every field for `g >= 32`.
-The fresh internal mathematical and implementation audits found no substantive
-gap. All three pinned research reports reproduce.
+[STATUS](../STATUS.md) is the current scientific index; the
+[release check](../docs/RELEASE_CHECK.md) records the latest audit.
+The two reconstruction guarantees have written proofs, internal mathematical
+and implementation audits, finite-field corollaries, source-supported
+background, and exact executable evidence. Retain their regimes and limitations
+when describing either result.
 
-The focused source comparison found no inspected result subsuming the quadratic
-guarantee. It includes the closest predecessor's polynomial-time algorithm and
-its suggested superpolynomial threshold refinement. Search and access limits
-are recorded; this is not universal priority certification.
+The [method boundary](../research/consolidation_v1/METHOD_BOUNDARY.md) closes
+the previous bounded extension question for the present whole-algebra,
+single-radius norm argument. It is neither a reconstruction lower bound nor
+a failure result for the actual iteration.
 
-The previous bounded extension question is closed by
-`research/consolidation_v1/METHOD_BOUNDARY.md`: the present whole-algebra,
-single-radius small-norm proof cannot reach a subquadratic field-size regime.
-The note proves neither a necessary threshold for reconstruction nor failure
-of the actual iteration. No consequential extension was obtained in this pass.
-
-The finite-field application pass is also complete. It verifies both theorem
-hypotheses for general abelian varieties, states the Jacobian-to-curve-zeta
-corollary, and separates compact Frobenius reconstruction from exponentially
-large expanded abelian-variety zeta output. Ordinary curve point counts remain
-a distinct input problem with the standard Newton reconstruction. These are
-application clarifications, not another novelty claim. No decoder, pinned
-report, or threshold changed.
-
-The manuscript background pass is complete: foundations, matched Weil
-reconstruction theorems, generic cyclic-resultant results, algorithmic methods,
-and claim-level citations are integrated with a reusable bibliography. The
-source record distinguishes primary-text inspection from metadata-only
-historical references. The remaining historical access gaps do not leave a
-used mathematical dependency unsupported. No additional matched competitor
-was found in the bounded search. This does not assert exhaustive priority.
-
-## Teaching checkpoint
-
-The repository now has a Galbraith-led reading path with a notation map,
-worked algebraic examples, self-checks, and a bridge to the two proofs.
-`docs/COMPARISON.md` explains the shared first-g problem, the change from
-successive power-sum recovery to simultaneous coefficient correction, and
-the resulting quadratic sufficient field-size bound. It credits the
-predecessor's polynomial bit complexity and contraction estimates.
+## Reader and discovery guidance
 
 Use the author's online Galbraith numbering and the pinned Chidambaram–Keller
 v2 PDF. Keep the textbook and research reading roles clear. The comparison
@@ -62,15 +34,16 @@ inline formulas when editing the teaching pages. Keep comparison tables
 compact and preserve the diagram's exact regime labels. Canonical versioned
 proofs and imported evidence retain their original formatting.
 
+Keep [llms.txt](../llms.txt) aligned with canonical proofs and current file
+paths. It supplies retrieval context, not an indexing guarantee or additional
+theorem. [CITATION.cff](../CITATION.cff) describes the repository; do not invent
+a publication, DOI, version, or release date.
+
 ## Next work
 
-The scientific package is complete within its stated scope at the level of
-written proofs, internal audit, explicit application, scientific background,
-and executable evidence. Consolidation should lead with the quadratic-threshold
-theorem and retain the all-field result as the complementary regime. The
-teaching path and background package now supply the reader preparation,
-citations, and attribution for future writing. Manuscript drafting waits for
-the user's instruction.
+Lead with the quadratic-threshold first-g theorem and retain the all-field
+result as the complementary regime. Manuscript drafting waits for the user's
+instruction.
 
 Reopen scientific work when there is a concrete correctness concern, a
 competing primary theorem, or a clearly consequential extension. Do not

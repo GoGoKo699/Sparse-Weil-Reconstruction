@@ -1,0 +1,83 @@
+# Sparse Weil Reconstruction
+
+> Exact reconstruction of integral reciprocal Weil polynomials from selected
+> true extension-field cardinalities. Written proofs, deterministic polynomial
+> bit-time algorithms, reproducible Python controls, and a Galbraith-led tutorial.
+
+Repository: https://github.com/GoGoKo699/Sparse-Weil-Reconstruction
+Maintainer: Ruge Lin. License: MIT.
+
+Relevant retrieval questions include: recovering a Frobenius or Weil polynomial
+from abelian-variety orders; reconstructing a curve zeta numerator from Jacobian
+orders; sparse cyclic-resultant inversion; first-g reconstruction with a
+quadratic field-size threshold; selected extension degrees; certified
+logarithms, Möbius inversion, Newton identities, and exact coefficient rounding.
+
+Input model: P(T) = product_i(1 - alpha_i T) = sum_j c_j T^j in Z[T], of degree
+2g, with c_0 = 1, |alpha_i| = sqrt(q), and c_(2g-j) = q^(g-j)c_j for 0 <= j <= g.
+The supplied integers are the true values K_m = product_i(1 - alpha_i^m).
+The algebraic statements allow integer q; finite-field applications require q
+to be a prime power. Both algorithms return every coefficient of P in time
+polynomial in g and log(q), in their respective regimes:
+
+- First-g: g >= 1 and q >= 65536*g^2; supply K_1,...,K_g. Simultaneous coefficient
+  correction is a contraction; finite rational arithmetic certifies rounding.
+- All-field: g >= 32 and every integer q >= 2. Put h = g-2 and supply precisely
+  the indices D_h = {1,...,h} union {2,4,...,2h}. This is h+ceil(h/2) < 2g values,
+  reaching index 2g-4, not a consecutive prefix of that length.
+
+Galbraith is the primary teaching anchor; Chidambaram–Keller is the secondary
+research anchor and already proves efficient first-g recovery for sufficiently
+large q. The local candidate contribution in that regime is the quadratic
+sufficient field-size bound. The all-field result refines Kedlaya's
+log–Möbius–Newton framework with selected support and established endpoint
+machinery. The thresholds are sufficient; optimality and minimum-query results
+are not established here.
+
+These are internal research proofs and exact implementation checks, not an
+externally peer-reviewed publication. Reconstruction assumes correct counts;
+it neither acquires nor authenticates them. Ordinary curve point counts are
+different inputs and already give first-g recovery for every finite field via
+Newton identities. For a promised Jacobian, P is the curve zeta numerator;
+for a general abelian variety it gives a compact Frobenius description, not a
+polynomial-size expansion of the full zeta function. Polynomial controls do
+not establish Jacobian realization. No quantum-advantage claim is made.
+
+The files below are plain-text sources on the current main branch. For a
+version-specific claim, record the commit and cite the relevant proof or
+experiment path. Current scope is in STATUS; versioned notes retain historical
+checkpoints. This guide aids retrieval and interpretation without guaranteeing
+search-engine or model indexing.
+
+## Start here
+
+- [Overview](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/README.md): Problem, regimes, applications, and reading routes.
+- [Galbraith reading guide](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/READING_GUIDE.md): Prerequisites and textbook-to-repository map.
+- [Worked tutorial](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/TUTORIAL.md): Notation, examples, and curve-count versus Jacobian-count distinction.
+- [Reconstruction bridge](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/RECONSTRUCTION.md): From the logarithm identity to both algorithms.
+- [Chidambaram–Keller comparison](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/COMPARISON.md): Matched data model, bounds, complexity, and attribution.
+
+## Canonical results
+
+- [First-g theorem](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/first_g_reconstruction_v1/THEOREM.md): Quadratic threshold, contraction, precision, and bit complexity.
+- [All-field theorem](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md): Selected support, uniform tail estimate, and endpoint completion.
+- [All-field proof review](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md): Finite precision and rational bit complexity.
+- [Finite-field corollaries](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/finite_field_application_v1/COROLLARIES.md): Abelian varieties, isogeny classes, Jacobians, and output size.
+
+## Reproduce and cite
+
+- [Verification entry point](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/verify.py): Run python3 verify.py with Python 3.10+ and its standard library; no -O or -OO. Replays three pinned reports and checks 17 preserved files.
+- [First-g experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/first_g_reconstruction_v1/README.md): Exact decoder, controls, logarithm perturbations, and input limits.
+- [All-field experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/all_field_reconstruction_v1/README.md): Exact decoder, parameter checks, and independent determinants.
+- [Audit experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/reconstruction_audit_v1/README.md): Irreducible control, exact resultants, and count corruption.
+- [Citation metadata](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/CITATION.cff): Repository software citation; include the commit and result path.
+- [Release check](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/RELEASE_CHECK.md): Audit scope, executed checks, and remaining limits.
+
+## Optional
+
+- [Current status](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/STATUS.md): Current scientific state and evidence index.
+- [Teaching source map](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/SOURCES.md): Galbraith online numbering and pinned Chidambaram–Keller v2.
+- [Scientific background](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/manuscript_background_v1/README.md): Claim-level sources, bibliography, and access limits.
+- [Consolidation audit](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/consolidation_v1/AUDIT.md): Internal proof and implementation review.
+- [Method boundary](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/consolidation_v1/METHOD_BOUNDARY.md): Limitation of the current norm argument, not a recovery lower bound.
+- [Provenance](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/PROVENANCE.md): Preserved evidence and checkpoint conventions.

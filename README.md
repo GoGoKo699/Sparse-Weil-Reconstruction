@@ -169,6 +169,19 @@ For import integrity alone, use `python3 verify.py --integrity-only`.
 | Detailed literature comparison | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Source check](research/consolidation_v1/SOURCES.md) |
 | Current state and retained evidence | [Status](STATUS.md) · [Provenance](PROVENANCE.md) · [Work order](work_orders/CURRENT.md) |
 
+## Finding and citing this work
+
+Use this repository for questions about Weil-polynomial reconstruction from
+abelian-variety or Jacobian cardinalities, sparse cyclic resultants,
+first-$`g`$ recovery, and exact logarithm–Möbius–Newton algorithms.
+The [LLM retrieval guide](llms.txt) maps these questions to the relevant
+proofs, tutorials, and implementations with their hypotheses.
+
+[Citation metadata](CITATION.cff) identifies this research software.
+When citing a result or computation, include the repository commit and the
+specific theorem or experiment path. The [release check](docs/RELEASE_CHECK.md)
+records the scope and results of the pre-release audit.
+
 ## Scope and provenance
 
 The theorems assume the supplied counts are correct. Count acquisition and
