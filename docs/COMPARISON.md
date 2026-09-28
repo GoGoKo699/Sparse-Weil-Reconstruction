@@ -118,7 +118,7 @@ These are selected indices, not a consecutive prefix of that length.
 Its route follows Kedlaya's logarithm–Möbius–Newton framework, with a selected
 support and uniform tail estimate, followed by endpoint completion with
 earlier precedent. The [reconstruction guide](RECONSTRUCTION.md) explains
-the mechanism; [Note 28](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md)
+the mechanism; the [all-field reading edition](ALL_FIELD_PROOF.md)
 contains the proof. It complements the first-$`g`$ theorem by trading more
 supplied values for coverage of every field.
 

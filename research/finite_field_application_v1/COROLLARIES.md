@@ -54,7 +54,7 @@ $`P_A`$ in time polynomial in $`g`$ and $`\log q`$:
 
 **Proof.** Substitute the displayed Frobenius properties and cardinality
 identity into the [first-$`g`$ theorem](../first_g_reconstruction_v1/THEOREM.md)
-or the [preserved all-field theorem](../../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md).
+or the [all-field proof](../../docs/ALL_FIELD_PROOF.md).
 Their supplied indices, hypotheses, and bit-complexity conclusions apply
 without alteration. In the second regime the largest supplied index is
 $`2g-4`$. Unlike the abstract algebraic theorems, this geometric application

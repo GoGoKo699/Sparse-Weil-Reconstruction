@@ -18,7 +18,7 @@ in deterministic polynomial bit time.
 |---|---|---|
 | 5 minutes | This page | Problem and two guarantees |
 | About 30 minutes | [Galbraith reading guide](docs/READING_GUIDE.md) | Objects, examples, and proof ideas |
-| Full study | [First-g proof](research/first_g_reconstruction_v1/THEOREM.md) · [All-field proof](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) | Estimates, exact rounding, and bit complexity |
+| Full study | [First-g proof](research/first_g_reconstruction_v1/THEOREM.md) · [All-field proof](docs/ALL_FIELD_PROOF.md) | Estimates, exact rounding, and bit complexity |
 
 **Galbraith is the primary teaching anchor.** Begin with the
 [polynomial and its counts](docs/TUTORIAL.md), then follow
@@ -116,8 +116,8 @@ mixtures. A uniform tail bound permits exact coefficient rounding, and two
 endpoint equations complete the polynomial. This refines Kedlaya's
 reconstruction framework, with the endpoint precedents recorded in the
 [background comparison](research/manuscript_background_v1/WEIL_RECONSTRUCTION.md).
-The [proof](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and
-[bit-complexity audit](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md)
+The [proof](docs/ALL_FIELD_PROOF.md) and
+[bit-complexity argument](docs/ALL_FIELD_PROOF.md#6-explicit-numerical-bit-complexity-audit)
 give the complete argument.
 
 Both regimes recover $`P`$ in deterministic time polynomial in $`g`$ and

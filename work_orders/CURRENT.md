@@ -30,7 +30,11 @@ v2 PDF. Keep the textbook and research reading roles clear. The comparison
 should explain the mathematical progression in neutral terms. New exposition
 must agree with the canonical promises, signs, and precision bounds.
 Use GitHub math fences for display equations and protected inline formulas in
-teaching and research notes. Keep comparison tables
+teaching and research notes. Typeset mathematical symbols in prose as math;
+reserve code spans for executable syntax, identifiers, paths, and recorded hashes.
+The [all-field reading edition](../docs/ALL_FIELD_PROOF.md) presents the preserved
+proof and its bit-complexity argument with consistent mathematical notation.
+Keep comparison tables
 compact and introduce the two reconstruction regimes in prose with their exact
 conditions. Formatting repairs must preserve mathematical content; retain the
 17 manifest-pinned baseline files byte for byte and keep dated verification

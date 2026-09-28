@@ -102,7 +102,7 @@ Kedlaya's earlier reconstruction framework.
 |---|---|
 | The coefficient correction and its fixed point | [First-$`g`$ theorem, §§2–5](../research/first_g_reconstruction_v1/THEOREM.md) |
 | Why an approximation can determine an integer exactly | [Finite precision and rational implementation, §§6–9](../research/first_g_reconstruction_v1/THEOREM.md) |
-| Cancellation using selected extension degrees | [All-field proof](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and [complexity audit](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
+| Cancellation using selected extension degrees | [All-field proof](ALL_FIELD_PROOF.md) and [bit complexity](ALL_FIELD_PROOF.md#6-explicit-numerical-bit-complexity-audit) |
 | What the recovered polynomial says about a variety | [Finite-field corollaries](../research/finite_field_application_v1/COROLLARIES.md) |
 | The mathematical argument and its data promises | [Exact executable controls](../experiments/first_g_reconstruction_v1/README.md) |
 

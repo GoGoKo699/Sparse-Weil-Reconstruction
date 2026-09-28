@@ -36,7 +36,7 @@ The two repository regimes should be stated alongside these comparisons:
 | Repository result | Sufficient regime | Supplied indices | Maximum index |
 |---|---|---|---:|
 | [First-$`g`$ theorem](../first_g_reconstruction_v1/THEOREM.md) | $`g\ge1`$, $`q\ge65{,}536g^2`$ | $`1,\ldots,g`$ | $`g`$ |
-| [All-field theorem](../../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) | $`g\ge32`$, $`q\ge2`$ | $`D_{g-2}=\{1,\ldots,g-2\}\cup\{2,4,\ldots,2g-4\}`$ | $`2g-4`$ |
+| [All-field theorem](../../docs/ALL_FIELD_PROOF.md) | $`g\ge32`$, $`q\ge2`$ | $`D_{g-2}=\{1,\ldots,g-2\}\cup\{2,4,\ldots,2g-4\}`$ | $`2g-4`$ |
 
 Both repository decoders have deterministic polynomial bit complexity. No
 matched running-time exponent improvement over Chidambaram–Keller is claimed.

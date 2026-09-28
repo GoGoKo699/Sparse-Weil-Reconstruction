@@ -232,7 +232,7 @@ A_n=\frac{q^n}{n}\sum_{i=1}^{k_n}\frac{\mu(i)}i L_{ni},\\
 ```
 
 The divisor identity for $`\mu`$ cancels the terms through $`k_n`$; the
-[uniform estimate](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md#3-uniform-analytic-error-proof)
+[uniform estimate](ALL_FIELD_PROOF.md#3-uniform-analytic-error-proof)
 bounds everything left. Newton identities then recover coefficients one at a
 time. Earlier coefficients and power sums are already exact, so only the new
 term needs an error allowance. A numerical error at most $`1/24`$ leaves total
@@ -250,7 +250,7 @@ The two regimes complement one another; neither threshold is asserted optimal.
 
 Continue with the [comparison to Chidambaram–Keller](COMPARISON.md), the
 [complete first-$`g`$ proof](../research/first_g_reconstruction_v1/THEOREM.md),
-or the [all-field proof audit](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md).
+or the [complete all-field proof](ALL_FIELD_PROOF.md).
 The [first-$`g`$](../experiments/first_g_reconstruction_v1/README.md) and
 [all-field](../experiments/all_field_reconstruction_v1/README.md) experiments
 reproduce exact supplied-polynomial controls. Their role is to check the

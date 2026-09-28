@@ -1,9 +1,9 @@
 # First-g contraction decoder: targeted experiment
 
 This successor experiment implements the first-g reconstruction argument for
-integral reciprocal q-Weil polynomials, under `g >= 1` and
-`q >= 65536*g*g`. It receives only `q`, `g`, and the true exact integers
-`K_1,...,K_g`. The input parameter `q` may be any integer satisfying the bound;
+integral reciprocal $`q`$-Weil polynomials, under $`g\ge1`$ and
+$`q\ge65{,}536g^2`$. It receives only $`q`$, $`g`$, and the true exact integers
+$`K_1,\ldots,K_g`$. The input parameter $`q`$ may be any integer satisfying the bound;
 the finite-field interpretation additionally requires a prime power.
 
 The formal-logarithm correction is evaluated with exact fractions, bounded
@@ -39,13 +39,13 @@ fraction-free determinants. Products of quadratic factors also have separate
 second-order count recurrences. The decoder receives none of those constructions.
 
 For the irreducible example, the real polynomial
-`x^4-x^3-4*x^2+4*x+1` has four roots in `(-2,2)`, verified by exact signs on
+$`x^4-x^3-4x^2+4x+1`$ has four roots in $`(-2,2)`$, verified by exact signs on
 four disjoint intervals. Its reduction modulo 2 has no linear or irreducible
-quadratic factor, hence is irreducible. Its q-Weil transform is irreducible
+quadratic factor, hence is irreducible. Its $`q`$-Weil transform is irreducible
 because the quadratic discriminant is negative at every real embedding.
 
 Every final unrounded coefficient differs from the known control coefficient
-by less than `1/32`, verified with exact rational arithmetic. Two legal
+by less than $`1/32`$, verified with exact rational arithmetic. Two legal
 logarithm-enclosure perturbations also recover the correct result, and seven
 malformed inputs are rejected. The alteration of one supplied count is
 accepted while retaining the original polynomial; independent resultant

@@ -3,13 +3,13 @@
 Updated 28 September 2026. Manuscript preparation remains on hold.
 
 The project now has two complementary supplied-count reconstruction guarantees.
-Both concern reciprocal integral q-Weil polynomials, true exact cyclic
+Both concern reciprocal integral $`q`$-Weil polynomials, true exact cyclic
 resultants, and deterministic polynomial bit time.
 
 | Result | Sufficient regime | Supplied indices |
 |---|---|---|
-| Preserved all-field theorem | $g\ge32$, every $q\ge2$ | $D_{g-2}$, with $g-2+\lceil(g-2)/2\rceil$ values |
-| First-$g$ companion | $g\ge1$, $q\ge65{,}536g^2$ | $1,\ldots,g$ |
+| Preserved all-field theorem | $`g\ge32`$, every $`q\ge2`$ | $`D_{g-2}`$, with $`g-2+\lceil(g-2)/2\rceil`$ values |
+| First-$`g`$ companion | $`g\ge1`$, $`q\ge65{,}536g^2`$ | $`1,\ldots,g`$ |
 
 The [companion proof](research/first_g_reconstruction_v1/THEOREM.md) establishes
 a contraction on a weighted coefficient ball and an explicit finite rational
@@ -63,7 +63,7 @@ entries; relevant primary passages were inspected for 15, while two historical
 entries retain explicit full-text access limits and supported alternative
 citations. Versions, theorem locations, and the bounded search are recorded.
 
-The comparison retains Chidambaram–Keller's existing polynomial-time first-$g$
+The comparison retains Chidambaram–Keller's existing polynomial-time first-$`g`$
 result, Bézivin's linear generic determination bound, Hillar's erratum, and the
 distinction between generic and uniform Weil reconstruction. No newly inspected
 statement subsumes the two local guarantees. This is background preparation,
@@ -93,7 +93,7 @@ The [primary-source comparison](research/contribution_assessment_v1/ASSESSMENT.m
 resolves the Chidambaram–Keller lead, includes their current v2 complexity
 statement, and adds Bézivin's generic linear bound and Hillar's erratum.
 
-First-$g$ reconstruction is already prior work for sufficiently large fields.
+First-$`g`$ reconstruction is already prior work for sufficiently large fields.
 The companion's candidate contribution is the quadratic sufficient field-size
 threshold, retaining polynomial bit time. The all-field theorem is a selected
 support refinement of Kedlaya's framework. No minimum-query theorem or blanket
