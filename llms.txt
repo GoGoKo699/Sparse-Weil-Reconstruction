@@ -67,6 +67,7 @@ search-engine or model indexing.
 
 ## Reproduce and cite
 
+- [Experiment reading guide](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/EXPERIMENTS.md): Typeset regimes, controls, reproduction commands, and links to the preserved experiment packages.
 - [Verification entry point](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/verify.py): Run python3 verify.py with Python 3.10+ and its standard library; no -O or -OO. Replays three pinned reports and checks 17 preserved files.
 - [First-g experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/first_g_reconstruction_v1/README.md): Exact decoder, controls, logarithm perturbations, and input limits.
 - [All-field experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/all_field_reconstruction_v1/README.md): Exact decoder, parameter checks, and independent determinants.

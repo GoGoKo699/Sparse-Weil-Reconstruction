@@ -251,8 +251,8 @@ The two regimes complement one another; neither threshold is asserted optimal.
 Continue with the [comparison to Chidambaram–Keller](COMPARISON.md), the
 [complete first-$`g`$ proof](../research/first_g_reconstruction_v1/THEOREM.md),
 or the [complete all-field proof](ALL_FIELD_PROOF.md).
-The [first-$`g`$](../experiments/first_g_reconstruction_v1/README.md) and
-[all-field](../experiments/all_field_reconstruction_v1/README.md) experiments
+The [first-$`g`$](EXPERIMENTS.md#first-g-reconstruction) and
+[all-field](EXPERIMENTS.md#all-field-reconstruction) experiments
 reproduce exact supplied-polynomial controls. Their role is to check the
 implementations; the proofs establish the uniform guarantees. Count acquisition,
 authentication, and realizing a test polynomial as a Jacobian remain separate

@@ -159,8 +159,8 @@ For import integrity alone, use `python3 verify.py --integrity-only`.
 | Scientific material | Entry point |
 |---|---|
 | Teaching path and source locations | [Reading guide](docs/READING_GUIDE.md) · [Source map](docs/SOURCES.md) |
-| Exact implementations and controls | [First-g experiment](experiments/first_g_reconstruction_v1/README.md) · [All-field experiment](experiments/all_field_reconstruction_v1/README.md) |
-| Irreducible control and count-corruption example | [Audit experiment](experiments/reconstruction_audit_v1/README.md) |
+| Exact implementations and controls | [First-g experiment](docs/EXPERIMENTS.md#first-g-reconstruction) · [All-field experiment](docs/EXPERIMENTS.md#all-field-reconstruction) |
+| Irreducible control and count-corruption example | [Audit experiment](docs/EXPERIMENTS.md#independent-reconstruction-audit) |
 | Claim-level citations and bibliography | [Scientific background](research/manuscript_background_v1/README.md) |
 | Mathematical checks and method boundary | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Norm-method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
 | Detailed literature comparison | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Source check](research/consolidation_v1/SOURCES.md) |

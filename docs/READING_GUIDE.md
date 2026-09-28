@@ -104,7 +104,7 @@ Kedlaya's earlier reconstruction framework.
 | Why an approximation can determine an integer exactly | [Finite precision and rational implementation, §§6–9](../research/first_g_reconstruction_v1/THEOREM.md) |
 | Cancellation using selected extension degrees | [All-field proof](ALL_FIELD_PROOF.md) and [bit complexity](ALL_FIELD_PROOF.md#6-explicit-numerical-bit-complexity-audit) |
 | What the recovered polynomial says about a variety | [Finite-field corollaries](../research/finite_field_application_v1/COROLLARIES.md) |
-| The mathematical argument and its data promises | [Exact executable controls](../experiments/first_g_reconstruction_v1/README.md) |
+| The mathematical argument and its data promises | [Exact executable controls](EXPERIMENTS.md) |
 
 The [source map](SOURCES.md) records the editions and passage locations.
 The broader [scientific background package](../research/manuscript_background_v1/README.md)

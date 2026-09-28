@@ -4,7 +4,7 @@
 
 **Theorem and status:** the proof below and its finite rational algorithm have
 passed an internal derivation and independent internal adversarial check.
-The [successor experiment](../../experiments/first_g_reconstruction_v1/README.md)
+The [successor experiment](../../docs/EXPERIMENTS.md#first-g-reconstruction)
 provides targeted exact controls. This is not external peer review or a
 proof-assistant verification; publication priority remains qualified.
 
