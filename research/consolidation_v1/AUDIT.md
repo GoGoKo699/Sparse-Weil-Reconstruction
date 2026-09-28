@@ -37,18 +37,18 @@ rather than relying on agreement of finite controls.
 
 Let `chi(X)=X^(2g)P(1/X)`. It is monic and integral, and
 
-$$
-K_n=\operatorname{Res}(\chi,X^n-1)\in\mathbb Z.
-$$
+```math
+K_n=\mathrm{Res}(\chi,X^n-1)\in\mathbb Z.
+```
 
 The sign is positive in this equality because the degree is even. Reciprocity
 gives the inverse-root multiset identity
 `{alpha_i}={q/alpha_i}` and the product `prod alpha_i=q^g`. For the true
 normalized polynomial `F(z)=P(z/sqrt(q))` and `p=q^(-1/2)`,
 
-$$
+```math
 \prod_{\zeta^n=1}F(p\zeta)=K_n/q^{gn}.
-$$
+```
 
 The convergent logarithm series has real coefficients. Pairing root-of-unity
 arguments under conjugation makes the sum of their logarithms real. Its
@@ -65,19 +65,19 @@ Lipschitz factor is at most `65/64` for `r=1/(8g)`.
 For `kappa=p/r`, a fixed coefficient of degree `m` contributes at every proper
 divisor `n <= g` of `m`. Its total relative weight is bounded by
 
-$$
+```math
 \sum_{\substack{n\mid m\\n\le g,\ n<m}}\kappa^{m-n}
 \le\sum_{j=\lceil m/2\rceil}^{m-1}\kappa^j
 \le\frac{\kappa}{1-\kappa}.
-$$
+```
 
 This checks the potentially repeated use of each coefficient. The resulting
 constants independently reproduce as
 
-$$
-\operatorname{Lip}(H)\le\frac{65}{744},\qquad
-\operatorname{Lip}(T)\le\frac{65}{434}<\frac16.
-$$
+```math
+\mathrm{Lip}(H)\le\frac{65}{744},\qquad
+\mathrm{Lip}(T)\le\frac{65}{434}<\frac16.
+```
 
 The exponent bound uses the promised true polynomial before invariance is
 asserted; the argument is not circular. The image norm is below `17/36`, inside
@@ -110,10 +110,10 @@ is handled by the pinned inherited logarithm routine.
 
 The raw exponent uses exactly
 
-$$
+```math
 Z_n=\frac{q^n}{n}\widehat L_n
  -\sum_{\substack{k\ge2\\nk\le M}}b_{nk}q^{-n(k-1)}.
-$$
+```
 
 Both formal-series recurrences match the proof. All stored low coefficients
 are quantized after every iteration; the final rounding convention is harmless
@@ -123,10 +123,10 @@ needed by the implementation.
 An explicit common denominator sharpens the bookkeeping in Section 9 without
 changing its conclusion. Write
 
-$$
-R=\operatorname{lcm}(1,\ldots,M),\qquad
+```math
+R=\mathrm{lcm}(1,\ldots,M),\qquad
 L=\texttt{log\_bits},\qquad D=2^{BM+L}R q^M.
-$$
+```
 
 Every `Z_n` has denominator dividing `D`: formal-logarithm denominators divide
 `2^(BM)R`, alias powers add denominators dividing `q^M`, and the input logarithms
