@@ -78,6 +78,10 @@ notation map, original worked examples, the logarithmic reconstruction bridge,
 and a matched comparison explaining the quadratic field-size guarantee.
 The [source map](docs/SOURCES.md) pins the teaching editions and adds a
 Galbraith BibTeX supplement to the existing scientific bibliography.
+The overview now has a diagram of the two reconstruction routes, boxed
+regimes, and a three-pass reading plan. Teaching notes use consistent
+mathematical displays and previous/next navigation; the
+[teaching check](docs/VERIFICATION.md) records presentation verification.
 
 The teaching layer links to the canonical proofs and exact experiments.
 All scientific thresholds, decoders, reference reports, and versioned

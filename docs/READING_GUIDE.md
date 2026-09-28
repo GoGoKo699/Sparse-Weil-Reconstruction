@@ -1,5 +1,7 @@
 # From Galbraith to sparse Weil reconstruction
 
+[← Overview](../README.md) · [Sources](SOURCES.md) · [Foundations →](TUTORIAL.md)
+
 The question is simple to state: **how much of a polynomial can we recover
 from a few products formed from its inverse roots?** Over a finite field,
 those products are cardinalities of an abelian variety over field extensions.
@@ -10,7 +12,7 @@ The primary teaching anchor is Steven D. Galbraith's
 Chidambaram–Keller's
 [*Point counts of abelian varieties over finite fields determining their zeta function*](https://arxiv.org/pdf/2606.28989v2)
 is the secondary anchor: it brings the reader from the textbook setting to
-the same first-$g$ reconstruction question studied here.
+the same first-$`g`$ reconstruction question studied here.
 
 ## A first visit
 
@@ -18,11 +20,11 @@ Start with the three short notes below. Together they give a roughly
 30-minute orientation; the linked textbook passages and full proofs support
 slower study afterward.
 
-| Read | Question answered |
+| Read | Takeaway |
 |---|---|
-| [1. The polynomial and its counts](TUTORIAL.md) | What are the objects, and why are curve counts and Jacobian counts different inputs? |
-| [2. From counts to coefficients](RECONSTRUCTION.md) | How do logarithms expose the unknown coefficients, and why does correction converge? |
-| [3. The step from Chidambaram–Keller](COMPARISON.md) | What is shared with the closest predecessor, and what changes in the field-size guarantee? |
+| [1. Foundations](TUTORIAL.md) | The polynomial; curve and Jacobian counts |
+| [2. Reconstruction](RECONSTRUCTION.md) | Logarithms, correction, and convergence |
+| [3. Comparison](COMPARISON.md) | The shared problem and the field-size guarantee |
 
 The first note has worked examples and short self-checks. The second explains
 the proof mechanism before its technical estimates. The third puts the
@@ -55,21 +57,33 @@ algorithm; proving those geometric theorems is a separate course of study.
 
 Our convention keeps the constant coefficient equal to one.
 
-| Object | Galbraith, online §10.7 | This repository |
+| Object | Galbraith | Here |
 |---|---|---|
-| Constant-term-one polynomial | $L(t)$ | $P(T)=\prod_i(1-\alpha_iT)$ |
-| Monic Frobenius polynomial | $P(T)$ | $\chi_A(X)=X^{2g}P(1/X)$ |
-| Ordinary curve cardinality | $\#C(\mathbb F_{q^m})$ | $N_m$ in the tutorial |
-| Jacobian cardinality | $\#\operatorname{Pic}^0_{\mathbb F_{q^m}}(C)$ | $K_m$ when the promised variety is $J_C$ |
+| Constant term one | $`L(t)`$ | $`P(T)`$ |
+| Monic polynomial | $`P(T)`$ | $`\chi_A(X)`$ |
 
-The tutorial uses $S_m=\sum_i\alpha_i^m$. Chidambaram–Keller instead use
-inverse power sums $s_m=\sum_i\alpha_i^{-m}$; reciprocity gives
-$S_m=q^m s_m$. Their $c_m$ denotes a count, which we call $K_m$;
-our $c_j$ denotes a polynomial coefficient.
+Here the two polynomial conventions are related by
+
+```math
+\begin{aligned}
+P(T)&=\prod_i(1-\alpha_iT),\\
+\chi_A(X)&=X^{2g}P(1/X).
+\end{aligned}
+```
+
+Galbraith's ordinary curve cardinality $`\#C(\mathbb F_{q^m})`$ is $`N_m`$
+in the tutorial. His Jacobian cardinality
+$`\#\operatorname{Pic}^0_{\mathbb F_{q^m}}(C)`$ is $`K_m`$ when the promised
+variety is $`J_C`$.
+
+The tutorial uses $`S_m=\sum_i\alpha_i^m`$. Chidambaram–Keller instead use
+inverse power sums $`s_m=\sum_i\alpha_i^{-m}`$; reciprocity gives
+$`S_m=q^m s_m`$. Their $`c_m`$ denotes a count, which we call $`K_m`$;
+our $`c_j`$ denotes a polynomial coefficient.
 
 In [the reconstruction note](RECONSTRUCTION.md),
-$L_m=\log(q^{gm}/K_m)$ is a logarithmic datum, not Galbraith's polynomial
-$L(t)$. The canonical first-$g$ proof uses the opposite logarithm sign and
+$`L_m=\log(q^{gm}/K_m)`$ is a logarithmic datum, not Galbraith's polynomial
+$`L(t)`$. The canonical first-$`g`$ proof uses the opposite logarithm sign and
 states that convention explicitly. This distinction is recorded beside the
 formulas, so the two derivations can be read side by side.
 
@@ -86,7 +100,7 @@ Kedlaya's earlier reconstruction framework.
 
 | Once you understand… | Continue with… |
 |---|---|
-| The coefficient correction and its fixed point | [First-$g$ theorem, §§2–5](../research/first_g_reconstruction_v1/THEOREM.md) |
+| The coefficient correction and its fixed point | [First-$`g`$ theorem, §§2–5](../research/first_g_reconstruction_v1/THEOREM.md) |
 | Why an approximation can determine an integer exactly | [Finite precision and rational implementation, §§6–9](../research/first_g_reconstruction_v1/THEOREM.md) |
 | Cancellation using selected extension degrees | [All-field proof](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and [complexity audit](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
 | What the recovered polynomial says about a variety | [Finite-field corollaries](../research/finite_field_application_v1/COROLLARIES.md) |
@@ -96,3 +110,7 @@ The [source map](SOURCES.md) records the editions and passage locations.
 The broader [scientific background package](../research/manuscript_background_v1/README.md)
 contains the claim-level citations and literature context for future writing.
 Manuscript preparation remains on hold.
+
+---
+
+[← Overview](../README.md) · [Sources](SOURCES.md) · [Foundations →](TUTORIAL.md)

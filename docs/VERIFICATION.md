@@ -35,4 +35,28 @@ These checks concern the new exposition and retained reproducibility;
 the [scientific audit](../research/consolidation_v1/AUDIT.md) records the
 proof review. Manuscript preparation remains on hold.
 
+## Presentation pass
+
+The presentation pass starts from `2a1b261262d6fa909c85057b0b78a0c4692b591e`.
+It adds the reconstruction diagram, a three-pass overview, compact reading
+navigation, and consistent GitHub mathematical displays.
+
+- All 39 pre-existing teaching display formulas were checked for equivalence
+  after removing only layout wrappers, spacing, and line breaks. Two existing
+  notation definitions were moved from a table into one additional display.
+- The six reader-facing pages converted to 295 MathML expressions without
+  parser warnings. Their 106 local links and image references, including four
+  heading anchors, resolved. The SVG parsed and was rendered at 900 and 390
+  pixels; visual inspection prompted a correction to formula spacing.
+- `python3 verify.py` passed again, reproducing all three exact reports and
+  verifying the 17-file import. The research proofs, decoders, fixtures,
+  reference reports, and versioned background remain byte-identical.
+- An independent presentation review found no scientific change or attribution
+  issue. Its endpoint-label clarification was incorporated.
+
+MathML conversion and SVG raster checks are local presentation checks.
+A whole-page browser preview was unavailable because the browser download
+endpoint returned an unavailable-site page; no live GitHub rendering check is
+claimed. The pages use GitHub-native math fences and protected inline formulas.
+
 [Return to the reading guide](READING_GUIDE.md).

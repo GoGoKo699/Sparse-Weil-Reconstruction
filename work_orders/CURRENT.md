@@ -57,6 +57,10 @@ Use the author's online Galbraith numbering and the pinned Chidambaram–Keller
 v2 PDF. Keep the textbook and research reading roles clear. The comparison
 should explain the mathematical progression in neutral terms. New exposition
 must agree with the canonical promises, signs, and precision bounds.
+Use GitHub math fences for reader-facing display equations and protected
+inline formulas when editing the teaching pages. Keep comparison tables
+compact and preserve the diagram's exact regime labels. Canonical versioned
+proofs and imported evidence retain their original formatting.
 
 ## Next work
 
