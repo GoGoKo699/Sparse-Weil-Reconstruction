@@ -1,9 +1,9 @@
 # Research continuation
 
 Read README.md, STATUS.md, PROVENANCE.md, and work_orders/CURRENT.md first.
-This repository develops classical sparse cyclic-resultant reconstruction of
-integral q-Weil polynomials. It does not inherit the parent project's quantum
-advantage objective or its publication target.
+This standalone project develops classical sparse cyclic-resultant reconstruction
+of integral q-Weil polynomials. Present its scientific question and results
+directly, with a prose introduction in the README.
 
 Preserve LICENSE and the 17 baseline files listed in
 provenance/import-manifest.json. Put substantive scientific changes in a versioned

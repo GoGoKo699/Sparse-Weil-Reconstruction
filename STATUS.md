@@ -78,9 +78,9 @@ notation map, original worked examples, the logarithmic reconstruction bridge,
 and a matched comparison explaining the quadratic field-size guarantee.
 The [source map](docs/SOURCES.md) pins the teaching editions and adds a
 Galbraith BibTeX supplement to the existing scientific bibliography.
-The overview now has a diagram of the two reconstruction routes, boxed
-regimes, and a three-pass reading plan. Teaching notes use consistent
-mathematical displays and previous/next navigation; the
+The overview introduces the two reconstruction routes in prose and provides
+their precise regimes and a three-pass reading plan. Teaching notes use
+consistent mathematical displays and previous/next navigation; the
 [teaching check](docs/VERIFICATION.md) records presentation verification.
 
 The teaching layer links to the canonical proofs and exact experiments.
@@ -105,8 +105,7 @@ guarantee. Its actual queries and access limits are recorded.
 
 The written proofs have internal mathematical checks and executable evidence.
 External peer review, publication priority, optimality, and Jacobian realizability
-of the controls remain unestablished. This is classical reconstruction research;
-no quantum-advantage claim is inherited from the parent project.
+of the controls remain unestablished. This is classical reconstruction research.
 
 ## Verification and preserved evidence
 
@@ -115,8 +114,8 @@ implementation, source, reproducibility, and presentation review. The
 [retrieval guide](llms.txt) maps relevant questions to canonical files;
 [citation metadata](CITATION.cff) identifies the repository as research software.
 
-All 17 imported files remain byte-identical to the pinned parent baseline
-`9ef56e5af6c7af452750b8cd035da6745f1d00c0`.
+All 17 baseline files remain byte-identical to the entries in the
+[preservation manifest](provenance/import-manifest.json).
 The preserved theorem, audit, fixtures, decoder, reports, and license were not
 refactored. Their exact reports reproduce.
 
@@ -130,7 +129,7 @@ report from fresh temporary storage.
 Run `python3 verify.py` for all three reports and import integrity.
 The [background receipt](research/manuscript_background_v1/VERIFICATION.json)
 records the scientific-background pass, and the [teaching check](docs/VERIFICATION.md)
-records the new exposition checks. Earlier research and handoff receipts
+records the new exposition checks. Earlier research and verification receipts
 remain at their versioned paths. No native point counter, author
 implementation, Lean proof, quantum circuit, or hardware was run.
 

@@ -31,8 +31,9 @@ should explain the mathematical progression in neutral terms. New exposition
 must agree with the canonical promises, signs, and precision bounds.
 Use GitHub math fences for reader-facing display equations and protected
 inline formulas when editing the teaching pages. Keep comparison tables
-compact and preserve the diagram's exact regime labels. Canonical versioned
-proofs and imported evidence retain their original formatting.
+compact and introduce the two reconstruction regimes in prose with their exact
+conditions. Canonical versioned proofs and imported evidence retain their
+original formatting.
 
 Keep [llms.txt](../llms.txt) aligned with canonical proofs and current file
 paths. It supplies retrieval context, not an indexing guarantee or additional
