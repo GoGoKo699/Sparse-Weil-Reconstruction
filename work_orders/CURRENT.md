@@ -29,11 +29,12 @@ Use the author's online Galbraith numbering and the pinned Chidambaram–Keller
 v2 PDF. Keep the textbook and research reading roles clear. The comparison
 should explain the mathematical progression in neutral terms. New exposition
 must agree with the canonical promises, signs, and precision bounds.
-Use GitHub math fences for reader-facing display equations and protected
-inline formulas when editing the teaching pages. Keep comparison tables
+Use GitHub math fences for display equations and protected inline formulas in
+teaching and research notes. Keep comparison tables
 compact and introduce the two reconstruction regimes in prose with their exact
-conditions. Canonical versioned proofs and imported evidence retain their
-original formatting.
+conditions. Formatting repairs must preserve mathematical content; retain the
+17 manifest-pinned baseline files byte for byte and keep dated verification
+receipts unchanged.
 
 Keep [llms.txt](../llms.txt) aligned with canonical proofs and current file
 paths. It supplies retrieval context, not an indexing guarantee or additional
