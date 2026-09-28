@@ -34,7 +34,7 @@ for reconstruction and does not show failure of the actual iteration.
 The core scientific work within the stated two-theorem scope is complete at
 the level of written proofs, internal audits, and exact reproducibility.
 No known substantive gap remains from these checks. Further threshold or query
-improvements are optional; manuscript preparation remains on hold.
+improvements are optional.
 
 ## Finite-field application checkpoint
 
@@ -85,7 +85,7 @@ mathematical displays and previous/next navigation; the
 
 The teaching layer links to the canonical proofs and exact experiments.
 All scientific thresholds, decoders, reference reports, and versioned
-background files are retained. Manuscript preparation remains on hold.
+background files are retained.
 
 ## Contribution assessment
 
@@ -109,6 +109,11 @@ of the controls remain unestablished. This is classical reconstruction research;
 no quantum-advantage claim is inherited from the parent project.
 
 ## Verification and preserved evidence
+
+The [release sanity check](docs/RELEASE_CHECK.md) records the latest proof,
+implementation, source, reproducibility, and presentation review. The
+[retrieval guide](llms.txt) maps relevant questions to canonical files;
+[citation metadata](CITATION.cff) identifies the repository as research software.
 
 All 17 imported files remain byte-identical to the pinned parent baseline
 `9ef56e5af6c7af452750b8cd035da6745f1d00c0`.

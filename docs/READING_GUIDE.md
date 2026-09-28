@@ -73,7 +73,7 @@ P(T)&=\prod_i(1-\alpha_iT),\\
 
 Galbraith's ordinary curve cardinality $`\#C(\mathbb F_{q^m})`$ is $`N_m`$
 in the tutorial. His Jacobian cardinality
-$`\#\operatorname{Pic}^0_{\mathbb F_{q^m}}(C)`$ is $`K_m`$ when the promised
+$`\#\mathrm{Pic}^0_{\mathbb F_{q^m}}(C)`$ is $`K_m`$ when the promised
 variety is $`J_C`$.
 
 The tutorial uses $`S_m=\sum_i\alpha_i^m`$. Chidambaram–Keller instead use

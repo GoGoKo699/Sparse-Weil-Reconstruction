@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: >-
+  If you use this research software, cite this repository and identify the
+  commit and the specific theorem or experiment used.
+type: software
+title: Sparse Weil Reconstruction
+authors:
+  - family-names: Lin
+    given-names: Ruge
+repository-code: https://github.com/GoGoKo699/Sparse-Weil-Reconstruction
+url: https://github.com/GoGoKo699/Sparse-Weil-Reconstruction
+license: MIT
+abstract: >-
+  Exact reconstruction of Weil polynomials from selected extension-field
+  cardinalities, with polynomial-time algorithms, proofs, reproducible
+  checks, and a Galbraith-led tutorial. The algorithms assume true exact
+  supplied counts and apply in the regimes stated in the canonical proofs.
+keywords:
+  - finite fields
+  - Weil polynomials
+  - Frobenius polynomials
+  - abelian varieties
+  - Jacobian cardinalities
+  - cyclic resultants
+  - zeta functions
+  - polynomial reconstruction
+  - computational number theory
+  - exact arithmetic
