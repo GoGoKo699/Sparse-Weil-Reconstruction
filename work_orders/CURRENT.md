@@ -1,12 +1,13 @@
-# Current scope: reconstruction, application, and manuscript background
+# Current scope: reconstruction and reader preparation
 
 Read README.md, STATUS.md, PROVENANCE.md, and
 `research/consolidation_v1/AUDIT.md`, and
 `research/finite_field_application_v1/COROLLARIES.md`.
+The reader entry point is `docs/READING_GUIDE.md`: Galbraith is the primary
+teaching anchor and Chidambaram–Keller is the secondary research anchor.
 The source-supported background starts at
 `research/manuscript_background_v1/README.md`.
 Manuscript preparation remains on hold.
-No publication target is recorded in this repository.
 
 ## Scientific checkpoint
 
@@ -43,15 +44,29 @@ historical references. The remaining historical access gaps do not leave a
 used mathematical dependency unsupported. No additional matched competitor
 was found in the bounded search. This does not assert exhaustive priority.
 
+## Teaching checkpoint
+
+The repository now has a Galbraith-led reading path with a notation map,
+worked algebraic examples, self-checks, and a bridge to the two proofs.
+`docs/COMPARISON.md` explains the shared first-g problem, the change from
+successive power-sum recovery to simultaneous coefficient correction, and
+the resulting quadratic sufficient field-size bound. It credits the
+predecessor's polynomial bit complexity and contraction estimates.
+
+Use the author's online Galbraith numbering and the pinned Chidambaram–Keller
+v2 PDF. Keep the textbook and research reading roles clear. The comparison
+should explain the mathematical progression in neutral terms. New exposition
+must agree with the canonical promises, signs, and precision bounds.
+
 ## Next work
 
 The scientific package is complete within its stated scope at the level of
 written proofs, internal audit, explicit application, scientific background,
 and executable evidence. Consolidation should lead with the quadratic-threshold
-theorem and retain the all-field result as
-the complementary regime. An additional discovery is not required before
-presentation work. The background package supplies the citation and attribution
-material for future writing; manuscript drafting waits for the user's instruction.
+theorem and retain the all-field result as the complementary regime. The
+teaching path and background package now supply the reader preparation,
+citations, and attribution for future writing. Manuscript drafting waits for
+the user's instruction.
 
 Reopen scientific work when there is a concrete correctness concern, a
 competing primary theorem, or a clearly consequential extension. Do not

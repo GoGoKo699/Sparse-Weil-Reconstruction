@@ -69,6 +69,20 @@ distinction between generic and uniform Weil reconstruction. No newly inspected
 statement subsumes the two local guarantees. This is background preparation,
 not manuscript drafting, a new theorem, or universal priority certification.
 
+## Reader preparation
+
+The [reading guide](docs/READING_GUIDE.md) now uses Galbraith's *Mathematics
+of Public Key Cryptography* as its primary teaching anchor, with
+Chidambaram–Keller as the secondary research anchor. The new notes give a
+notation map, original worked examples, the logarithmic reconstruction bridge,
+and a matched comparison explaining the quadratic field-size guarantee.
+The [source map](docs/SOURCES.md) pins the teaching editions and adds a
+Galbraith BibTeX supplement to the existing scientific bibliography.
+
+The teaching layer links to the canonical proofs and exact experiments.
+All scientific thresholds, decoders, reference reports, and versioned
+background files are retained. Manuscript preparation remains on hold.
+
 ## Contribution assessment
 
 The [primary-source comparison](research/contribution_assessment_v1/ASSESSMENT.md)
@@ -105,9 +119,10 @@ count-corruption example are retained. The new verifier reproduces its pinned
 report from fresh temporary storage.
 
 Run `python3 verify.py` for all three reports and import integrity.
-The [current receipt](research/manuscript_background_v1/VERIFICATION.json)
-records the background pass's executed checks. Earlier research and handoff
-receipts remain at their versioned paths. No native point counter, author
+The [background receipt](research/manuscript_background_v1/VERIFICATION.json)
+records the scientific-background pass, and the [teaching check](docs/VERIFICATION.md)
+records the new exposition checks. Earlier research and handoff receipts
+remain at their versioned paths. No native point counter, author
 implementation, Lean proof, quantum circuit, or hardware was run.
 
 Successful decoding is not count authentication or certification of a claimed

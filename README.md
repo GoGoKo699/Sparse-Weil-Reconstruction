@@ -1,20 +1,27 @@
 # Sparse Weil Reconstruction
 
-Exact reconstruction of integral Weil polynomials from selected cyclic-resultant values.
+Recover a finite-field arithmetic invariant from a small set of exact counts.
 
-Two deterministic polynomial-time guarantees are developed here: sparse
-reconstruction over every field for $g\ge32$, and reconstruction from the
-first $g$ values under the sufficient condition $q\ge65{,}536g^2$.
-This repository preserves the original all-field theorem, proof audit,
-implementation, and exact verification reports from the parent
-[Quantum Assisted Algorithm Discovery](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery)
-project. Its research scope is classical reconstruction theory.
+An abelian variety has a Frobenius polynomial that determines its cardinalities
+over every finite extension. This project studies the reverse direction:
+**recovering that polynomial from selected cardinalities**. Its main result
+uses the first $g$ counts when $q\ge65{,}536g^2$. A complementary sparse-count
+result works for every $q\ge2$ when $g\ge32$. Both algorithms have deterministic
+polynomial bit complexity.
+
+**Start with the [Galbraith reading guide](docs/READING_GUIDE.md).**
+It leads from textbook objects through worked examples to the reconstruction
+proofs. Chidambaram–Keller is the secondary anchor for understanding the step
+from the closest predecessor to the quadratic field-size guarantee.
+
+| Start here | Continue with |
+|---|---|
+| [The polynomial and its counts](docs/TUTORIAL.md) | Definitions, notation, and worked examples |
+| [From counts to coefficients](docs/RECONSTRUCTION.md) | Logarithms, correction, convergence, and exact rounding |
+| [The step from Chidambaram–Keller](docs/COMPARISON.md) | Shared problem, different proof, and the resulting field-size bound |
 
 **Status:** written proofs, exact executable controls, and a completed
-[internal consolidation audit](research/consolidation_v1/AUDIT.md) with no
-substantive gap found. The two-theorem research scope includes explicit
-[finite-field corollaries and output bounds](research/finite_field_application_v1/COROLLARIES.md);
-publication priority remains a bounded assessment and optimality is unproved.
+[internal consolidation audit](research/consolidation_v1/AUDIT.md).
 Manuscript preparation is on hold.
 
 ## The polynomial and supplied data
@@ -26,79 +33,75 @@ P(T)=\prod_{i=1}^{2g}(1-\alpha_iT)=\sum_{j=0}^{2g}c_jT^j\in\mathbb Z[T],
 \qquad c_0=1,
 $$
 
-where the inverse roots satisfy $|\alpha_i|=\sqrt q$ and
+where $|\alpha_i|=\sqrt q$ and
 $c_{2g-j}=q^{g-j}c_j$ for $0\le j\le g$.
-Define $K_m=\prod_i(1-\alpha_i^m)$. The inputs to each decoder are
-$q$, $g$, and the indicated **true exact integers** $K_m$.
+The decoder receives $q$, $g$, and the indicated **true exact integers**
+
+$$
+K_m=\prod_{i=1}^{2g}(1-\alpha_i^m).
+$$
+
+These are cyclic-resultant values. For an abelian variety $A/\mathbb F_q$,
+with $q$ a prime power, they are $K_m=\#A(\mathbb F_{q^m})$.
+The algebraic reconstruction theorems themselves allow every integer $q$
+in their stated regimes.
 
 | Guarantee | Sufficient regime | Supplied indices | Number of values |
 |---|---|---|---:|
-| All-field sparse reconstruction | $g\ge32$, every $q\ge2$ | $D_{g-2}$ below | $g-2+\lceil(g-2)/2\rceil$ |
 | First-$g$ reconstruction | $g\ge1$, $q\ge65{,}536g^2$ | $1,\ldots,g$ | $g$ |
+| All-field sparse reconstruction | $g\ge32$, every $q\ge2$ | $D_{g-2}$ below | $g-2+\lceil(g-2)/2\rceil$ |
 
 Both recover $P$ in deterministic time polynomial in $g$ and $\log q$.
-The constants are sufficient, not optimal. Neither decoder acquires or
-authenticates its supplied counts.
+The thresholds are sufficient bounds.
 
-### All-field sparse reconstruction
+### First-$g$ reconstruction
 
-Put $h=g-2$. The selected indices are
+Chidambaram–Keller establish efficient first-$g$ recovery for sufficiently
+large fields. Here, a contraction on weighted polynomial coefficients gives
+an explicit **quadratic sufficient field-size threshold**. The rational
+implementation uses certified logarithms, finite series, and dyadic rounding.
+
+The [method explanation](docs/RECONSTRUCTION.md) develops this idea, and the
+[comparison](docs/COMPARISON.md) shows how it connects to the predecessor's
+power-sum argument. The full [theorem and algorithm](research/first_g_reconstruction_v1/THEOREM.md)
+contain the bounds and proof of polynomial bit complexity.
+
+### Sparse reconstruction over every field
+
+Put $h=g-2$. Supply the indices
 
 $$
-D_h=\{1,\ldots,h\}\cup\{2,4,\ldots,2h\}
+D_h=\{1,\ldots,h\}\cup\{2,4,\ldots,2h\}.
 $$
 
 There are $h+\lceil h/2\rceil<2g$ values, and the largest index is $2g-4$.
+For genus 32 this means 45 counts, at indices $1,\ldots,30$ and
+$32,34,\ldots,60$. The schedule refines Kedlaya's logarithmic
+Möbius/Newton reconstruction framework, with the endpoint precedents recorded
+in the [background comparison](research/manuscript_background_v1/WEIL_RECONSTRUCTION.md).
+See the [proof](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and
+[bit-complexity audit](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md).
 
-| Genus | Supplied values | Largest index |
-|---:|---:|---:|
-| 32 | 45 | 60 |
-| 64 | 93 | 124 |
+## What the recovered polynomial tells us
 
-For genus 32 the indices are $1,\ldots,30$ and $32,34,\ldots,60$.
-They are not the first 45 indices. The threshold 32 is sufficient, not optimal.
+For an abelian variety, $P_A$ determines its $\mathbb F_q$-isogeny class.
+For a promised Jacobian $A=J_C$, it gives the curve zeta function
 
-### First-$g$ reconstruction with a quadratic field-size threshold
+$$
+Z_C(T)=\frac{P_A(T)}{(1-T)(1-qT)}.
+$$
 
-The [companion theorem](research/first_g_reconstruction_v1/THEOREM.md) uses a
-contraction on weighted polynomial coefficients to remove the higher-index
-terms from the supplied logarithms. Its rational implementation uses certified
-logarithms, finite series, and dyadic rounding; it does not compute roots or
-require exact arithmetic in $\sqrt q$.
+The inputs here count **Jacobian elements**. Ordinary curve point counts are
+a different input: their first $g$ values already recover $P_A$ over every
+finite field by Newton identities. The [worked tutorial](docs/TUTORIAL.md)
+explains this distinction.
 
-Chidambaram–Keller already prove first-$g$ reconstruction for sufficiently large
-$q$. The candidate improvement here is an explicit **quadratic sufficient
-threshold**, with polynomial bit time retained. See the
-[matched source assessment](research/contribution_assessment_v1/ASSESSMENT.md).
-This complements the all-field guarantee rather than replacing it.
-
-For an abelian variety $A/\mathbb F_q$, where $q$ is a prime power,
-$K_m=|A(\mathbb F_{q^m})|$ and the recovered $P_A$ determines its
-$\mathbb F_q$-isogeny class. For $A=J_C$, it is the numerator of the **curve**
-zeta function $Z_C(T)=P_A(T)/((1-T)(1-qT))$; the inputs count Jacobian elements.
-The first $g$ ordinary curve point counts already suffice over every finite
-field by Newton identities. The full abelian-variety zeta function is determined
-compactly by $P_A$, but its expanded numerator and denominator have exponential
-output size. See the [precise corollaries](research/finite_field_application_v1/COROLLARIES.md).
+For a general abelian variety, $P_A$ also specifies its full zeta function
+compactly; expanding that function has exponential output size. The
+[finite-field corollaries](research/finite_field_application_v1/COROLLARIES.md)
+state the exact applications and output bounds.
 
 ## Read and reproduce
-
-| Purpose | Entry point |
-|---|---|
-| Scientific background, claim-to-source map, and reusable bibliography | [Manuscript background package](research/manuscript_background_v1/README.md) |
-| Current proof, implementation, and scope audit | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Fresh source check](research/consolidation_v1/SOURCES.md) |
-| First-$g$ theorem, contraction, and finite-precision proof | [Companion theorem](research/first_g_reconstruction_v1/THEOREM.md) |
-| Rational first-$g$ decoder and exact controls | [First-$g$ experiment](experiments/first_g_reconstruction_v1/README.md) |
-| Abelian-variety/curve corollaries and exact output claims | [Finite-field application](research/finite_field_application_v1/COROLLARIES.md) |
-| Why the present norm argument has a quadratic scale | [Method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
-| Current predecessor and significance assessment | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Primary sources](research/contribution_assessment_v1/SOURCES.md) |
-| Full theorem, cancellation, uniform tail proof, and rounding | [Note 28](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) |
-| Proof audit and explicit bit complexity | [Note 29](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
-| Decoder and seven supplied-polynomial controls | [Reconstruction experiment](experiments/all_field_reconstruction_v1/README.md) |
-| Irreducible degree-64 control and accepted-corruption boundary | [Audit experiment](experiments/reconstruction_audit_v1/README.md) |
-| Preserved baseline source comparison | [Historical sources](experiments/reconstruction_audit_v1/SOURCES.md) |
-| Exact import origin and historical context | [Provenance](PROVENANCE.md) |
-| Current evidence and next research task | [Status](STATUS.md) · [Work order](work_orders/CURRENT.md) |
 
 Python 3.10 or later; standard library only:
 
@@ -106,30 +109,40 @@ Python 3.10 or later; standard library only:
 python3 verify.py
 ```
 
-This checks the 17 preserved files against their import hashes, runs both
-inherited verifiers, and checks the first-$g$ successor experiment. Each
-regenerates its exact report in temporary storage.
-Do not use `-O` or `-OO`. For import integrity alone, use
-`python3 verify.py --integrity-only`.
+This checks the 17 preserved import files and regenerates all three pinned
+research reports in temporary storage. Do not use `-O` or `-OO`.
+For import integrity alone, use `python3 verify.py --integrity-only`.
 
-## Scope and attribution
+| Scientific material | Entry point |
+|---|---|
+| Primary and secondary teaching anchors | [Reading guide](docs/READING_GUIDE.md) · [Source map](docs/SOURCES.md) |
+| First-$g$ proof and exact implementation | [Theorem](research/first_g_reconstruction_v1/THEOREM.md) · [Experiment](experiments/first_g_reconstruction_v1/README.md) |
+| All-field proof and exact implementation | [Note 28](exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) · [Note 29](exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) · [Experiment](experiments/all_field_reconstruction_v1/README.md) |
+| Irreducible control and count-corruption example | [Audit experiment](experiments/reconstruction_audit_v1/README.md) |
+| Claim-to-source map and bibliography | [Scientific background](research/manuscript_background_v1/README.md) |
+| Current mathematical checks and method boundary | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Norm-method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
+| Detailed literature assessment | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Source check](research/consolidation_v1/SOURCES.md) |
+| Project state and retained evidence | [Status](STATUS.md) · [Provenance](PROVENANCE.md) · [Work order](work_orders/CURRENT.md) |
 
-The decoder receives $q$, $g$, and the selected count map. It does not receive a
-curve equation, a twist oracle, or a factorization. It does not acquire or
-authenticate the counts. Successful decoding can accept a corrupted transcript;
-the audit retains an explicit example. Supplied test polynomials have not been
-shown to be curve Jacobians.
+## Scope and provenance
 
-Kedlaya's Möbius/Newton reconstruction framework, Sutherland's endpoint
-precedents, and Chidambaram–Keller's first-$g$ reconstruction are essential
-context. The candidate contributions are the selected-data all-field guarantee
-and the quadratic-threshold first-$g$ decoder.
-The source comparison is bounded; it does not establish publication priority.
-No quantum speedup or minimum-query theorem is claimed here.
+The theorems assume the supplied counts are correct. Count acquisition and
+authentication are separate tasks; successful decoding alone does not verify
+an input transcript. The exact controls test supplied polynomials, without
+claiming they are Jacobians of curves. The written proofs establish the
+uniform guarantees; the finite controls check their implementations.
 
-Versioned research notes, assessments, and experiment directories are retained
-as checkpoints. Their proposed next steps and verification statements refer to
-the time they were written. This README, [STATUS.md](STATUS.md), and the
-[work order](work_orders/CURRENT.md) describe the current project.
+The candidate contributions are the quadratic-threshold first-$g$ guarantee
+and the selected-data all-field refinement. The
+[literature assessment](research/contribution_assessment_v1/ASSESSMENT.md)
+records the inspected predecessors and search limits. Optimal thresholds and
+minimum query counts remain open in the general setting studied here.
+
+This classical reconstruction project originated in
+[Quantum Assisted Algorithm Discovery](https://github.com/GoGoKo699/Quantum-Assisted-Algorithm-Discovery).
+The imported theorem, audit, implementation, and reports are preserved byte
+for byte. Versioned notes describe their own checkpoints; this overview,
+[STATUS.md](STATUS.md), and the [work order](work_orders/CURRENT.md) describe
+the current project.
 
 MIT license, Copyright (c) 2026 Ruge Lin.
