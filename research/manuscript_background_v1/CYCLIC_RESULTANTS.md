@@ -6,24 +6,24 @@ and quantitative guarantees remain those in the [README](../../README.md).
 
 ## 1. Match the invariant before comparing theorems
 
-For a polynomial $f(X)=a\prod_{i=1}^{d}(X-\lambda_i)$, use the convention
+For a polynomial $`f(X)=a\prod_{i=1}^{d}(X-\lambda_i)`$, use the convention
 
-$$
-r_m(f)=\operatorname{Res}(f,X^m-1)
+```math
+r_m(f)=\mathrm{Res}(f,X^m-1)
 =a^m\prod_{i=1}^{d}(\lambda_i^m-1).
-$$
+```
 
 This is the convention in [Hillar2005] and [HillarLevine2007]. Reversing the
-arguments of a resultant can introduce $(-1)^{dm}$; changing every factor
-to $1-\lambda_i^m$ introduces $(-1)^d$. For the project's monic polynomial
+arguments of a resultant can introduce $`(-1)^{dm}`$; changing every factor
+to $`1-\lambda_i^m`$ introduces $`(-1)^d`$. For the project's monic polynomial
 
-$$
+```math
 \chi(X)=X^{2g}P(1/X)=\prod_{i=1}^{2g}(X-\alpha_i),
-$$
+```
 
-the even degree makes $r_m(\chi)=K_m$ exactly. Comparisons below concern the
-indexed sequence $(r_m)_{m\ge1}$, rather than an unordered collection of values.
-Every $K_m$ is nonzero because $|\alpha_i|=\sqrt q>1$.
+the even degree makes $`r_m(\chi)=K_m`$ exactly. Comparisons below concern the
+indexed sequence $`(r_m)_{m\ge1}`$, rather than an unordered collection of values.
+Every $`K_m`$ is nonzero because $`|\alpha_i|=\sqrt q>1`$.
 
 Three different questions must be separated:
 
@@ -41,7 +41,7 @@ repeated-root inputs and require no genericity test.
 
 **Hillar's classification.** [Hillar2005, Theorem 1.1], read with
 [HillarErratum2005], describes equal full nonzero sequences through factor
-reversal and possible powers of $X$. The correction restores a parity case for
+reversal and possible powers of $`X`$. The correction restores a parity case for
 zero-root multiplicities; the erratum states that the other results are
 unaffected. Corollaries 1.4 and 1.12 treat reciprocal-polynomial uniqueness.
 Section 5 also describes Gröbner-basis reconstruction, without the uniform
@@ -49,7 +49,7 @@ polynomial bit bound sought here.
 
 A direct consequence: for monic polynomials with all roots strictly outside the
 unit disk, no nonconstant factor can be reversed, as its roots would move inside
-the disk. Nonzero constant terms exclude powers of $X$. Full-sequence uniqueness
+the disk. Nonzero constant terms exclude powers of $`X`$. Full-sequence uniqueness
 for the project's class therefore follows without genericity. This is prior
 background, not the present finite-data contribution.
 
@@ -57,10 +57,10 @@ Primary texts: [corrected arXiv version](https://arxiv.org/pdf/math/0401220)
 and [one-page author erratum](https://qualiaphile.com/files/hillarcyclicerrata.pdf).
 
 **Finite generic bounds and recurrences.** [HillarLevine2007, Theorem 1.1]
-gives initial-segment bounds $2^{d+1}$ for generic monic degree-$d$ polynomials
-and $2\cdot3^{d/2}$ in the generic monic reciprocal even-degree case.
+gives initial-segment bounds $`2^{d+1}`$ for generic monic degree-$`d`$ polynomials
+and $`2\cdot3^{d/2}`$ in the generic monic reciprocal even-degree case.
 Theorem 1.4 supplies polynomial relations on consecutive blocks of length
-$d+1$, or $d/2+1$ in the reciprocal case. A polynomial relation is not itself
+$`d+1`$, or $`d/2+1`$ in the reciprocal case. A polynomial relation is not itself
 a single-valued update rule. Moreover, Section 4 explicitly notes that the
 short relation's coefficients depend on the unknown polynomial, whereas its
 longer determinant relation is universal. These statements do not provide
@@ -70,15 +70,15 @@ Primary text: [author-hosted paper](https://pi.math.cornell.edu/~levine/hillarle
 Theorems 1.1 and 1.4, Section 4.
 
 **A linear generic bound was already known.** [Bezivin2008, Théorème 1.3]
-proves that the first $d+1$ resultants distinguish two monic degree-$d$
+proves that the first $`d+1`$ resultants distinguish two monic degree-$`d`$
 polynomials when both root tuples belong to a suitable Zariski-open subset
-$U\subset\mathbb C^d$ and neither has a root of unity of order at most $d+1$.
+$`U\subset\mathbb C^d`$ and neither has a root of unity of order at most $`d+1`$.
 The paragraph immediately after the theorem says that the proof does not
-explicitly determine $U$, or establish coverage of every polynomial satisfying
+explicitly determine $`U`$, or establish coverage of every polynomial satisfying
 the paper's named genericity condition. This is a finite generic determination
 result, not an all-Weil decoding theorem. Proposition 2.1 converts initial
 cyclic resultants into cyclotomic-resultant data by divisor factorization;
-that conversion does not remove the restriction to $U$.
+that conversion does not remove the restriction to $`U`$.
 
 Primary text: [publisher PDF](https://www.impan.pl/shop/en/publication/transaction/download/product/83965),
 printed p. 172. The predecessor landscape must include this result; describing
@@ -90,36 +90,36 @@ incorrect.
 The following calculations apply the repository's promises; they are not new
 claims about the cited authors' results. With
 
-$$
+```math
 \widehat\chi(X)=q^{-g}\chi(\sqrt q\,X),
 \qquad \beta_i=\alpha_i/\sqrt q,
-$$
+```
 
-the polynomial $\widehat\chi$ is monic and ordinarily reciprocal. However,
+the polynomial $`\widehat\chi`$ is monic and ordinarily reciprocal. However,
 
-$$
+```math
 r_m(\widehat\chi)
 =\prod_i(\beta_i^m-1)
 =q^{-gm}\prod_i(\alpha_i^m-q^{m/2}),
-$$
+```
 
-whereas the supplied $K_m$ is $\prod_i(\alpha_i^m-1)$. Normalization changes
-the evaluation point inside every factor. It does not turn $K_m$ into the
-ordinary cyclic resultants of $\widehat\chi$ by a known scalar multiplication.
+whereas the supplied $`K_m`$ is $`\prod_i(\alpha_i^m-1)`$. Normalization changes
+the evaluation point inside every factor. It does not turn $`K_m`$ into the
+ordinary cyclic resultants of $`\widehat\chi`$ by a known scalar multiplication.
 Normalized roots can also be roots of unity: for
-$\chi(X)=(X^2+q)^g$, the normalized polynomial is $(X^2+1)^g$, so its fourth
-cyclic resultant vanishes even though the original $K_4$ does not.
+$`\chi(X)=(X^2+q)^g`$, the normalized polynomial is $`(X^2+1)^g`$, so its fourth
+cyclic resultant vanishes even though the original $`K_4`$ does not.
 
 The generic monic conditions require separate care before normalization too.
 In the distinct-subset-product setting discussed by Hillar–Levine and Bézivin,
-different subsets of roots must have different products. For $g\ge2$, the
-Weil pairing supplies two disjoint root pairs with product $q$, violating that
+different subsets of roots must have different products. For $`g\ge2`$, the
+Weil pairing supplies two disjoint root pairs with product $`q`$, violating that
 condition. The generic reciprocal class is a different parameter space; its
 results cannot be imported by ignoring the preceding change in supplied data.
 
 Consequently, the manuscript should compare the uniform finite-field results
 directly with Kedlaya and Chidambaram–Keller, while using the general literature
-to explain the history and distinctions above. The present first-$g$ guarantee
+to explain the history and distinctions above. The present first-$`g`$ guarantee
 does not establish the general reciprocal-polynomial conjecture.
 
 ## 4. Historical and adjacent sources: appropriate citation roles
@@ -153,7 +153,7 @@ Exact-title and bounded newer searches combined cyclic resultants with
 reconstruction, Weil, generic determination, and the cited authors. A newer
 primary lead, Yoshizaki's [arXiv:2503.06194v1](https://arxiv.org/html/2503.06194v1),
 was screened at its abstract, introduction, and main-statement level: its
-Theorems 3.2 and 4.4 concern $p$-adic convergence and covering-space invariants,
+Theorems 3.2 and 4.4 concern $`p`$-adic convergence and covering-space invariants,
 not a competing finite Weil reconstruction statement. No additional matching
 theorem emerged from this bounded cyclic-resultant search. That conclusion is
 not an exhaustive citation-graph, thesis, software, or unpublished-priority

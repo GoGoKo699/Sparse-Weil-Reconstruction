@@ -59,4 +59,30 @@ A whole-page browser preview was unavailable because the browser download
 endpoint returned an unavailable-site page; no live GitHub rendering check is
 claimed. The pages use GitHub-native math fences and protected inline formulas.
 
+## Research-note rendering repair
+
+28 September 2026. Baseline: `51b1f1f343a42e1102ae2f9215d03a9de6c372be`.
+
+Live GitHub inspection reproduced the cardinality-symbol failure in the
+finite-field corollaries and further failures in the first-g proof. Ordinary
+Markdown consumed TeX escapes and subscripts; the renderer also rejected
+`\operatorname` and interpreted some strict inequalities as markup.
+
+Nine research pages now use protected inline math and `math` display fences,
+`\mathrm` for the affected named operators, and `\lt` for strict inequalities.
+Independent comparison checked all 102 displays and 344 inline formulas against
+the baseline. After normalizing only these typography changes and whitespace,
+all mathematical payloads, surrounding prose, and code agree.
+
+The 17 manifest-pinned files, all experiment files, and historical JSON receipts
+remain byte-identical. The first-g theorem and application/background notes
+received formatting repairs only. Hashes in earlier receipts identify their
+dated checkpoint bytes; they have not been replaced with the reformatted hashes.
+
+`python3 verify.py` passed, including import integrity and all three exact
+reports. The corrected research pages were checked in GitHub's live renderer;
+all 446 formulas completed rendering without reported math errors. The browser
+check covers these nine pages, not every archived document. All 216 local links,
+14 heading anchors, and 21 retrieval-guide source paths resolved.
+
 [Return to the reading guide](READING_GUIDE.md).
