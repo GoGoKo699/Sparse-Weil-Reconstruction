@@ -85,4 +85,41 @@ all 446 formulas completed rendering without reported math errors. The browser
 check covers these nine pages, not every archived document. All 216 local links,
 14 heading anchors, and 21 retrieval-guide source paths resolved.
 
+## Inline notation and preserved reading editions
+
+28 September 2026. Baseline: `ed82f91e404bd2a3762bf8f66dd0b3833d009ebf`.
+
+Mathematical expressions in the first-g proof and consolidation notes now use
+protected inline math. Roots, Greek letters, subscripts, superscripts, norms,
+inequalities, and complexity expressions are typeset within the prose. Actual
+code, identifiers, paths, and recorded hashes retain code formatting. The status,
+background index, and claim map use the same inline convention.
+
+Independent review checked the 170 first-g code-span translations and the
+distinction between the coefficient ball and integer precision parameter.
+All 55 existing display formulas in that proof, and all 13 displays in the
+consolidation notes, remain byte-identical to the baseline.
+
+The [all-field reading edition](ALL_FIELD_PROOF.md) presents the complete
+mathematical argument of preserved Note 28, Sections 1–5, followed by Note 29,
+Section 3. Independent comparison checked all 22 source displays and 133 inline
+formulas. One former inline numerical error estimate is now the 23rd display.
+The edition clarifies the inverse-root terminology and Jacobian input; historical
+project context is omitted. Its mathematical hypotheses and arguments are retained.
+
+The [experiment guide](EXPERIMENTS.md) provides typeset regimes, controls, and
+reproduction commands for the three preserved experiment packages. An intermediate
+check caught the first-g experiment README's own manifest constraint; that README
+was restored before final verification. Every experiment file, all historical
+JSON receipts, and all 17 import-manifest files remain byte-identical. No expected
+report or manifest was regenerated to make a check pass.
+
+`python3 verify.py` passed on the baseline and on the final scientific content,
+reproducing all three exact reports. GitHub's live renderer completed all 538
+formulas across the eight pages with new inline notation, without reported math
+errors. A visual check confirmed the notation within proof paragraphs. All 247
+local links, 28 heading anchors, and 23 retrieval-guide source paths resolved.
+These presentation checks cover the current reading editions; preserved historical
+records retain their original formatting and verification identities.
+
 [Return to the reading guide](READING_GUIDE.md).
