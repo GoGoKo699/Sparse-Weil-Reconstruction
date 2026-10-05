@@ -1,6 +1,10 @@
 # Research status
 
-Updated 28 September 2026. Manuscript preparation remains on hold.
+Updated 5 October 2026.
+
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 The project now has two complementary supplied-count reconstruction guarantees.
 Both concern reciprocal integral $`q`$-Weil polynomials, true exact cyclic

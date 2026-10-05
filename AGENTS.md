@@ -20,7 +20,8 @@ do not prove a theorem over all genera.
 
 Attribute prior Möbius/Newton and endpoint machinery. Verify primary sources
 before strengthening novelty claims. Keep source-search limits explicit.
-Manuscript preparation remains on hold. Record concrete unresolved questions in
+Use the purpose and contact notice in README.md for current reader-facing
+project descriptions. Record concrete unresolved questions in
 the work order; avoid implementing unrelated frameworks without a research claim.
 
 Repository use does not authorize outside messages, paid computation, submissions,

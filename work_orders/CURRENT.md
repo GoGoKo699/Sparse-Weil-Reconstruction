@@ -7,7 +7,10 @@ The reader entry point is `docs/READING_GUIDE.md`: Galbraith is the primary
 teaching anchor and Chidambaram–Keller is the secondary research anchor.
 The source-supported background starts at
 `research/manuscript_background_v1/README.md`.
-Manuscript preparation remains on hold.
+
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ## Current checkpoint
 
@@ -48,8 +51,7 @@ a publication, DOI, version, or release date.
 ## Next work
 
 Lead with the quadratic-threshold first-g theorem and retain the all-field
-result as the complementary regime. Manuscript drafting waits for the user's
-instruction.
+result as the complementary regime.
 
 Reopen scientific work when there is a concrete correctness concern, a
 competing primary theorem, or a clearly consequential extension. Do not

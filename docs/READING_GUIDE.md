@@ -109,7 +109,10 @@ Kedlaya's earlier reconstruction framework.
 The [source map](SOURCES.md) records the editions and passage locations.
 The broader [scientific background package](../research/manuscript_background_v1/README.md)
 contains the claim-level citations and literature context for future writing.
-Manuscript preparation remains on hold.
+
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ---
 

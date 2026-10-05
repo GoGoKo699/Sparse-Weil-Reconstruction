@@ -30,9 +30,9 @@ method, and the resulting quadratic field-size guarantee.
 **Status:** written proofs, exact executable controls, and a completed
 [internal consolidation audit](research/consolidation_v1/AUDIT.md).
 
-**Manuscript writing is on hold.** Researchers interested in collaborating on
-this project are welcome to contact **Ruge Lin** at
-[gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ## The polynomial and supplied data
 
