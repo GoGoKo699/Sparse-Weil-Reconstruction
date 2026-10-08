@@ -1,28 +1,34 @@
-# Research continuation
+# Repository maintenance
 
-Read README.md, STATUS.md, PROVENANCE.md, and work_orders/CURRENT.md first.
-This standalone project develops classical sparse cyclic-resultant reconstruction
-of integral q-Weil polynomials. Present its scientific question and results
-directly, with a prose introduction in the README.
+This standalone project studies classical reconstruction of integral reciprocal
+Weil polynomials from supplied exact cyclic resultants. Read README.md and the
+relevant proof before editing. Galbraith is the primary teaching anchor;
+Chidambaram–Keller is the secondary research anchor.
 
-Preserve LICENSE and the 17 baseline files listed in
-provenance/import-manifest.json. Put substantive scientific changes in a versioned
-successor directory. Never overwrite reference data to obtain a passing check.
-Also retain the versioned first-g proof and experiment when developing successors.
-Run `python3 verify.py` for changes affecting the handoff or decoder, and report
-which checks actually ran. Do not use Python optimization flags.
+Present the results, methods, and reproducible examples directly. Keep progress
+reports, development history, and lists of unrelated unperformed work out of
+reader-facing documents. Use the purpose and contact notice in README.md.
 
-Keep exact input promises visible: supplied true counts, selected indices,
-q-reciprocity, integral coefficients, inverse-root modulus, and genus threshold.
-Distinguish Jacobian cardinalities from curve point counts, reconstruction from
-authentication, and polynomial-class controls from realized curves. Finite tests
-do not prove a theorem over all genera.
+Preserve the mathematical statements, source attribution, LICENSE, executable
+code, fixtures, and reference reports. Substantive scientific changes belong in
+a versioned successor. Documentation-only edits to manifest-pinned files require
+updated documentation checksums with the original identities retained. Never
+change reference outputs or weaken checks to obtain a pass.
 
-Attribute prior Möbius/Newton and endpoint machinery. Verify primary sources
-before strengthening novelty claims. Keep source-search limits explicit.
-Use the purpose and contact notice in README.md for current reader-facing
-project descriptions. Record concrete unresolved questions in
-the work order; avoid implementing unrelated frameworks without a research claim.
+Keep the exact input promises visible: true supplied counts, selected indices,
+q-reciprocity, integrality, inverse-root modulus, and genus/field thresholds.
+Distinguish Jacobian cardinalities from curve point counts and reconstruction
+from authentication. Controls are supplied polynomials; finite tests support
+implementations, while the proofs establish the uniform guarantees.
 
-Repository use does not authorize outside messages, paid computation, submissions,
-release tags, or unrelated repository changes. Follow the user's current scope.
+Use protected inline math and GitHub math fences. Retain code formatting for
+executable syntax, identifiers, paths, and hashes. Keep llms.txt and local links
+aligned with the canonical proofs and reading path. Verify primary sources
+before strengthening novelty claims; preserve material source-access limits.
+
+Run `python3 verify.py` after changes affecting proofs, documentation integrity,
+or the decoder. Do not use Python optimization flags. Check the diff and links.
+Report the checks actually executed in the pull request.
+
+Repository maintenance does not authorize outside messages, paid computation,
+submissions, release tags, or unrelated repository changes.

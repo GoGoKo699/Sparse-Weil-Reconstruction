@@ -1,9 +1,8 @@
 # Primary-source record
 
-Inspected 27 September 2026. Scope: finite supplied-count reconstruction,
-not acquisition of the counts. The sources below were opened as primary texts;
-search snippets alone were not used to decide theorem scope. This extends the
-preserved historical source lists without altering them.
+Sources inspected 27 September 2026 for reconstruction from supplied counts.
+The entries identify the versions and passages supporting the
+[sampling-schedule comparison](ASSESSMENT.md).
 
 ## Matched reconstruction statements
 
@@ -29,8 +28,7 @@ preserved historical source lists without altering them.
   and [author repository](https://github.com/TimoKellerMath/PointCountsAbelianVarieties)
   corroborate the identity. An [author-hosted PDF](https://people.math.wisc.edu/~chidambaram3/papers/PointCountsOnAbVars_ZetaFunction.pdf)
   is an older, 15-page text dated 29 June. Its different pagination and absent
-  complexity paragraph must not be used to characterize v2. No author code was
-  imported, executed, or formally checked.
+  complexity paragraph must not be used to characterize v2.
 
 - **[S09]** Andrew V. Sutherland, *A Generic Approach to Searching for Jacobians*,
   Mathematics of Computation 78 (2009), 485–507.
@@ -71,7 +69,7 @@ preserved historical source lists without altering them.
   vanish. Fried's older theorem is encountered through these accounts, not
   claimed as a newly inspected original paper.
 
-## Resolved adjacent leads
+## Related cyclic-resultant results
 
 - **[St12]** C. L. Stewart, *Exceptional units and cyclic resultants*,
   Acta Arithmetica 155.4 (2012), 407–418; DOI 10.4064/aa155-4-5.
@@ -86,35 +84,14 @@ preserved historical source lists without altering them.
   Theorems 1.1–1.3 and the introductory scope were checked. No reconstruction
   algorithm or matching sparse-data theorem is stated in those results.
 
-## Search record and limits
+## Coverage
 
-The work order's Chidambaram–Keller lead is resolved, not left as an unsupported
-bibliographic assertion. Focused author/title searches found the exact arXiv
-identifier and author materials after a broader engine query returned unrelated
-results. Several arXiv abstract/HTML opens initially failed; the primary PDF
-subsequently opened successfully. The current PDF version, not a search result's
-version/date snippet, determines the comparison.
+The comparison uses the primary statements listed above and author/title searches
+for Weil-polynomial reconstruction, first-$`g`$ recovery, polynomial field-size
+thresholds, and cyclic resultants. Its conclusions concern these inspected
+statements, rather than an exhaustive priority search.
 
-Other queries combined “Weil polynomial”, “Jacobian”, “cardinalities”,
-“reconstruction”, “cyclic resultants”, “Kedlaya”, and “fewer”, followed by exact
-author/title searches for Stewart and Bézivin. Stewart's bibliography led to
-Bézivin; the Hillar citation trail exposed the erratum. Author-hosted and
-publisher PDFs resolved both of those primary-text gaps. References discovered
-in secondary search results were used only as leads.
-
-This is not an exhaustive thesis, software, or citation-graph search. A recent
-conference-slide search hit was not used as independent theorem evidence.
-The bibliographic lead Bézivin, *Sur les résultants cycliques* (2007), DOI
-10.3792/pjaa.83.157, was identified, but primary full-text access failed at
-J-STAGE and Project Euclid; that paper is not marked fully inspected.
-No unpublished argument is excluded. No author was contacted. “Not subsumed
-by the inspected statements” is the supported conclusion; “first ever” is not.
-
-A final focused search for first-$g$ recovery with polynomial/quadratic field
-thresholds and contraction methods found no additional primary theorem with
-that guarantee. The arXiv metadata still listed CK26 v2 as current when checked.
-This bounded check also does not establish priority for the companion theorem.
-
-The citations are for reconstruction scope and comparison. They do not certify
-every proof or implementation in the cited papers. No source text or third-party
-code is copied into this repository.
+Bézivin, *Sur les résultants cycliques* (2007),
+[DOI 10.3792/pjaa.83.157](https://doi.org/10.3792/pjaa.83.157), was identified but
+its full text was inaccessible through J-STAGE and Project Euclid. It is not
+used as a fully inspected source.

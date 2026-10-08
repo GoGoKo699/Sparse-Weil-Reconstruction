@@ -1,21 +1,10 @@
-# Reconstruction theorem: proof audit and separation decision
+# Reconstruction theorem: proof and bit-complexity audit
 
-27 September 2026. Reviewed baseline: `4fc01966db525ff761fc6c1b363ef3bd9dfb1023`
-on `research/prx-quantum-phase2`.
-
-**Audit conclusion:** the Note 28 reconstruction theorem survives a fresh proof
-derivation, an explicit bit-size analysis, and an independently constructed
-irreducible-polynomial control. No change to its genus threshold, query set, or
-mathematical hypotheses is required by this audit. This is an internal mathematical
-and implementation audit, not an external peer review or a formal proof-assistant
-verification. Publication priority remains qualified by the search scope below.
-
-**Project decision:** there is now a distinct classical reconstruction-theory
-project worth separating from the parent quantum-discovery exploration. Proposed
-repository name: `Sparse-Weil-Reconstruction`. No repository has been created,
-and no other repository has been modified.
-The original quantum capability and the previously closed twist-resource
-comparison must not be recast as new consequences of this theorem.
+This internal mathematical and implementation audit checks the all-field
+reconstruction theorem by a fresh proof derivation, explicit bit-size analysis,
+and an independently constructed irreducible-polynomial control. The analysis
+supports its stated genus threshold, query set, and mathematical hypotheses.
+The source comparison and its search scope appear in Section 6.
 
 ## 1. The audited statement
 
@@ -42,11 +31,10 @@ The natural application is an unknown curve's Jacobian cardinality data, NOT
 ordinary curve point counts. Given the first g curve point counts, the usual
 Newton reconstruction is already a different, simpler input problem.
 
-The statement is about selected indices, not the first h+ceil(h/2) indices.
-It is not a minimum-query bound, a theorem for arbitrary reciprocal complex
-polynomials, or a conclusion about all-field quantum order acquisition.
+The sufficient query bound applies to the selected set D_h, rather than the
+first h+ceil(h/2) indices.
 
-## 2. Proof audit: where a failure could have occurred
+## 2. Proof audit
 
 ### Root conventions, positivity, and logarithm branches
 
@@ -111,8 +99,8 @@ $$
 All are strictly below 1/3. In the third region the remaining quantity
 7g*rho^(2(g-2)/3) decreases for g>=32: its logarithmic derivative is at most
 1/32-4/21<0, using log(7/5)>=2/7. Thus checking the three rational constants is
-not an extrapolation from finite genera. No improvement of threshold 32 is
-needed for validity, and optimizing that threshold is not the audit's objective.
+not an extrapolation from finite genera. The value 32 is a sufficient genus
+threshold.
 
 ### Exact induction rather than floating-point error propagation
 
@@ -198,15 +186,13 @@ Newton's identity. The endpoint divisions and final output are polynomial-sized.
 There are O(g^2 B) rational arithmetic operations under a loose count of all series,
 log combinations and Newton sums. Ordinary exact integer addition, multiplication,
 division and gcd on these polynomial-sized operands have polynomial bit cost.
-This proves the claimed polynomial decoder time and storage. These are upper
-bounds for an intentionally simple implementation, not new optimal arithmetic
-bounds or hardware resource estimates.
+This proves polynomial decoder time and storage for the implementation.
 
 ## 4. A structurally different, independently checked control
 
-The preceding tests supplied quadratic products and cyclotomic-shaped factors.
-To check that the decoder was not implicitly relying on their special structure,
-this audit constructs an irreducible polynomial of degree 64 at q=2, g=32.
+An irreducible polynomial of degree 64 at q=2, g=32 tests the decoder on a
+structurally different input from quadratic products and cyclotomic-shaped
+factors.
 
 Take the integer symmetric tridiagonal matrix A with off-diagonal entries 1 and
 the 32 diagonal entries recorded in CONTROL.json. Let F(Y)=det(YI-A). A standard
@@ -240,11 +226,10 @@ recovers all 65 coefficients and 30 required power sums exactly.
 
 Four further runs shift each rational logarithm centre to different edges of
 its permitted numerical enclosure while enlarging its radius accordingly. The
-output is unchanged in all four. These are tests of the error interface, not
-quantum runs or independent application samples. The log computations used at
-most 13 terms versus the proved cap 49 for this control.
+output is unchanged in all four. These test the error interface. The log
+computations used at most 13 terms versus the proved cap 49 for this control.
 
-## 5. One accepted corruption: a promise boundary, not a theorem failure
+## 5. Reconstruction and input authenticity
 
 Replacing just K_60 by K_60+1 still lets the inherited decoder return the same P.
 Its log change is too small to affect the integer rounding, and the endpoints
@@ -255,8 +240,7 @@ Thus successful reconstruction and divisibility checks are not a test of the
 input's authenticity. An optional all-query resultant replay can enforce internal
 transcript consistency; even that would not bind a transcript to a separately
 claimed curve. The theorem correctly receives TRUE values as a promise. The
-experiment does not change the theorem's statement or justify treating the decoder
-as a proof checker. This distinction must survive any future repository cleanup.
+experiment therefore distinguishes reconstruction from authentication.
 
 ## 6. Priority and significance after direct source comparison
 
@@ -277,53 +261,12 @@ integer coefficient lattice; it does not silently turn their palindromic questio
 into ours. The later preprint's use of the consecutive bound is not a priority
 certificate for our improvement.
 
-This is a bounded negative search result, not proof that no paper, thesis, source
-implementation or unpublished argument contains the statement. Some broad searches
-returned unrelated results, and two requested PDF screenshots failed; neither is
-counted as an examined predecessor. No outside researcher was contacted.
+The search is limited to the sources and access scope recorded in SOURCES.md;
+it does not establish publication priority.
 
-The defensible candidate contribution is therefore a deterministic reconstruction
-query theorem for a structured integer-polynomial class, with exact implementation
-and a comparison to the known sufficient bound. Its constants are modest, but its
-scope is unbounded in genus and includes every field size; it is not a finite
-rediscovery or an application-specific numerical example. This is enough to warrant
-a focused mathematical project, not a forecast of publication acceptance.
-
-## 7. Separation and the remaining quantum objective
-
-The proposed standalone scope is **Sparse Weil Reconstruction**: finite selected
-cyclic-resultant data, exact reconstruction, bit complexity, and transparent
-predecessor comparisons. Its starting theorem is Note 28 as audited here. It must
-not claim a new quantum speedup, solve the generic first-g+1-resultants conjecture,
-assume that arbitrary Weil polynomials are curve Jacobians, or turn consistency
-checks into order authentication.
-
-A new repository should preserve the tested Note-28 source/report and the present
-audit before any refactoring. The parent repository should retain a compact record
-of the theorem as a supporting classical component and resume its distinct question:
-what useful compact information becomes materially cheaper to acquire quantumly?
-The theorem's classical character is a reason to separate the projects, not to
-relabel it as the sought quantum advantage.
-
-No repository is created by this checkpoint. The user is asked to create
-`GoGoKo699/Sparse-Weil-Reconstruction` and provide its link; access and import
-scope will be established before modifying it. The existing authorization is
-still used only for Quantum-Assisted-Algorithm-Discovery.
-
-## 8. Execution record
-
-The five current predecessor verifiers passed unchanged from the mounted Note-28
-checkpoint. Their directory tree identities and the Note-28 live source identity
-were checked. The new standalone audit and its hash/report verifier also pass.
-The original historical root and 164-curve suites were not rerun. A full checkout
-attempt failed because the container could not resolve github.com; GitHub connector
-read/write access worked. No native point counter, quantum circuit, hardware,
-external contact, paid computation or other repository mutation occurred.
-
-The mathematical proof audit does not derive its infinite-domain conclusion from
-the finite checks. All inherited sources, expected reports, licenses and unrelated
-branches remain unchanged. The only revised files outside the added audit and
-note are current navigation and the work order.
+The contribution is a deterministic reconstruction query theorem for a structured
+integer-polynomial class, with exact implementation and a comparison to the known
+sufficient bound. Its scope is unbounded in genus and includes every field size.
 
 [Audit source, fixture and verifier](../../experiments/reconstruction_audit_v1/README.md).
 [Primary-source inspection record](../../experiments/reconstruction_audit_v1/SOURCES.md).

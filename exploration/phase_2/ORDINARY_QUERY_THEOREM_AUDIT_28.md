@@ -1,19 +1,11 @@
 # Ordinary-count reconstruction without a large-field hypothesis
 
-27 September 2026. Base commit: `63a617d3302f1ef1df52febe7b8d231c15a2ead6`,
-branch `research/prx-quantum-phase2`.
-
-**Result derived in this continuation:** for genus at least 32, the ordinary
-query set from Note 26 reconstructs the Weil polynomial over every finite field,
-not only in the earlier q>=64g^2 regime. The decoder uses additional cancellation
-terms already supported by the same queried data. The characteristic may be two;
-no twist equation, source-curve access, or generic-root assumption is used.
-
-This is a candidate mathematical contribution, not a claim of first publication,
-an optimal query bound, or a complete new quantum algorithm. The identified
-predecessor statements do not supply this exact bound, but their principal
-reconstruction ingredients are essential prior work. The small-field cardinalities
-are SUPPLIED to the theorem; their efficient acquisition is a separate question.
+For genus at least 32, a fixed set of fewer than 2g supplied cardinalities
+reconstructs the Weil polynomial over every finite field. The decoder combines
+normalized Mobius cancellation, Newton identities and endpoint equations with
+a uniform tail bound and certified rational logarithms. The characteristic may
+be two. The source comparison below attributes the reconstruction ingredients
+and records the scope of the literature assessment.
 
 ## 1. The theorem and its exact input model
 
@@ -51,10 +43,7 @@ For g=64 it means 93 counts and maximum degree 124. The theorem includes q=2.
 It does NOT assert that the first 45 counts suffice in the genus-32 example.
 The constant 32 is a convenient sufficient threshold, not a lower bound.
 
-The earlier large-field theorem and low-genus endpoint results remain intact.
-No uniform all-field claim for genera 3..31 is added here.
-
-## 2. The source comparison that led to the extension
+## 2. Normalized Mobius reconstruction
 
 Kedlaya [1, Section 8] does not require rounding each unnormalized power sum to
 within one half. Previously recovered coefficients fix the next power sum
@@ -62,11 +51,10 @@ modulo its index through Newton identities. This means the error should be
 controlled on S_n/n, where S_n=sum_j alpha_j^n. That is prior machinery, not a
 new congruence principle.
 
-His cutoff-dependent Mobius formula also permits more than the two logarithms
-used in our large-field decoder. For low indices those extra logarithms lie in
-the dense initial part 1..h of D_h, already queried. At high indices two terms
-suffice because q^n is large even when q itself is small. This observation,
-combined with the final two endpoint equations, supplies the theorem above.
+His cutoff-dependent Mobius formula uses logarithms from the dense initial
+part 1..h of D_h for low indices. At high indices two terms suffice because q^n
+is large even when q itself is small. Combined with the final two endpoint
+equations, this supplies the theorem above.
 
 No extra query is hidden in the improvement. Put
 
@@ -186,15 +174,15 @@ c_{g-1}=\frac{R_++sR_-}{2(q+1)},\qquad
 c_g=\frac{R_+-sR_-}{2}.
 $$
 
-Reciprocity supplies the remaining coefficients. These are the inherited
-endpoint equations; [2] supplies their direct low-genus predecessors.
+Reciprocity supplies the remaining coefficients. Reference [2] supplies the
+direct low-genus predecessors of these endpoint equations.
 
 ### Logarithms must be range-reduced in small fields
 
-The old unscaled atanh series can converge extremely slowly when its positive
-rational argument is tiny. It is not silently reused as a polynomial-time
-small-field implementation. For x>0, first compute the exact decomposition
-x=2^e*u with 1<=u<2. Then
+The unscaled atanh series can converge extremely slowly when its positive
+rational argument is tiny. Range reduction gives a polynomial-time small-field
+implementation: for x>0, compute the exact decomposition x=2^e*u with 1<=u<2.
+Then
 
 $$
 \log x=e\log2+2\sum_{j\ge0}\frac{z^{2j+1}}{2j+1},\qquad
@@ -219,7 +207,7 @@ geometric series therefore use polynomially many rational operations of
 polynomial bit length. Newton identities and endpoint divisions also have
 polynomial bit cost. No exponential candidate enumeration is needed.
 
-## 5. What the inspected predecessor results do and do not say
+## 5. Comparison with predecessor results
 
 | Source | Exact relevant scope | Relation to this statement |
 |---|---|---|
@@ -229,47 +217,23 @@ polynomial bit cost. No exponential candidate enumeration is needed.
 | Hillar [4], Theorem 1.1 | Characterization using the full nonzero cyclic-resultant sequence | Infinite-sequence uniqueness, not the present finite data/complexity guarantee |
 | Roy-Saxena-Venkatesh [5], Lemma 2.10 | Invokes the consecutive max(18,2g) theorem for its certification framework | Confirms that cited ingredient, not priority of our pruning |
 
-The retrieved primary statements do not subsume the bound proved above. This
-is NOT equivalent to proving that no paper, thesis, implementation or unpublished
-argument contains it. The literature search was focused and its exact scope is
-recorded in the companion SOURCES.md. We claim a proved candidate statement
-within this workspace, not established publication priority.
+The inspected primary statements do not subsume the bound proved above.
+The focused search and its limits are recorded in the companion SOURCES.md;
+publication priority remains qualified by that scope.
 
-The relationship to Kedlaya's question is now precise: this gives fewer than 2g
-ORDINARY selected count requests for the supplied-data reconstruction problem,
-for every field size once g>=32. It is not a theorem about the first g+1 cyclic
-resultants, a global minimum-query result, or arbitrary complex polynomials.
-It does not turn parameter counting into an information-theoretic lower bound
-for discrete, variable-bit-length integer answers.
+This addresses Kedlaya's fewer-than-2g question for selected ordinary count
+requests in the supplied-data reconstruction problem, for every field size once
+g>=32. The selected set differs from the initial sequence in the generic
+cyclic-resultant conjecture. Its cardinality is a sufficient query bound.
 
-## 6. Separation from quantum acquisition and the closed comparison
+## 6. Exact verification controls
 
-For actual curves, the statement applies beyond the odd-characteristic
-hyperelliptic implementation previously considered. But the prior quantum
-backend's generator and arithmetic restrictions are NOT removed by this theorem.
-In particular, Kedlaya's Proposition 11 has its own large-extension condition;
-the small-q counts K_1,K_2,.. required here are not thereby provided by that
-restricted implementation. This note supplies no characteristic-two circuit,
-new sampling theorem, order authentication, or small-field oracle construction.
-
-Accordingly, it is not claimed to solve every implementation aspect of the
-fewer-than-2g QUANTUM-oracle question. It answers its supplied-cardinality
-reconstruction aspect on an all-field high-genus range. The general quantum zeta
-algorithm remains prior work, and a classical algorithm receives the same decoder.
-
-Note 27's source-aware normalization still closes the twist-specific resource
-comparison. It is not reopened by this result. Query savings against the stated
-consecutive theorem are a mathematical upper-bound improvement, not a measured
-speedup over an optimized source-aware program or all classical alternatives.
-
-## 7. Executed evidence and research decision
-
-The new standard-library decoder receives only q, g and the declared count map.
+The standard-library decoder receives only q, g and the declared count map.
 Seven supplied Weil-polynomial controls cover genera 32,33,48 and q=2,3,4,5,
 including repeated roots and degree-64 or mixed higher-degree factors. Their
-orders are generated from independently specified factor recurrences, not by a
-quantum order finder. All 489 recovered coefficients and 227 recovered traces
-agree exactly with the supplied polynomials. No assertion is made that these
+orders are generated from independently specified factor recurrences. All 489
+recovered coefficients and 227 recovered traces agree exactly with the supplied
+polynomials. No assertion is made that these
 controls are Jacobians of curves.
 
 The factorwise order generator is separately checked against 36 small companion-
@@ -280,20 +244,6 @@ malformed cases. Decimal logarithms are only a secondary numerical spot check;
 the decoder and its error proof use exact rational enclosures. The two extreme
 range reductions need 23 log2-series terms rather than a near-unit-ratio expansion.
 The finite checks do not replace the uniform proof or authenticate arbitrary data.
-
-All four preceding current verifiers passed unchanged from the mounted Note-27
-checkpoint. The new source/report verifier also passes. The inherited directory
-Git tree identities were checked against the recorded committed trees. Full
-checkout still failed on DNS; historical root/164-curve suites, native point
-counters and quantum circuits were not run. No other repository was modified.
-
-This is now a concrete reconstruction-theory candidate, not only implementation
-housekeeping. The next task is an independent proof-and-priority audit of this
-ALL-FIELD theorem, including its numerical bit complexity and precise oracle
-interpretation. Do not optimize the numerical threshold 32 or launch a general
-arithmetic compiler as a substitute. A separate repository is not requested for
-this checkpoint; it becomes appropriate when that candidate survives the audit
-and warrants an independent research programme.
 
 Primary links and inspection records: [SOURCES.md](../../experiments/all_field_reconstruction_v1/SOURCES.md).
 Executable source and reproduction: [README.md](../../experiments/all_field_reconstruction_v1/README.md).

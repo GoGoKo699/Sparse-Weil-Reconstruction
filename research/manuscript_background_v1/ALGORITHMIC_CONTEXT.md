@@ -1,7 +1,6 @@
 # Analytic and algorithmic background
 
-28 September 2026. Background and attribution for the reconstruction methods.
-The existing theorems, precision schedules, and executable controls are unchanged.
+Sources checked 28 September 2026.
 
 This note separates standard algebra and numerical analysis from the estimates
 specific to this reconstruction problem. The guarantee is deterministic
@@ -13,17 +12,16 @@ variable. It is not a count of unit-cost real arithmetic operations.
 | Ingredient | Role and attribution |
 |---|---|
 | Logarithms of normalized resultants, truncated Möbius cancellation, and Newton residue information | The reconstruction framework of [Kedlaya2006], Section 8; see the [preserved derivation](../../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md). |
-| Formal logarithm/exponential identities and Newton identities | Elementary identities recalled below, with no separate novelty claim. |
+| Formal logarithm/exponential identities and Newton identities | Standard identities recalled below. |
 | Weighted $`\ell^1`$ coefficient algebra and contraction principle | Standard tools; the needed facts are proved below. |
 | Range reduction and logarithm series | Standard multiple-precision methods; [BrentZimmermann2010], Sections 4.3–4.4, especially printed p. 141. |
 | Integer arithmetic, division, and gcd reduction | Standard bit-cost accounting; [BrentZimmermann2010], Sections 1.2, 1.3.1, 1.4.1, and 1.6.1. |
 | Sparse support and all-field tail estimates | Repository-specific statements in [Note 28](../../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md), with endpoint attribution retained there. |
 | Palindromic completion, alias bound, invariant ball, and quadratic field threshold | Repository-specific estimates in [the first-$`g`$ theorem](../first_g_reconstruction_v1/THEOREM.md), Sections 2–5. |
-| Certified finite iteration, precision allocation, and denominator bounds | Theorem Sections 6–9 and the [consolidation audit](../consolidation_v1/AUDIT.md), Section 3. |
+| Certified finite iteration, precision allocation, and denominator bounds | Theorem Sections 6–9 and the [consolidation audit](../consolidation_v1/AUDIT.md), Section 2. |
 
-The first-$`g`$ and polynomial-time precedents belong in the separate predecessor
-comparison. None of the standard tools in this table establishes the new
-field-size threshold by itself.
+The [predecessor comparison](WEIL_RECONSTRUCTION.md) places the first-$`g`$
+and polynomial-time guarantees in context.
 
 ## 2. Formal identities and the meaning of the logarithmic data
 
@@ -51,7 +49,7 @@ L_n=\log(K_n/q^{gn})
 
 The sum converges absolutely because $`|\alpha_i/q|=q^{-1/2}\lt 1`$.
 Positivity and the absence of a logarithm-branch ambiguity are established in
-the [audit](../consolidation_v1/AUDIT.md), Section 2. This distinction between
+the [audit](../consolidation_v1/AUDIT.md), Section 1. This distinction between
 a power sum and its mixture with higher indices is the reconstruction problem.
 
 For a cutoff $`k_0`$, substitution into
@@ -59,8 +57,8 @@ $`-q^n\sum_{i=1}^{k_0}\mu(i)L_{ni}/(ni)`$ makes the coefficient of the
 $`s_{nr}`$ term proportional to
 $`\sum_{i\mid r,\ i\le k_0}\mu(i)`$. The usual divisor identity makes this
 sum zero for $`2\le r\le k_0`$. What remains to prove is the support condition,
-the tail bound, and an exact recovery margin. These are the specific tasks in
-Note 28, not new Möbius inversion or new Newton identities.
+the tail bound, and an exact recovery margin. Note 28 establishes these for
+the selected count schedule.
 
 The finite first-$`g`$ algorithm also uses only formal identities. If
 $`\log P_c=\sum b_mT^m`$ and $`\exp Z=\sum d_mT^m`$, then
@@ -147,9 +145,7 @@ $`\log2`$. Its error must be multiplied by $`|e|`$ when the two enclosures are
 combined. All displayed finite terms and tail bounds are rational.
 
 Dyadic rounding of the enclosure center adds a separately budgeted error.
-No call to a floating-point logarithm is needed for the guarantee. Faster
-elementary-function algorithms are not required, and their asymptotic
-complexities are not being claimed for this implementation.
+This gives a fully rational, certified logarithm calculation.
 
 ## 5. Why iteration count alone is not a complexity proof
 
@@ -176,8 +172,7 @@ compounding without control across iterations.
 
 Standard integer arithmetic then turns the polynomial number of operations
 into polynomial bit time; [BrentZimmermann2010], Chapter 1, gives the
-arithmetic background. The repository does not require fast multiplication,
-an optimal exponent, or a unit-cost real-number model.
+arithmetic background.
 
 The input transcript also has to fit this accounting. The Weil bound gives
 $`K_n\le2^{2g}q^{gn}`$; both schedules use $`O(g)`$ indices of size $`O(g)`$,
@@ -186,22 +181,6 @@ $`O(g\log q)`$ bits, and the polynomial output has $`O(g^2\log q)`$ bits.
 See the [application note](../finite_field_application_v1/COROLLARIES.md)
 for why a fully expanded abelian-variety zeta function is a different,
 potentially exponential-sized output.
-
-## 6. Precise statement of the results
-
-- State the true-count, integrality, reciprocity, modulus, genus, and field-size
-  promises with the theorem. The parameter-only runtime bound applies to
-  promised transcripts, not arbitrary malformed integers of unbounded length.
-- Describe the analytic normalization as a proof device. The finite algorithm
-  works in raw rational coefficients and does not compute $`\sqrt q`$.
-- Retain the invariant-ball and bit-length arguments. A contraction estimate
-  or an arithmetic-operation count alone does not establish the stated decoder.
-- Cite standard machinery as standard. Attribute the threshold, sparse support,
-  and their certified recovery bounds only to the corresponding repository
-  statements; first-$`g`$ recovery itself has a predecessor.
-- Keep count acquisition, authentication, geometric realization, and expanded
-  zeta output separate from reconstruction. Numerical controls support the
-  implementation; they do not replace the uniform proof.
 
 ## Sources inspected for this note
 
@@ -215,6 +194,4 @@ printed pp. 11–12. Used here only for the classical reconstruction machinery.
 [Author page](https://members.loria.fr/PZimmermann/mca/pub226.html);
 [author-hosted version 0.5.9, 7 October 2010](https://www.loria.fr/~zimmerma/mca/mca-cup-0.5.9.pdf).
 The locators above refer to printed page numbers in that version, whose
-pagination differs from the PDF viewer's page count. The author-hosted text
-and relevant sections were inspected; no third-party code or source text
-was imported.
+pagination differs from the PDF viewer's page count.

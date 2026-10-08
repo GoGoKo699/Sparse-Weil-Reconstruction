@@ -1,8 +1,7 @@
 # Cyclic-resultant background and comparison boundaries
 
-Checked 28 September 2026. This is background for a future manuscript, not a
-manuscript draft or a new reconstruction theorem. The current project promises
-and quantitative guarantees remain those in the [README](../../README.md).
+Sources checked 28 September 2026. The polynomial promises and quantitative
+guarantees are stated in the [README](../../README.md).
 
 ## 1. Match the invariant before comparing theorems
 
@@ -50,8 +49,7 @@ polynomial bit bound sought here.
 A direct consequence: for monic polynomials with all roots strictly outside the
 unit disk, no nonconstant factor can be reversed, as its roots would move inside
 the disk. Nonzero constant terms exclude powers of $`X`$. Full-sequence uniqueness
-for the project's class therefore follows without genericity. This is prior
-background, not the present finite-data contribution.
+for the project's class therefore follows without genericity.
 
 Primary texts: [corrected arXiv version](https://arxiv.org/pdf/math/0401220)
 and [one-page author erratum](https://qualiaphile.com/files/hillarcyclicerrata.pdf).
@@ -81,14 +79,11 @@ cyclic resultants into cyclotomic-resultant data by divisor factorization;
 that conversion does not remove the restriction to $`U`$.
 
 Primary text: [publisher PDF](https://www.impan.pl/shop/en/publication/transaction/download/product/83965),
-printed p. 172. The predecessor landscape must include this result; describing
-generic finite determination as having only exponential known bounds would be
-incorrect.
+printed p. 172.
 
 ## 3. Why reciprocal rescaling is not a transfer of the input data
 
-The following calculations apply the repository's promises; they are not new
-claims about the cited authors' results. With
+Under the repository's polynomial promises, put
 
 ```math
 \widehat\chi(X)=q^{-g}\chi(\sqrt q\,X),
@@ -117,10 +112,9 @@ Weil pairing supplies two disjoint root pairs with product $`q`$, violating that
 condition. The generic reciprocal class is a different parameter space; its
 results cannot be imported by ignoring the preceding change in supplied data.
 
-Consequently, the manuscript should compare the uniform finite-field results
-directly with Kedlaya and Chidambaram–Keller, while using the general literature
-to explain the history and distinctions above. The present first-$`g`$ guarantee
-does not establish the general reciprocal-polynomial conjecture.
+Kedlaya and Chidambaram–Keller therefore provide the direct comparisons for
+the uniform finite-field guarantees. The general reciprocal-polynomial
+problem has a different input class and resultant normalization.
 
 ## 4. Historical and adjacent sources: appropriate citation roles
 
@@ -134,20 +128,14 @@ does not establish the general reciprocal-polynomial conjecture.
 The Stewart primary texts are available from the author:
 [2012 PDF](https://uwaterloo.ca/pure-mathematics/sites/default/files/uploads/documents/aa155-4-05.pdf)
 and [2013 PDF](https://uwaterloo.ca/pure-mathematics/sites/default/files/uploads/documents/exceptional_units-5_0.pdf).
-They are useful for closing misleading citation leads, rather than mandatory
-ingredients of the reconstruction proof.
 
 ## 5. Search and access limits
 
-This pass reopened the relevant Hillar, Hillar–Levine, Bézivin 2008, and Stewart
-primary statements. It followed their bibliography to the Fried publisher
-record and retried the Bézivin 2007 DOI, J-STAGE article/PDF paths, and Project
-Euclid article/PDF paths. The latter returned errors or an unavailable-page
-wrapper, including on direct public PDF retrieval. No access restriction was
-bypassed, and no original Bézivin 2007 proof is represented as read. The decisive
-full-sequence classification is independently available in Hillar's corrected
-text and erratum, so this access gap does not leave that mathematical background
-unsupported.
+The inspected sources include the relevant Hillar, Hillar–Levine, Bézivin 2008,
+and Stewart primary statements. The original Fried 1988 and Bézivin 2007 full
+texts were unavailable; the [source record](SOURCE_RECORD.md) documents access
+attempts and bibliographic support. The full-sequence classification used here
+is available in Hillar's corrected text and erratum.
 
 Exact-title and bounded newer searches combined cyclic resultants with
 reconstruction, Weil, generic determination, and the cited authors. A newer
@@ -156,6 +144,4 @@ was screened at its abstract, introduction, and main-statement level: its
 Theorems 3.2 and 4.4 concern $`p`$-adic convergence and covering-space invariants,
 not a competing finite Weil reconstruction statement. No additional matching
 theorem emerged from this bounded cyclic-resultant search. That conclusion is
-not an exhaustive citation-graph, thesis, software, or unpublished-priority
-claim. None of the source proofs was formally verified, and no author code was
-run in this pass.
+limited by the recorded search scope and inspection depth.

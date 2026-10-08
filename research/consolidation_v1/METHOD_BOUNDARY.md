@@ -1,9 +1,8 @@
-# Why the present norm argument has a quadratic scale
+# Why the norm argument has a quadratic scale
 
-27 September 2026. This note answers the bounded extension question in the
-previous work order. It concerns the proof architecture of the
-[first-g theorem](../first_g_reconstruction_v1/THEOREM.md), not a necessary
-condition for reconstruction.
+The [first-g proof](../first_g_reconstruction_v1/THEOREM.md) uses a single weighted
+norm for the coefficient ball and the alias operator. The proposition below
+shows why these two estimates require a quadratic field-size scale.
 
 ## Proposition: a limitation of the single-radius argument
 
@@ -44,8 +43,8 @@ $`1-tT+qT^2`$ form a complex conjugate pair of modulus $`\sqrt q`$. Therefore
 P(T)=(1-tT+qT^2)^g
 ```
 
-is integral, $`q`$-reciprocal, and in the polynomial class of condition 1. No claim
-of Jacobian realization is needed. Its normalized polynomial is
+is integral, $`q`$-reciprocal, and in the polynomial class of condition 1.
+Its normalized polynomial is
 
 ```math
 F(z)=(1-az+z^2)^g,\qquad a=t/\sqrt q\ge1.
@@ -81,13 +80,7 @@ the sampling radius $`1/\sqrt q`$ to be no larger. Thus changing numerical
 constants while retaining these two requirements cannot yield a subquadratic
 field-size condition as $`g`$ varies.
 
-This does not prove that $`65{,}536`$ is necessary, that quadratic $`q`$ is optimal,
-that the implemented map diverges below its proved threshold, or that distinct
-Weil polynomials share their first $`g`$ values there. The test monomials used to
-prove unboundedness need not be logarithms of candidate polynomials.
-
-Estimates restricted to the actual logarithmic family, cancellation inside
-the composed map, a different center, multiple radii, or a different norm are
-not covered. Pursuing those would be a new extension project. The present
-scope does not require such an extension, and no new experiment is needed
-to establish this analytic proposition.
+This necessity statement applies to the two norm requirements above. It does
+not establish an optimal field-size threshold for reconstruction: the test
+monomials used to prove unboundedness need not be logarithms of candidate
+polynomials.

@@ -27,9 +27,6 @@ Chidambaram–Keller is the secondary anchor: the
 [comparison](docs/COMPARISON.md) explains the common problem, the change in
 method, and the resulting quadratic field-size guarantee.
 
-**Status:** written proofs, exact executable controls, and a completed
-[internal consolidation audit](research/consolidation_v1/AUDIT.md).
-
 ## Purpose and contact
 
 This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
@@ -155,9 +152,9 @@ Python 3.10 or later; standard library only:
 python3 verify.py
 ```
 
-This checks the 17 preserved import files and regenerates all three pinned
-research reports in temporary storage. Do not use `-O` or `-OO`.
-For import integrity alone, use `python3 verify.py --integrity-only`.
+This checks source integrity and reproduces all three exact reference reports
+in temporary storage. Do not use `-O` or `-OO`.
+See the [verification guide](docs/VERIFICATION.md) for the checks and commands.
 
 | Scientific material | Entry point |
 |---|---|
@@ -165,9 +162,8 @@ For import integrity alone, use `python3 verify.py --integrity-only`.
 | Exact implementations and controls | [First-g experiment](docs/EXPERIMENTS.md#first-g-reconstruction) · [All-field experiment](docs/EXPERIMENTS.md#all-field-reconstruction) |
 | Irreducible control and count-corruption example | [Audit experiment](docs/EXPERIMENTS.md#independent-reconstruction-audit) |
 | Claim-level citations and bibliography | [Scientific background](research/manuscript_background_v1/README.md) |
-| Mathematical checks and method boundary | [Consolidation audit](research/consolidation_v1/AUDIT.md) · [Norm-method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
-| Detailed literature comparison | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Source check](research/consolidation_v1/SOURCES.md) |
-| Current state and retained evidence | [Status](STATUS.md) · [Provenance](PROVENANCE.md) · [Work order](work_orders/CURRENT.md) |
+| Proof and arithmetic checks | [Analytic checks](research/consolidation_v1/AUDIT.md) · [Norm-method boundary](research/consolidation_v1/METHOD_BOUNDARY.md) |
+| Detailed literature comparison | [Assessment](research/contribution_assessment_v1/ASSESSMENT.md) · [Primary sources](research/contribution_assessment_v1/SOURCES.md) |
 
 ## Finding and citing this work
 
@@ -179,8 +175,7 @@ proofs, tutorials, and implementations with their hypotheses.
 
 [Citation metadata](CITATION.cff) identifies this research software.
 When citing a result or computation, include the repository commit and the
-specific theorem or experiment path. The [release check](docs/RELEASE_CHECK.md)
-records the scope and results of the pre-release audit.
+specific theorem or experiment path.
 
 ## Scope
 
@@ -190,14 +185,8 @@ an input transcript. The exact controls test supplied polynomials, without
 claiming they are Jacobians of curves. The written proofs establish the
 uniform guarantees; the finite controls check their implementations.
 
-The candidate contributions are the quadratic-threshold first-$`g`$ guarantee
-and the selected-data all-field refinement. The
-[literature assessment](research/contribution_assessment_v1/ASSESSMENT.md)
-records the inspected predecessors and search limits. Optimal thresholds and
-minimum query counts remain open in the general setting studied here.
-
-Versioned research notes describe their own checkpoints; this overview,
-[STATUS.md](STATUS.md), and the [work order](work_orders/CURRENT.md) describe
-the current project.
+The [literature comparison](research/manuscript_background_v1/WEIL_RECONSTRUCTION.md)
+locates the quadratic-threshold guarantee and sparse all-field refinement
+within the existing reconstruction methods.
 
 MIT license, Copyright (c) 2026 Ruge Lin.

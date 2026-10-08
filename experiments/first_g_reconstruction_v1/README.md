@@ -1,6 +1,6 @@
 # First-g contraction decoder: targeted experiment
 
-This successor experiment implements the first-g reconstruction argument for
+This experiment implements the first-g reconstruction argument for
 integral reciprocal q-Weil polynomials, under `g >= 1` and
 `q >= 65536*g*g`. It receives only `q`, `g`, and the true exact integers
 `K_1,...,K_g`. The input parameter `q` may be any integer satisfying the bound;
@@ -10,10 +10,9 @@ The formal-logarithm correction is evaluated with exact fractions, bounded
 alias truncation, range-reduced logarithm enclosures, and dyadic rounding after
 each complete correction. The number of iterations and all precision choices
 follow the written contraction argument; no convergence shortcut or supplied
-factorization is used. This implementation is a research prototype, not a
-claim of optimal resource use.
+factorization is used.
 
-The inherited range-reduced logarithm routine is imported from
+The range-reduced logarithm routine is imported from
 `../all_field_reconstruction_v1/reconstruct.py` and pinned by SHA256 and Git blob
 identity. Each center is itself rounded to a dyadic rational within the allowed
 logarithm error budget, preventing its long exact series denominator from
@@ -51,7 +50,5 @@ malformed inputs are rejected. The alteration of one supplied count is
 accepted while retaining the original polynomial; independent resultant
 replay finds the discrepancy. Reconstruction does not authenticate counts.
 
-These are supplied-polynomial controls, not newly counted curves. Jacobian
-realization, field-order acquisition, publication priority, and theorem-wide
-correctness are not established by finite controls. The uniform conclusion
-depends on the written analytic and bit-complexity proof.
+These are supplied-polynomial controls, with no assumed Jacobian realization.
+The uniform conclusion depends on the written analytic and bit-complexity proof.

@@ -47,7 +47,7 @@ L_n:=\log\frac{q^{gn}}{K_n}
 
 The series converges absolutely because $`|\alpha_i/q|=q^{-1/2}<1`$.
 The paired factors make the product positive; the real logarithm is unambiguous.
-For comparison with the versioned proofs, their quantity named $`L_n`$ is
+For comparison with the full proofs, their quantity named $`L_n`$ is
 $`\log(K_n/q^{gn})`$, the negative of the convention on this page.
 
 > **One supplied logarithm mixes a desired power sum with power sums at all
@@ -246,17 +246,17 @@ support and uniform tail bound are the repository's contribution here.
 
 There are $`h+\lceil h/2\rceil`$ supplied values, with largest index $`2g-4`$.
 For $`g=32`$, that is 45 values reaching index 60, not the first 45 values.
-The two regimes complement one another; neither threshold is asserted optimal.
+The two regimes complement one another, with sufficient thresholds.
 
 Continue with the [comparison to Chidambaram–Keller](COMPARISON.md), the
 [complete first-$`g`$ proof](../research/first_g_reconstruction_v1/THEOREM.md),
 or the [complete all-field proof](ALL_FIELD_PROOF.md).
 The [first-$`g`$](EXPERIMENTS.md#first-g-reconstruction) and
 [all-field](EXPERIMENTS.md#all-field-reconstruction) experiments
-reproduce exact supplied-polynomial controls. Their role is to check the
-implementations; the proofs establish the uniform guarantees. Count acquisition,
-authentication, and realizing a test polynomial as a Jacobian remain separate
-from the promised-input reconstruction problem.
+reproduce exact supplied-polynomial controls. See the
+[experiment guide](EXPERIMENTS.md#what-the-controls-establish) for their role
+in checking the implementations and the distinction between reconstruction
+and authentication.
 
 ---
 

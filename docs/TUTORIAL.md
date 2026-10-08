@@ -23,10 +23,6 @@ information. Galbraith writes $`L(t)`$ for our constant-term-one polynomial
 $`P(T)`$; his monic Frobenius polynomial is $`\chi_A(X)=X^{2g}P(1/X)`$ in our
 notation.
 
-The derivations and numerical illustrations below are written for this
-tutorial. The textbook supplies the foundation, and the versioned research
-notes hold the local proofs.
-
 ## 2. The unknown has only g free coefficients
 
 Let $`q\ge2`$ and $`g\ge1`$ be integers. The unknown is
@@ -157,9 +153,9 @@ S_1=2.
 ```
 
 The corresponding monic polynomial is $`X^2-2X+5`$, with roots $`1\pm2i`$;
-both have modulus $`\sqrt5`$, as required. This example needs no construction
-of a curve. In the elliptic-curve application, the curve and its Jacobian
-have the same cardinalities, so the two input types coincide in this dimension.
+both have modulus $`\sqrt5`$, as required. In the elliptic-curve application,
+the curve and its Jacobian have the same cardinalities, so the two input types
+coincide in this dimension.
 
 ## 6. Work it out in dimension two
 
@@ -216,10 +212,9 @@ c_2&=\frac{36+36}{2}-1-25=10.
 \end{aligned}
 ```
 
-This is an illustration within the promised polynomial class; no Jacobian
-realization is asserted. The dimension-two inversion works for every $`q\ge2`$.
-It is a special exact calculation, not evidence that the general first-$`g`$
-theorem holds outside its stated sufficient regime $`q\ge65{,}536g^2`$.
+This is an illustration within the promised polynomial class. The
+dimension-two inversion works for every $`q\ge2`$; the general first-$`g`$
+theorem has the sufficient regime $`q\ge65{,}536g^2`$.
 
 ## 7. Check your understanding
 

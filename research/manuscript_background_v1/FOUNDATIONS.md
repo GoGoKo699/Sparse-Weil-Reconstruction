@@ -1,10 +1,8 @@
 # Finite-field foundations and interpretation
 
 Background checked on 28 September 2026 (Asia/Shanghai; 27 September UTC).
-This is a source map for the eventual manuscript, not a manuscript draft or a
-new theorem. The [application note](../finite_field_application_v1/COROLLARIES.md)
-remains the canonical statement and proof of the project's geometric corollaries
-and output bounds.
+The [application note](../finite_field_application_v1/COROLLARIES.md) gives
+the geometric corollaries and output bounds.
 
 ## 1. Fix the Frobenius and polynomial conventions
 
@@ -36,7 +34,7 @@ c_{2g-j}=q^{g-j}c_j,
 The last identity is a cardinality formula: the geometric points fixed by
 $`\pi_A^m`$ form the kernel of the separable isogeny $`1-\pi_A^m`$.
 Integrality, reciprocity and the inverse-root modulus are standard input
-facts, not contributions of this project. The abstract reconstruction results
+facts. The abstract reconstruction results
 also allow integers $`q\ge2`$ that are not prime powers; their geometric
 interpretation does not.
 
@@ -58,9 +56,9 @@ $`g`$-dimensional abelian variety, rather than points of the curve.
 The first $`g`$ values of $`N_m`$ already recover $`P_{J_C}`$ for every finite field:
 convert them to power sums, apply Newton identities, then use reciprocity.
 The [application note, Section 2](../finite_field_application_v1/COROLLARIES.md#2-curves-and-jacobians)
-records this elementary derivation. It must not be presented as the new
-quadratic-threshold result. No rational base point, curve equation, or
-hyperellipticity hypothesis is needed for the stated zeta identity.
+records this elementary derivation. The quadratic-threshold theorem instead
+uses the product data $`K_m`$. The stated zeta identity holds for every curve
+under the hypotheses above.
 
 ## 3. What the recovered invariant determines
 
@@ -70,12 +68,9 @@ characteristic polynomials agree. Equivalently, all their extension-field
 cardinalities agree. Reconstructing $`P_A`$ therefore identifies the
 $`\mathbb F_q`$-isogeny class.
 
-This implication supplies scientific meaning to the compact output. It does
-not provide a geometric model, an explicit isogeny, an isomorphism class, or
-the structure of every finite group $`A(\mathbb F_{q^m})`$. In the Jacobian
-application the output is the curve's zeta function, not an equation for the
-curve. These are limits of the specified reconstruction task, not missing
-steps in its proof.
+The compact output identifies an isogeny class, which can contain several
+isomorphism classes. In the Jacobian application it also gives the curve's
+zeta function.
 
 For a variety $`X`$, the zeta function packages all extension counts as
 $`\exp(\sum_{m\ge1}\#X(\mathbb F_{q^m})T^m/m)`$. For an abelian variety,
@@ -101,13 +96,11 @@ an arbitrary polynomial as an abelian-variety characteristic polynomial with
 the proposed multiplicities. [DupuyEtAl2021, Section 2.3][DupuyEtAl2021] states
 the exponent rule. Realization by a Jacobian is an additional issue.
 
-The decoder assumes its polynomial promises; it does not solve either
-geometric realization problem. The geometric corollaries start from an actual
-$`A`$ or $`J_C`$ and therefore inherit the promises. The exact experimental controls
-start from supplied polynomials and remain controls of that algebraic class.
-They must not be relabelled as curves or Jacobians. Honda–Tate is useful
-interpretive background, but is not an algorithmic subroutine or a prerequisite
-for applying the theorem to promised true counts.
+The geometric corollaries start from an actual $`A`$ or $`J_C`$ and therefore
+inherit the polynomial promises. The exact experimental controls instead start
+from supplied polynomials and test recovery within that algebraic class;
+identifying them with abelian varieties or Jacobians would require a separate
+realization argument.
 
 ## 5. Scientific role of the supplied-count model
 
@@ -124,8 +117,7 @@ for their cost. The polynomial bit-time result here is the conversion cost
 after those true exact integers are supplied. Fewer requested indices alone
 do not prove a faster acquisition procedure, especially when the extension
 degrees differ. Successful output also does not authenticate an untrusted
-transcript. These restrictions are already part of the repository's theorem
-and experiment contracts.
+transcript.
 
 ## 6. Exact source locations
 

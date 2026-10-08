@@ -1,17 +1,9 @@
 # First-g reconstruction with a quadratic field-size threshold
 
-27 September 2026. Classical supplied-count reconstruction.
-
-**Theorem and status:** the proof below and its finite rational algorithm have
-passed an internal derivation and independent internal adversarial check.
-The [successor experiment](../../docs/EXPERIMENTS.md#first-g-reconstruction)
-provides targeted exact controls. This is not external peer review or a
-proof-assistant verification; publication priority remains qualified.
-
-The preserved all-field theorem remains unchanged. Kedlaya supplies the
-logarithmic reconstruction framework, and Chidambaram–Keller already prove
-first-g recovery in a large-field regime. The candidate improvement here is the
-explicit quadratic sufficient threshold with polynomial bit time retained.
+The proof below gives an explicit quadratic sufficient field-size threshold
+for first-$`g`$ reconstruction with deterministic polynomial bit time.
+Kedlaya supplies the logarithmic reconstruction framework, and
+Chidambaram–Keller already prove first-$`g`$ recovery in a large-field regime.
 See the [primary-source comparison](../contribution_assessment_v1/ASSESSMENT.md)
 for exact predecessor statements, versions, and search limitations.
 
@@ -40,11 +32,11 @@ K_n=\prod_{i=1}^{2g}(1-\alpha_i^n),\qquad 1\le n\le g.
 promised class, and the algorithm specified below recovers it deterministically
 in time polynomial in $`g`$ and $`\log q`$.
 
-No curve equation, factorization, acquisition algorithm, authenticity check,
-genericity assumption, or root separation is supplied. Primality of $`q`$ is not
-used. In an application to a curve these are Jacobian cardinalities, not curve
-point counts. The threshold is only a conservative sufficient bound. In
-particular, the conclusion is not an all-field first-g theorem.
+The algorithm uses only $`q`$, $`g`$, and the supplied counts. It applies to the
+whole promised class, including repeated roots, and to every integer $`q`$ in
+the stated regime. In an application to a curve these are Jacobian
+cardinalities, rather than curve point counts. The threshold is a conservative
+sufficient bound.
 
 The case $`g=0`$ is separately trivial, with $`P=1`$. All bounds below explicitly
 include $`g=1`$; they are very wasteful there, where one already has
@@ -622,7 +614,7 @@ There are polynomially many rational additions, multiplications, divisions,
 comparisons, and gcd reductions: for example, $`O(M^2+gM+g^2)`$ arithmetic
 operations per iteration is a loose bound. Ordinary integer algorithms on the
 polynomial-sized operands therefore prove deterministic polynomial bit time
-and polynomial storage. No tight runtime exponent is asserted.
+and polynomial storage.
 
 ## 10. Verification and scope
 
@@ -637,19 +629,18 @@ $`q`$, equality at the sufficient threshold, and an irreducible degree-eight Wei
 polynomial. All 41 coefficients agree exactly; all final unrounded low
 coefficients satisfy the proved error budget. Two allowed logarithm displacement
 runs also recover the polynomial. Independent full-degree companion determinants
-agree on all 18 supplied values. See the experiment for the exact report.
-
-The supplied controls are not asserted to be Jacobians. The finite controls
-support the implementation, while the proof above establishes the uniform
-claim. No hardware, quantum group-order acquisition, native point counter,
-external author's program, or formal proof checker was used.
+agree on all 18 supplied values. See the
+[experiment](../../docs/EXPERIMENTS.md#first-g-reconstruction) for the exact report.
+These are controls of the promised polynomial class; geometric realization as
+Jacobians is a separate condition. The finite controls support the
+implementation, while the proof above establishes the uniform claim.
 
 A one-unit corruption of a supplied count can be accepted and decoded to the
 original polynomial; replaying its resultant detects the mismatch. The
 promised-input theorem reconstructs the true polynomial. Successful decoding
 alone does not authenticate a transcript or bind it to a claimed curve.
 
-The constant 65,536 is sufficient, not sharp. Failure of its inequality is not
-proof that first-g reconstruction fails. The theorem coexists with the
-preserved sparse all-field guarantee; neither subsumes the other over the
-entire parameter range.
+The constant 65,536 is sufficient; failure of its inequality does not imply
+failure of first-$`g`$ reconstruction. The
+[all-field theorem](../../docs/ALL_FIELD_PROOF.md) supplies a complementary
+guarantee over smaller fields using a different count schedule.
