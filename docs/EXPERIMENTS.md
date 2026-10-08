@@ -1,9 +1,7 @@
 # Reproducing the exact experiments
 
 The three experiment packages check the reconstruction algorithms using supplied
-Weil polynomials and independently computed counts. Their source files, manifests,
-READMEs, and reference reports are preserved. This guide provides a typeset reading
-route to those records.
+Weil polynomials and independently computed counts.
 
 Use Python 3.10 or later; only the standard library is required. From the
 repository root, run all three packages and the 17-file preservation check with
@@ -13,8 +11,7 @@ python3 verify.py
 ```
 
 Each verifier checks its pinned files, runs in temporary storage, and compares
-the regenerated report with the preserved reference. It does not overwrite the
-expected evidence. Do not use `-O` or `-OO`.
+the regenerated report with the reference. Do not use `-O` or `-OO`.
 
 ## First-g reconstruction
 
@@ -45,13 +42,13 @@ negative at every real embedding.
 Every final unrounded coefficient has error $`\lt1/32`$, checked with exact
 rational arithmetic. Two allowed logarithm perturbations retain the correct
 output, and seven malformed inputs are rejected. Runtime is reported separately
-from the pinned output; the prototype makes no optimal-resource claim.
+from the pinned output.
 
 [Decoder](../experiments/first_g_reconstruction_v1/reconstruct.py) ·
 [Controls](../experiments/first_g_reconstruction_v1/experiment.py) ·
 [Report](../experiments/first_g_reconstruction_v1/REPORT.json) ·
 [Manifest](../experiments/first_g_reconstruction_v1/MANIFEST.json) ·
-[Preserved README](../experiments/first_g_reconstruction_v1/README.md)
+[Experiment README](../experiments/first_g_reconstruction_v1/README.md)
 
 ## All-field reconstruction
 
@@ -78,13 +75,13 @@ serve only as secondary spot checks; reconstruction uses exact rational enclosur
 [Controls](../experiments/all_field_reconstruction_v1/checks.py) ·
 [Report](../experiments/all_field_reconstruction_v1/REPORT.json) ·
 [Manifest](../experiments/all_field_reconstruction_v1/MANIFEST.json) ·
-[Preserved README](../experiments/all_field_reconstruction_v1/README.md)
+[Experiment README](../experiments/all_field_reconstruction_v1/README.md)
 
 ## Independent reconstruction audit
 
 This package checks an irreducible degree-64 $`2`$-Weil polynomial at
 $`q=2`$, $`g=32`$, using exact real-root bounds and a modulo-7 irreducibility
-test. It retains the all-field decoder and its theorem's threshold.
+test, using the all-field decoder under its theorem's threshold.
 
 ```sh
 python3 experiments/reconstruction_audit_v1/verify.py
@@ -102,7 +99,7 @@ provides the uniform size bounds supporting the algorithm.
 [Fixture](../experiments/reconstruction_audit_v1/CONTROL.json) ·
 [Report](../experiments/reconstruction_audit_v1/REPORT.json) ·
 [Manifest](../experiments/reconstruction_audit_v1/MANIFEST.json) ·
-[Preserved README](../experiments/reconstruction_audit_v1/README.md)
+[Experiment README](../experiments/reconstruction_audit_v1/README.md)
 
 ## What the controls establish
 
@@ -112,5 +109,3 @@ they are Jacobians of curves. Count acquisition and authentication remain separa
 tasks. Both the first-$`g`$ experiment and the independent audit include an altered
 count that decoding accepts while exact resultant replay detects the discrepancy.
 Successful reconstruction therefore does not authenticate the input transcript.
-The controls do not establish external peer review, publication priority, optimal
-thresholds, or minimum query counts.

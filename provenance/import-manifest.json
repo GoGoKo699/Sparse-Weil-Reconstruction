@@ -18,9 +18,9 @@
     {
       "path": "exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md",
       "source_path": "exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md",
-      "size_bytes": 13196,
-      "sha256": "703669e6515ec985cf834b0c9b82a6e8293c800f28e00438eb18bebb1f414a3b",
-      "git_blob": "dc1503fb0031dc5a097b200de66f7cf09fc2ea0b",
+      "size_bytes": 9899,
+      "sha256": "d7bccd945485843c3eaaafc3d8213df6b2298e5ee777a2bf53ebd0e54093dfa5",
+      "git_blob": "48b4740b15cff0b3736dbd91bac30133b6875d61",
       "imported_identity": {
         "size_bytes": 13262,
         "sha256": "3249bda2edfa3353751eae61067ce3349d22aa39bdcb02a87f22684fddd240ec",
@@ -30,9 +30,9 @@
     {
       "path": "exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md",
       "source_path": "exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md",
-      "size_bytes": 16025,
-      "sha256": "80487b8b584803ab116180d7d6ea46de007dd7e58222c0676b3ab289434b31d7",
-      "git_blob": "a1fa2a3d304ad1f62bca32eafc6414c371f0e435",
+      "size_bytes": 12218,
+      "sha256": "1d5b1b32ebd9a09b39492a69d9ec7058337f21f7df52f93c31330a82e4b60815",
+      "git_blob": "54255c5881856e7d5122672a364f806df172d01c",
       "imported_identity": {
         "size_bytes": 16143,
         "sha256": "88a8f07fee7567b4f28c189387f7a41f4b80744f74121927ce24e9d17f595182",
@@ -42,16 +42,26 @@
     {
       "path": "experiments/all_field_reconstruction_v1/MANIFEST.json",
       "source_path": "experiments/all_field_reconstruction_v1/MANIFEST.json",
-      "size_bytes": 554,
-      "sha256": "1ac983d394081215a5e22d9d1f53d89ede112fbba1288c15349ddcd9a33d9a4c",
-      "git_blob": "0edec53953626ec7958e3bfade664ff0ccf720d4"
+      "size_bytes": 766,
+      "sha256": "21d0a6e62ab0d8429597f34a9caa69035d832d4b1254e48f70380ed8f6e7b854",
+      "git_blob": "bd14c3c0ba1553fc36dcd5379ea9bcb2717892c9",
+      "imported_identity": {
+        "size_bytes": 554,
+        "sha256": "1ac983d394081215a5e22d9d1f53d89ede112fbba1288c15349ddcd9a33d9a4c",
+        "git_blob": "0edec53953626ec7958e3bfade664ff0ccf720d4"
+      }
     },
     {
       "path": "experiments/all_field_reconstruction_v1/README.md",
       "source_path": "experiments/all_field_reconstruction_v1/README.md",
-      "size_bytes": 2419,
-      "sha256": "4a6b59198d7034ff4b4ef65ac4336251b062cf15567075ee79ee93f67c907135",
-      "git_blob": "513b55d567a390222034c10326062d18febd31e8"
+      "size_bytes": 1801,
+      "sha256": "792790f02418af201e92a76d4faa5e472554d31dd97c83e3f1bf2ee43a54cc8b",
+      "git_blob": "438c6520497d6fa16950d5e2d17e01a2c01b7d1e",
+      "imported_identity": {
+        "size_bytes": 2419,
+        "sha256": "4a6b59198d7034ff4b4ef65ac4336251b062cf15567075ee79ee93f67c907135",
+        "git_blob": "513b55d567a390222034c10326062d18febd31e8"
+      }
     },
     {
       "path": "experiments/all_field_reconstruction_v1/REPORT.json",
@@ -63,9 +73,14 @@
     {
       "path": "experiments/all_field_reconstruction_v1/SOURCES.md",
       "source_path": "experiments/all_field_reconstruction_v1/SOURCES.md",
-      "size_bytes": 5559,
-      "sha256": "170b5825ce88ceb20d2c2c54052118c09d617045f6258e6b340c0a18552d9438",
-      "git_blob": "7d8106e8fd7f1193651689340f4dc10863137b8e"
+      "size_bytes": 3539,
+      "sha256": "f07260124c4ee1511d651b83532806ff4641fcfc6c75d8a03a02e50dbf995def",
+      "git_blob": "64523a8153fe1acb563636fe29d7e05270558475",
+      "imported_identity": {
+        "size_bytes": 5559,
+        "sha256": "170b5825ce88ceb20d2c2c54052118c09d617045f6258e6b340c0a18552d9438",
+        "git_blob": "7d8106e8fd7f1193651689340f4dc10863137b8e"
+      }
     },
     {
       "path": "experiments/all_field_reconstruction_v1/checks.py",
@@ -98,16 +113,26 @@
     {
       "path": "experiments/reconstruction_audit_v1/MANIFEST.json",
       "source_path": "experiments/reconstruction_audit_v1/MANIFEST.json",
-      "size_bytes": 776,
-      "sha256": "a45bf26d2c38c03008cc2f296f6b3653befb564348876cca3663ad2d9d276d55",
-      "git_blob": "91c0106d411f4f6053a390f812f7efc54e97a3af"
+      "size_bytes": 988,
+      "sha256": "662b2fd56c6c9e61a26e28b6896ac7463bfeba6ceaf0fab0eac7b9b52036435e",
+      "git_blob": "8cd4a17ac9006053ce6fd5c86a7e261e5120fabe",
+      "imported_identity": {
+        "size_bytes": 776,
+        "sha256": "a45bf26d2c38c03008cc2f296f6b3653befb564348876cca3663ad2d9d276d55",
+        "git_blob": "91c0106d411f4f6053a390f812f7efc54e97a3af"
+      }
     },
     {
       "path": "experiments/reconstruction_audit_v1/README.md",
       "source_path": "experiments/reconstruction_audit_v1/README.md",
-      "size_bytes": 2180,
-      "sha256": "2d7d86bc928397816f6747d393052cbb07b8a39f20f11cd17fff06a5d8ae66a9",
-      "git_blob": "b8139305b27b514f2889f33eb86d614c02170a9c"
+      "size_bytes": 1876,
+      "sha256": "c1b7a8682b2f1581b0d0efcecf56cbefa3b5cb191d99a4e6fef330a5925f4802",
+      "git_blob": "a5452d154e5b3c1d6f3ccb7451653a90cb071f6d",
+      "imported_identity": {
+        "size_bytes": 2180,
+        "sha256": "2d7d86bc928397816f6747d393052cbb07b8a39f20f11cd17fff06a5d8ae66a9",
+        "git_blob": "b8139305b27b514f2889f33eb86d614c02170a9c"
+      }
     },
     {
       "path": "experiments/reconstruction_audit_v1/REPORT.json",
@@ -119,9 +144,14 @@
     {
       "path": "experiments/reconstruction_audit_v1/SOURCES.md",
       "source_path": "experiments/reconstruction_audit_v1/SOURCES.md",
-      "size_bytes": 5707,
-      "sha256": "09dd7a45d7711ef6b1e11a737b1b34a10ade7405e096a8585f83cd28c5c48fe1",
-      "git_blob": "b77a23a3ec7280f855a4905fb52345a420bc54af"
+      "size_bytes": 3299,
+      "sha256": "11c1c49bb465c8b6a651dcbafdde8d3680ba938a37d6a00eae86d796c738c184",
+      "git_blob": "d3ccfe04bebb84b853f87f039d60ba62acb75eae",
+      "imported_identity": {
+        "size_bytes": 5707,
+        "sha256": "09dd7a45d7711ef6b1e11a737b1b34a10ade7405e096a8585f83cd28c5c48fe1",
+        "git_blob": "b77a23a3ec7280f855a4905fb52345a420bc54af"
+      }
     },
     {
       "path": "experiments/reconstruction_audit_v1/audit.py",
@@ -138,10 +168,10 @@
       "git_blob": "8bbe05b7e6ef2d04e963433d4ce9444fd40a6021"
     }
   ],
-  "current_integrity": "The files entries verify the current baseline. Original imported identities are retained as imported_identity for the two documentation-only amendments.",
+  "current_integrity": "The files entries verify the current baseline. Original imported identities are retained as imported_identity for documentation and documentation-manifest amendments.",
   "documentation_amendment": {
     "date": "2026-10-08",
-    "baseline_commit": "2a02dbc18c8b4da9da1786f672f815f9c3fa2211",
-    "scope": "Obsolete editorial status sentences removed from Notes 28 and 29; mathematical content, code, fixtures, reference reports, and license unchanged."
+    "baseline_commit": "1282141aeca05bf3b66a407d455f3662246bc0d1",
+    "scope": "Reader-focused documentation cleanup and corresponding documentation checksums; mathematical content, executable code, fixtures, reference reports, and license unchanged."
   }
 }

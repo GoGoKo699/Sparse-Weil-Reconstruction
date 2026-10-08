@@ -2,8 +2,8 @@
 
 [← Comparison](COMPARISON.md) · [Reading guide](READING_GUIDE.md) · [Overview →](../README.md)
 
-Checked 28 September 2026. The guide uses Galbraith as its primary textbook
-and Chidambaram–Keller as the secondary research anchor. The existing
+The guide uses Galbraith as its primary textbook and Chidambaram–Keller as
+the secondary research anchor. The
 [scientific bibliography](../research/manuscript_background_v1/REFERENCES.bib)
 and [claim map](../research/manuscript_background_v1/CLAIM_MAP.md) retain the
 broader primary-literature context.
@@ -13,14 +13,13 @@ broader primary-literature context.
 Steven D. Galbraith, *Mathematics of Public Key Cryptography*, Cambridge
 University Press, 2012. [Author's book page and extended text](https://www.math.auckland.ac.nz/~sgal018/crypto-book/crypto-book.html).
 Citation key: `Galbraith2012`; [BibTeX entry](GALBRAITH.bib).
-This one-entry teaching supplement can be used alongside the existing
-17-entry scientific bibliography, without duplicating its references.
+The entry supplements the scientific bibliography.
 
-The inspected chapter PDFs are the extended online text. The author explicitly
-notes that their section, theorem, and page numbers can differ from the print
-edition. All tutorial locators use the online numbering.
+The chapter PDFs are the extended online text. Their section, theorem, and
+page numbers can differ from the print edition; all tutorial locators use
+the online numbering.
 
-| Passage inspected | Use in the reading path |
+| Passage | Use in the reading path |
 |---|---|
 | [Chapter 2](https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch2.pdf), §§2.1–2.2, §§2.10–2.11 | Arithmetic model, finite precision, polynomials, and finite fields |
 | [Chapter 7](https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch7.pdf), §§7.7–7.8 | Principal divisors and divisor classes |
@@ -30,10 +29,6 @@ edition. All tutorial locators use the online numbering.
 | Definition 10.7.10 and surrounding discussion | Monic Frobenius polynomial versus constant-term-one polynomial |
 | Theorem 10.7.13 | Isogeny interpretation |
 
-The new worked calculations are derived in the tutorial. The textbook supplies
-the established setting; the reconstruction proofs are linked to their
-canonical repository notes.
-
 ## Chidambaram–Keller: the secondary anchor
 
 Shiva Chidambaram and Timo Keller, *Point counts of abelian varieties over
@@ -42,7 +37,7 @@ finite fields determining their zeta function*, arXiv:2606.28989v2.
 [Pinned PDF](https://arxiv.org/pdf/2606.28989v2).
 Citation key: `ChidambaramKeller2026`.
 
-| Passage inspected | Use in the comparison |
+| Passage | Use in the comparison |
 |---|---|
 | Theorem 1.1 | First-$`g`$ determination and the stated sufficient threshold |
 | §2 | Reciprocity, Weil bounds, integrality, and Newton identities |
@@ -50,11 +45,8 @@ Citation key: `ChidambaramKeller2026`.
 | §§4–6 | Reconstruction argument and polynomial bit complexity |
 | Remark 7.12 | Refined threshold discussion and the polynomial-threshold question |
 
-The version record dates v2 to 14 July 2026. The pinned PDF's internal date is
-15 July 2026. The HTML rendering inspected on this pass displays a different
-internal date (24 August 2026), while retaining the v2 header. The reading path
-therefore links the pinned PDF and uses section/theorem locators; it does not
-infer a new revision from the HTML date.
+The locators refer to the pinned v2 PDF (version record: 14 July 2026;
+internal PDF date: 15 July 2026).
 
 ## Claims supported by our proofs
 
@@ -65,10 +57,8 @@ infer a new revision from the HTML date.
 | Sparse selected indices, uniform all-field tail bound, and bit complexity | [All-field reading edition](ALL_FIELD_PROOF.md), from [Note 28](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) and [Note 29](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md) |
 | Geometric applications and compact-output distinction | [Finite-field corollaries](../research/finite_field_application_v1/COROLLARIES.md) |
 
-Kedlaya's reconstruction framework and the endpoint precedents remain
-attributed in the [existing source comparison](../research/manuscript_background_v1/WEIL_RECONSTRUCTION.md).
-They support the literature record without becoming additional required
-teaching anchors. Primary papers and book chapters are linked, not redistributed.
+Kedlaya's reconstruction framework and the endpoint precedents are described
+in the [source comparison](../research/manuscript_background_v1/WEIL_RECONSTRUCTION.md).
 
 ---
 

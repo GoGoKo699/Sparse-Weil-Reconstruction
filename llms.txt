@@ -32,26 +32,21 @@ polynomial in g and log(q), in their respective regimes:
 
 Galbraith is the primary teaching anchor; Chidambaram–Keller is the secondary
 research anchor and already proves efficient first-g recovery for sufficiently
-large q. The local candidate contribution in that regime is the quadratic
+large q. The result here in that regime is the quadratic
 sufficient field-size bound. The all-field result refines Kedlaya's
 log–Möbius–Newton framework with selected support and established endpoint
-machinery. The thresholds are sufficient; optimality and minimum-query results
-are not established here.
+machinery. Both thresholds are sufficient bounds.
 
-These are internal research proofs and exact implementation checks, not an
-externally peer-reviewed publication. Reconstruction assumes correct counts;
-it neither acquires nor authenticates them. Ordinary curve point counts are
-different inputs and already give first-g recovery for every finite field via
-Newton identities. For a promised Jacobian, P is the curve zeta numerator;
-for a general abelian variety it gives a compact Frobenius description, not a
-polynomial-size expansion of the full zeta function. Polynomial controls do
-not establish Jacobian realization. No quantum-advantage claim is made.
+Reconstruction assumes correct supplied counts. Successful decoding does not
+authenticate a transcript. Ordinary curve point counts are different inputs
+and give first-g recovery for every finite field via Newton identities. For a
+promised Jacobian, P is the curve zeta numerator; for a general abelian variety,
+it gives a compact Frobenius description. Expanding the full abelian-variety
+zeta function has exponential output size. The implementation controls use
+supplied polynomials, whose realization as Jacobians is a separate question.
 
-The files below are plain-text sources on the current main branch. For a
-version-specific claim, record the commit and cite the relevant proof or
-experiment path. Current scope is in STATUS; versioned notes retain historical
-checkpoints. This guide aids retrieval and interpretation without guaranteeing
-search-engine or model indexing.
+For a version-specific claim, record the commit and cite the relevant proof or
+experiment path. The sources below are on the main branch.
 
 ## Start here
 
@@ -65,25 +60,22 @@ search-engine or model indexing.
 
 - [First-g theorem](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/first_g_reconstruction_v1/THEOREM.md): Quadratic threshold, contraction, precision, and bit complexity.
 - [All-field reading edition](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/ALL_FIELD_PROOF.md): Typeset theorem, full proof, and explicit bit-complexity argument; start here for the all-field result.
-- [Preserved all-field theorem](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md): Selected support, uniform tail estimate, and endpoint completion.
-- [All-field proof review](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md): Finite precision and rational bit complexity.
 - [Finite-field corollaries](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/finite_field_application_v1/COROLLARIES.md): Abelian varieties, isogeny classes, Jacobians, and output size.
 
 ## Reproduce and cite
 
 - [Experiment reading guide](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/EXPERIMENTS.md): Typeset regimes, controls, reproduction commands, and links to the preserved experiment packages.
-- [Verification entry point](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/verify.py): Run python3 verify.py with Python 3.10+ and its standard library; no -O or -OO. Replays three pinned reports and checks 17 preserved files.
+- [Verification entry point](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/verify.py): Run python3 verify.py with Python 3.10+ and its standard library; no -O or -OO. Replays three pinned reports and checks source integrity.
 - [First-g experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/first_g_reconstruction_v1/README.md): Exact decoder, controls, logarithm perturbations, and input limits.
 - [All-field experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/all_field_reconstruction_v1/README.md): Exact decoder, parameter checks, and independent determinants.
 - [Audit experiment](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/experiments/reconstruction_audit_v1/README.md): Irreducible control, exact resultants, and count corruption.
+- [Verification guide](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/VERIFICATION.md): Commands and checked evidence.
 - [Citation metadata](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/CITATION.cff): Repository software citation; include the commit and result path.
-- [Release check](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/RELEASE_CHECK.md): Audit scope, executed checks, and remaining limits.
 
-## Optional
+## Sources and supporting analysis
 
-- [Current status](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/STATUS.md): Current scientific state and evidence index.
 - [Teaching source map](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/docs/SOURCES.md): Galbraith online numbering and pinned Chidambaram–Keller v2.
 - [Scientific background](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/manuscript_background_v1/README.md): Claim-level sources, bibliography, and access limits.
-- [Consolidation audit](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/consolidation_v1/AUDIT.md): Internal proof and implementation review.
+- [Proof and arithmetic checks](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/consolidation_v1/AUDIT.md): Logarithm signs, contraction bounds, error margins, and rational denominators.
 - [Method boundary](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/research/consolidation_v1/METHOD_BOUNDARY.md): Limitation of the current norm argument, not a recovery lower bound.
-- [Provenance](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/PROVENANCE.md): Preserved evidence and checkpoint conventions.
+- [Provenance](https://raw.githubusercontent.com/GoGoKo699/Sparse-Weil-Reconstruction/main/PROVENANCE.md): Source hashes, reference reports, and verification records.

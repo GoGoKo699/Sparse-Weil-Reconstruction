@@ -1,31 +1,17 @@
-# Provenance
+# Source and report integrity
 
-The [preservation manifest](provenance/import-manifest.json) identifies the
-17-file research baseline and records each file's path, byte count, SHA256,
-and Git blob identity. It retains the source metadata needed to verify the
-baseline independently.
+The [integrity manifest](provenance/import-manifest.json) records byte counts,
+SHA256 hashes, and Git blob identities for 17 baseline files: the two all-field
+research notes, the all-field and audit experiment packages, and the MIT license.
+Its source commit and original identities support comparison with the imported
+scientific record. Documentation amendments have current checksums alongside
+those original identities.
 
-The preserved set is deliberately small:
+Each experiment's `MANIFEST.json` pins its executable files, input fixtures,
+reference report, and any shared decoder dependency. The verifiers run the code
+in temporary storage and compare the output exactly with the reference reports.
 
-- Notes 28 and 29, at their original `exploration/phase_2/` paths.
-- The complete `experiments/all_field_reconstruction_v1/` directory.
-- The complete `experiments/reconstruction_audit_v1/` directory.
-- The MIT license.
+The dated JSON verification records identify the files and executions checked
+at their recorded commits. Their hashes refer to those revisions.
 
-These are 17 files. Notes 28 and 29 have documentation-only amendments recorded
-in the manifest; their original imported identities are retained there. All
-mathematical content, executable files, expected reports, and experiment
-manifests are unchanged. Keeping the original paths preserves relative links and the audit's
-pinned dependency on the sibling reconstruction decoder. No earlier experiment
-is required to run these two verifiers.
-
-Historical notes retain their checkpoint hashes, research decisions, and
-execution statements. They describe the state at the time of writing.
-The current project state is maintained in [STATUS.md](STATUS.md).
-
-Source records document the primary-source inspections performed at each
-checkpoint. A bounded predecessor search is not a publication-priority certificate.
-
-Future scientific changes should use a versioned successor directory and retain
-these inputs and reference reports. Do not regenerate the preserved reports to
-make a changed implementation pass verification.
+See the [verification guide](docs/VERIFICATION.md) for reproduction commands.

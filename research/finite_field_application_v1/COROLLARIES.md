@@ -1,12 +1,8 @@
 # Finite-field corollaries and output size
 
-27 September 2026 (UTC). Application and output clarification for the two
-existing supplied-count reconstruction theorems.
-
-The statements below are standard finite-field consequences of those theorems,
-not additional novelty claims or improvements to their thresholds. They make
-the input promises and the representation of the recovered object explicit.
-The original proofs, decoders, and reference reports are retained unchanged.
+The two supplied-count reconstruction theorems have the following finite-field
+corollaries. Their standard geometric interpretation specifies both the input
+promises and the representation of the recovered object.
 
 ## 1. Abelian varieties
 
@@ -62,11 +58,10 @@ requires $`q`$ to be a prime power. No simplicity, ordinarity, squarefreeness,
 genericity, or polarization-as-input assumption is needed. $`\square`$
 
 By [Tate, Theorem 1(c)][tate], $`P_A`$ determines the **$`\mathbb F_q`$-isogeny
-class** of $`A`$. This is a statement about the invariant recovered: the decoder
-does not construct an equation for $`A`$, an isogeny, or an isomorphism class.
-It neither acquires nor authenticates the counts. An input promised to arise
-from an abelian variety needs no further realizability test for this corollary;
-the decoder does not certify that arbitrary data have such an origin.
+class** of $`A`$. The output is the polynomial identifying this class.
+The corollary assumes true cardinalities of an abelian variety; successful
+decoding alone does not authenticate arbitrary supplied data or certify their
+geometric origin.
 
 ## 2. Curves and Jacobians
 
@@ -181,15 +176,9 @@ For $`g=1`$ the two formulas agree.
 
 ## 4. Scope and sources
 
-This application check closes the distinction between the abstract polynomial
-theorems and their geometric interpretation. It changes neither field/genus
-threshold and supplies no new count-acquisition or authentication algorithm.
-The preserved polynomial controls are still not asserted to be Jacobians.
-The internal checks are recorded in [VERIFICATION.json](VERIFICATION.json);
-they do not constitute external peer review.
-
-The following primary/author sources were inspected for these standard facts
-on 27 September 2026 (UTC). No new literature-priority claim is made here.
+The internal checks are recorded in [VERIFICATION.json](VERIFICATION.json).
+The following primary/author sources were inspected for the geometric facts
+on 27 September 2026 (UTC).
 
 - J. S. Milne, *Abelian Varieties*, corrected 2022 chapter: Theorem 19.1,
   pp. 40–41, and Corollary 19.4, p. 42, for Frobenius, counts, and the full

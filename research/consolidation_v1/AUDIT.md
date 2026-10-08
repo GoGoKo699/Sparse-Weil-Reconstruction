@@ -1,37 +1,14 @@
-# Scientific consolidation audit
+# Proof and arithmetic checks
 
-27 September 2026. Audited commit:
-`08a1199cfc52befc3bd47bf1f758612cdf650445`, tree
-`94bacb3dabbdc5f7642fb6513fe825c18731fba4`.
+These internal analytic and implementation checks supplement the
+[first-g proof](../first_g_reconstruction_v1/THEOREM.md). They address logarithm
+signs, contraction bounds, finite-error margins, and rational denominator growth.
+The theorem applies to the true supplied counts under its stated Weil-polynomial
+and field-size hypotheses.
 
-**Outcome:** no substantive correctness or implementation gap was found in the
-first-g theorem. The focused primary-source comparison continues to support the
-quadratic sufficient threshold as the candidate main contribution. The current
-two-theorem scope is ready for consolidation; an additional discovery is not a
-prerequisite.
+## 1. Analytic checks
 
-This is a fresh internal AI review, divided between mathematical and finite
-arithmetic audits, with the findings checked together. It is not external peer
-review or proof-assistant verification. The audit preserves the first-g proof,
-decoder, fixtures, and reports, as well as all 17 imported baseline files.
-
-## 1. Scope of the conclusion
-
-The [first-g theorem](../first_g_reconstruction_v1/THEOREM.md) assumes integer
-$`g\ge1`$, integer $`q\ge65{,}536g^2`$, integral coefficients, $`q`$-reciprocity, inverse
-roots of modulus $`\sqrt q`$, and the true exact values $`K_1,\ldots,K_g`$. It gives
-uniqueness and deterministic polynomial bit-time reconstruction. It does not
-acquire or authenticate counts. For curves, the supplied counts are Jacobian
-cardinalities. Abstract polynomial controls are not asserted to be Jacobians.
-
-The all-field selected-data theorem remains a complementary result for $`g\ge32`$.
-Neither the minimum number of queries nor the necessary field-size threshold
-is established. No quantum advantage or practical runtime improvement is claimed.
-
-## 2. Independent analytic checks
-
-The following rederivations address possible failure points in Sections 1–7,
-rather than relying on agreement of finite controls.
+The following rederivations check Sections 1–7 of the proof.
 
 ### Input signs and the logarithm
 
@@ -99,7 +76,7 @@ Nearest-integer recovery is therefore unique. The empty completion sum for
 $`g=1`$, nonsquare $`q`$, repeated roots, and equality at the field-size threshold
 introduce no uncovered case.
 
-## 3. Finite arithmetic and implementation
+## 2. Finite arithmetic and implementation
 
 The [decoder](../../experiments/first_g_reconstruction_v1/reconstruct.py) matches
 Sections 6–9 of the theorem. The code's cutoff
@@ -140,7 +117,7 @@ finite composition counts in the theorem. Quantization then resets all stored
 denominators to divisors of $`2^B`$. Thus repeated nonlinear iterations do not
 cause an uncontrolled denominator tower.
 
-One reporting qualification is now explicit: the historical metadata field
+The experiment metadata field
 `max_intermediate_bits` samples stored formal-logarithm and exponential
 coefficients. It does not measure corrected exponents, fraction-operation
 temporaries, or logarithm preprocessing. It is not an observed global memory
@@ -151,37 +128,9 @@ positive malformed counts need not keep iterates in the invariant ball. The
 prototype is not a total defensive validator with the same parameter-only
 runtime guarantee outside that promise.
 
-## 4. Literature and the bounded extension question
+## 3. The norm-method boundary
 
-The [fresh source record](SOURCES.md) confirms the current first-g predecessor
-and its still-open polynomial-threshold question. Its polynomial bit-time
-algorithm and its proposed $`g^{O(g)}`$ threshold refinement are included in the
-comparison. The candidate contribution is the quadratic sufficient threshold,
-not the first use of $`g`$ counts or the first efficient decoder.
-
-The [method-boundary note](METHOD_BOUNDARY.md) proves that the current
-single-radius, whole-algebra small-norm argument inherently requires a
-quadratic field-size scale. This closes the bounded extension probe with a
-precise limitation of the estimates. It proves neither failure of the actual
-iteration below the threshold nor ambiguity of the data. It is an elementary
-supporting observation, not a separate publication-priority claim.
-
-## 5. Scientific decision and remaining limits
-
-The quadratic-threshold theorem should lead the mathematical account; the
-all-field sparse guarantee supplies the complementary regime. No new theorem,
-constant optimization, lower bound, actual-curve fixture, or large simulation
-is presently necessary to support this scope. No substantive correction was
-identified in this audit, so the versioned decoder and its reference outputs
-were left unchanged.
-
-The focused search found no statement subsuming the new guarantee. That is a
-bounded originality assessment, not a certificate against every thesis or
-unpublished argument. External review remains unperformed. Query optimality,
-an all-field first-g theorem, and practical scalability remain optional research
-questions outside the present scope.
-
-The [verification receipt](VERIFICATION.json) records the actual before/after
-runs and preserved scientific file identities. Further scientific work should
-respond to a concrete gap, competing theorem, or consequential extension,
-rather than repeat this audit without new evidence.
+The [method-boundary proposition](METHOD_BOUNDARY.md) shows why the single-radius,
+whole-algebra small-norm argument requires a quadratic field-size scale. Its
+necessity statement concerns those estimates; it is not a lower bound on
+reconstruction from the first $`g`$ counts.

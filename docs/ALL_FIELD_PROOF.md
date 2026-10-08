@@ -1,12 +1,9 @@
-# All-field reconstruction: a typeset proof
+# All-field reconstruction
 
-This reading edition presents the complete selected-count argument from
-Sections 1–5 of the [preserved theorem](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md),
-followed by the explicit bit-complexity analysis from Section 3 of the
-[preserved proof audit](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md).
-The mathematical hypotheses, bounds, rounding argument, and complexity estimates
-are unchanged. The original records retain their historical context and exact
-verification identities.
+This proof combines the selected-count argument in
+[Note 28, §§1–5](../exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md) with
+the explicit bit-complexity analysis in
+[Note 29, §3](../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md).
 
 ## 1. The theorem and its exact input model
 
@@ -44,20 +41,15 @@ sequence. This is a supplied-data / exact-cardinality-oracle theorem.
 
 For $`g=32`$, this means 45 supplied counts, at degrees $`1,\ldots,30`$ and
 $`32,34,\ldots,60`$. For $`g=64`$ it means 93 counts and maximum degree 124.
-The theorem includes $`q=2`$. It does not assert that the first 45 counts
-suffice in the genus-32 example. The constant 32 is a convenient sufficient
-threshold, not a lower bound.
-
-The separate large-field guarantee and low-genus endpoint results retain their
-own regimes. No uniform all-field claim for genera $`3,\ldots,31`$ is added here.
+The theorem includes $`q=2`$. The genus-32 example uses the selected indices
+shown above rather than the first 45 counts. The genus threshold 32 is sufficient.
 
 ## 2. Möbius cancellation on the selected indices
 
-[Kedlaya, Section 8][Kedlaya] does not require rounding each unnormalized power
-sum to within one half. Previously recovered coefficients fix the next power
-sum modulo its index through Newton identities. This means the error should be
-controlled on $`S_n/n`$, where $`S_n=\sum_j\alpha_j^n`$. That is prior
-machinery, not a new congruence principle.
+[Kedlaya, Section 8][Kedlaya] uses Newton identities to fix the next power
+sum modulo its index from the previously recovered coefficients. Thus the
+rounding error is controlled on $`S_n/n`$, where
+$`S_n=\sum_j\alpha_j^n`$, rather than on the unnormalized power sum.
 
 His cutoff-dependent Möbius formula permits more than two logarithms. For low
 indices those extra logarithms lie in the dense initial part $`1,\ldots,h`$ of
@@ -65,7 +57,7 @@ $`D_h`$, already queried. At high indices two terms suffice because $`q^n`$ is
 large even when $`q`$ itself is small. This observation, combined with the final
 two endpoint equations, supplies the theorem above.
 
-No extra query is hidden in the improvement. For $`1\le n\le h`$, put
+For $`1\le n\le h`$, put
 
 ```math
 k_n=\max(2,\lfloor h/n\rfloor),\qquad
@@ -116,9 +108,8 @@ E_{g,n}=\frac{2gk}{n(k+1)}
        \frac{\rho^{n(k-1)}}{1-\rho^n}.
 ```
 
-We now prove $`E_{g,n}\lt1/3`$ for every $`g\ge32`$ and $`1\le n\le h`$,
-rather than extrapolating from a finite parameter table. Here $`h\ge30`$ and
-$`g/h\le16/15`$.
+We now prove $`E_{g,n}\lt1/3`$ for every $`g\ge32`$ and $`1\le n\le h`$.
+Here $`h\ge30`$ and $`g/h\le16/15`$.
 
 **Case A: $`n>h/3`$.** Then $`k=2`$, so
 
@@ -147,9 +138,7 @@ E_{g,n}\lt7g\rho^{2(g-2)/3}
 
 The middle inequality holds uniformly: the logarithmic derivative of
 $`x\rho^{2(x-2)/3}`$ is $`1/x-(2/3)\log(7/5)\lt0`$ for $`x\ge32`$,
-using $`\log(7/5)\ge2/7`$. This finishes the analytic proof. The executable
-checks of the three rational constants are supplementary, not the reason the
-bound holds for arbitrarily large genus.
+using $`\log(7/5)\ge2/7`$. This proves the bound uniformly in the genus.
 
 ## 4. Integer reconstruction and numerical control
 
@@ -226,34 +215,27 @@ Each input $`K_j`$ has $`O(gj\log q+g)`$ bits by the Weil bounds, with
 $`j\le2h`$. The required precision is $`O(h\log q+\log h)`$ bits. Range
 reduction and the geometric series therefore use polynomially many rational
 operations of polynomial bit length. Newton identities and endpoint divisions
-also have polynomial bit cost. No exponential candidate enumeration is needed.
-Section 6 gives the explicit size accounting.
+also have polynomial bit cost. Section 6 gives the explicit size accounting.
 
 ## 5. Predecessors and the scope of the result
 
 | Source | Exact relevant scope | Relation to this statement |
 |---|---|---|
-| [Kedlaya][Kedlaya], Sections 8–9 | Consecutive $`\max(18,2g)`$ count reconstruction; normalized Möbius cancellation and Newton residues; fewer-than-$`2g`$ question | Supplies the proof ingredients and question, but not the selected $`D_h`$/all-field/$`g\ge32`$ bound as a stated result |
-| [Sutherland][Sutherland], Section 4.1, Lemma 4 | Base endpoints determine genus at most three in its stated large-$`q`$ range; exact genus-two formulas | Direct predecessor for low-genus endpoint reasoning, not a varying-genus theorem |
-| [Hillar–Levine][HillarLevine], Theorem 1.1 and Conjecture 1.2 | Generic monic / palindromic polynomials, exponential sufficient initial segment; conjectured short initial segment | Different promises and first-sequence question; not an effective all-input Weil reconstruction theorem with this query set |
-| [Hillar][Hillar], Theorem 1.1 | Characterization using the full nonzero cyclic-resultant sequence | Infinite-sequence uniqueness, not the present finite data/complexity guarantee |
-| [Roy–Saxena–Venkatesh][RoySaxenaVenkatesh], Lemma 2.10 | Invokes the consecutive $`\max(18,2g)`$ theorem for its certification framework | Confirms that cited ingredient, not priority of the selected-support refinement |
+| [Kedlaya][Kedlaya], Sections 8–9 | Consecutive $`\max(18,2g)`$ count reconstruction; normalized Möbius cancellation and Newton residues; fewer-than-$`2g`$ question | Proof framework and question underlying the selected-$`D_h`$ bound |
+| [Sutherland][Sutherland], Section 4.1, Lemma 4 | Base endpoints determine genus at most three in its stated large-$`q`$ range; exact genus-two formulas | Endpoint method used here to complete the last two coefficients |
+| [Hillar–Levine][HillarLevine], Theorem 1.1 and Conjecture 1.2 | Generic monic / palindromic polynomials, exponential sufficient initial segment; conjectured short initial segment | Generic initial-segment reconstruction; the present theorem uses uniform Weil promises and selected indices |
+| [Hillar][Hillar], Theorem 1.1 | Characterization using the full nonzero cyclic-resultant sequence | Full-sequence uniqueness; the present theorem supplies finite data and complexity bounds |
+| [Roy–Saxena–Venkatesh][RoySaxenaVenkatesh], Lemma 2.10 | Invokes the consecutive $`\max(18,2g)`$ theorem for its certification framework | Application of Kedlaya's consecutive-count theorem |
 
-The primary statements inspected in the original comparison do not subsume the
-bound proved above. This is not equivalent to proving that no paper, thesis,
-implementation or unpublished argument contains it. The literature search was
-focused and its exact scope is recorded in the [source record](../experiments/all_field_reconstruction_v1/SOURCES.md).
-The proved statement is a candidate contribution, not established publication
-priority. The [current background comparison](../research/manuscript_background_v1/WEIL_RECONSTRUCTION.md)
+The relation to Kedlaya's question is the selected-query guarantee: fewer than
+$`2g`$ supplied cardinalities suffice for every field size once $`g\ge32`$.
+This is a sufficient query bound for the promised Weil class.
+
+The [source record](../experiments/all_field_reconstruction_v1/SOURCES.md)
+documents the scope of the focused literature search. The
+[background comparison](../research/manuscript_background_v1/WEIL_RECONSTRUCTION.md)
 and [cyclic-resultant background](../research/manuscript_background_v1/CYCLIC_RESULTANTS.md)
-record the subsequent literature checks and qualifications.
-
-The relationship to Kedlaya's question is precise: this gives fewer than $`2g`$
-selected cardinality requests for the supplied-data reconstruction problem,
-for every field size once $`g\ge32`$. It is not a theorem about the first
-$`g+1`$ cyclic resultants, a global minimum-query result, or arbitrary complex
-polynomials. It does not turn parameter counting into an information-theoretic
-lower bound for discrete, variable-bit-length integer answers.
+give the matched predecessor statements and qualifications.
 
 ## 6. Explicit numerical bit-complexity audit
 
@@ -319,8 +301,7 @@ There are $`O(g^2B)`$ rational arithmetic operations under a loose count of all
 series, log combinations and Newton sums. Ordinary exact integer addition,
 multiplication, division and gcd on these polynomial-sized operands have
 polynomial bit cost. This proves the claimed polynomial decoder time and
-storage. These are upper bounds for an intentionally simple implementation,
-not new optimal arithmetic bounds or hardware resource estimates.
+storage. The estimates are upper bounds for the rational implementation.
 
 [Kedlaya]: ../experiments/all_field_reconstruction_v1/SOURCES.md#1-kiran-s-kedlaya
 [Sutherland]: ../experiments/all_field_reconstruction_v1/SOURCES.md#2-andrew-v-sutherland

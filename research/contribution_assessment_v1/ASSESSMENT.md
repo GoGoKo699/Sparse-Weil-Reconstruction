@@ -1,23 +1,9 @@
-# Contribution assessment: sparse reconstruction and its predecessors
+# Sampling schedules and prior reconstruction results
 
-27 September 2026. Reviewed standalone baseline:
-`5d11ec4a91890436e7e20e176f5ebb0087b6084b`.
-
-**Assessment of the preserved theorem:** it is an explicit, uniform all-field improvement
-in selected supplied data over the consecutive-count reconstruction. It is a
-modest adaptation of established reconstruction machinery. It is not the first
-polynomial-time reconstruction theorem, and it is not the fewest-count theorem
-in every field-size regime. Publication priority and significance sufficient for
-publication remain unestablished.
-
-The comparison also led to a separately proved
-[first-$`g`$ companion theorem](../first_g_reconstruction_v1/THEOREM.md) with a
-quadratic sufficient field-size threshold. That extension is distinct from the
-assessment of the preserved all-field theorem below.
-
-The previously unresolved Chidambaram–Keller lead is now identified and read.
-It changes the comparison materially. The baseline proof and decoder need no
-change as a consequence of this source assessment.
+The two reconstruction guarantees differ in their supplied indices and
+field-size regimes. This comparison relates them to earlier cyclic-resultant
+methods and quantifies the size of the selected input transcript.
+Source versions and inspected passages are listed in [SOURCES.md](SOURCES.md).
 
 ## 1. The comparison problem
 
@@ -62,12 +48,10 @@ not every possible adaptation of the paper.
 | [RSV25], Lemma 2.10 | Restates the consecutive $`\max(18,2g)`$ supplied-count polynomial-time theorem | A useful modern formulation of the comparator, not evidence of our priority. |
 | [St12], Section 2, Corollary 2; [St13], Theorems 1.1–1.3 | Bounds on constant absolute cyclic-resultant runs, cyclotomic norms, and exceptional units | These are not equal-transcript bounds for two arbitrary polynomials and do not supply a reconstruction competitor. |
 
-Two corrections to a possible reading of the inherited source lists are
-essential: generic finite-resultant theory is not limited to the exponential
-Hillar–Levine bound, and recent Weil reconstruction already has an efficient
-first-$`g`$ algorithm in a large-field regime.
+Bézivin supplies a linear generic bound, and Chidambaram–Keller supply efficient
+first-$`g`$ recovery for sufficiently large fields.
 
-## 3. What Note 28 adds to Kedlaya's argument
+## 3. The selected-support refinement
 
 The new part is the support-and-error lemma. With $`h=g-2`$, the cutoff
 
@@ -88,17 +72,11 @@ and endpoint evaluation should not be described as discoveries of this project.
 Without endpoint completion, a similar schedule through $`g`$ already suggests
 the same leading $`3g/2`$ query scale; endpoints provide an additive improvement.
 
-The strongest concise description of the current contribution is therefore:
-
-> An explicit polynomial-time reconstruction from a fixed sparse set of ordinary
-> cyclic resultants, uniformly over the integral reciprocal Weil class for every
-> field size and every genus at least 32.
-
 It also gives a separation statement: two distinct polynomials in that promised
 class differ at some index in $`D_h`$. This is a corollary of the decoder, not a
 separate novelty claim or a lower bound on necessary observations.
 
-## 4. The newly resolved large-field comparison
+## 4. The large-field comparison
 
 [CK26, Theorem 1.1] permits
 
@@ -112,8 +90,7 @@ to this sufficient threshold and leaves a polynomial-in-$`g`$ threshold open.
 The current version is v2, 14 July 2026; an older author-hosted PDF omits the
 explicit complexity paragraph. The current version controls this comparison.
 
-There is consequently no polynomial-time-versus-inefficient distinction to
-claim. The proven schedules occupy different regimes:
+The proven schedules occupy different regimes:
 
 | Supplied-data theorem | Field/genus regime | Number of counts | Largest index |
 |---|---|---:|---:|
@@ -174,48 +151,16 @@ No dimension-counting argument establishes that $`g`$ integer observations are
 necessary. Integer answers have varying bit lengths. Selected indices and an
 initial consecutive segment are different optimization problems.
 
-## 6. Research consequence: a companion threshold theorem
+## 6. The quadratic-threshold theorem
 
-The inspected primary statements do not subsume the exact all-field selected
-guarantee. This supports continued work on a precise candidate theorem, not a
-certificate of priority. Its current mathematical novelty is narrow; a claim
-of a major new reconstruction mechanism would be disproportionate to the proof.
-
-The clear external benchmark is first-$`g`$ recovery with a polynomial field-size
-threshold, retaining uniform polynomial bit time. The
-[companion proof](../first_g_reconstruction_v1/THEOREM.md) establishes the
-sufficient condition $`q\ge65{,}536g^2`$ for the promised polynomial class. It
-uses a weighted coefficient norm, a uniformly invariant domain, and an explicit
+The [first-$`g`$ proof](../first_g_reconstruction_v1/THEOREM.md) establishes the
+sufficient condition $`q\ge65{,}536g^2`$ for the promised polynomial class. It uses
+a weighted coefficient norm, a uniformly invariant domain, and an explicit
 finite-precision contraction algorithm. Intermediate iterates need not be Weil
-polynomials; the domain estimates cover them anyway.
+polynomials; the domain estimates cover them.
 
-This changes the growth of a sufficient field-size threshold, rather than only
-an additive query constant. It addresses the polynomial-threshold question in
-[CK26, Remark 7.12], subject to the stated input promises and the internal audit
-status. It does not improve on their count of $`g`$ or claim that $`g`$ is optimal.
-The proof and executable evidence are separate from the immutable imported
-baseline. No publication-priority claim follows from the focused source search.
-
-The next scientific gap is a matched assessment of the two guarantees together:
-where the remaining field/query trade-off can be strengthened, and what actual
-obstruction is present when the contraction condition fails. A sufficient
-contraction bound failing is not nonuniqueness. Any claimed necessity must have
-a construction or proof, not a census or extrapolation from this upper bound.
-The current result does not restore the parent project's closed twist-resource
-claim.
-
-## 7. Evidence and scope of this continuation
-
-The root verifier passed before the assessment. It checked the 17 preserved
-imported files and reproduced both inherited exact reports. After the proof
-and implementation additions, it passed again and reproduced all three reports.
-The completed execution record is in
-[VERIFICATION.json](VERIFICATION.json). No inherited proof, decoder, fixture, or
-expected report is changed. The small schedule table was checked by direct
-integer set construction as well as the formula above.
-
-This is a theorem-level literature and significance assessment. It does not
-claim a fresh complete independent audit of every cited proof, validation of
-the cited Sage/Lean implementations, external peer review, native point
-counting, or quantum execution. Search limitations are retained in the source
-record.
+This changes the growth of the sufficient field-size threshold while retaining
+$`g`$ supplied counts and polynomial bit time. It addresses the polynomial-threshold
+question in [CK26, Remark 7.12]. A sufficient contraction bound failing is not
+nonuniqueness. The [norm-method boundary](../consolidation_v1/METHOD_BOUNDARY.md)
+identifies which estimates impose the quadratic scale.

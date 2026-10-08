@@ -26,16 +26,14 @@ slower study afterward.
 | [2. Reconstruction](RECONSTRUCTION.md) | Logarithms, correction, and convergence |
 | [3. Comparison](COMPARISON.md) | The shared problem and the field-size guarantee |
 
-The first note has worked examples and short self-checks. The second explains
-the proof mechanism before its technical estimates. The third puts the
-comparison in one place. The [repository overview](../README.md) contains
-the exact theorem regimes and reproduction command.
+The notes include worked examples and self-checks. The
+[repository overview](../README.md) gives the exact theorem regimes and
+reproduction command.
 
 ## The Galbraith reading path
 
 All locators below refer to the **author's extended online edition**. Its
-numbering may differ from the printed book. These are selections from one
-book, rather than a prerequisite bibliography.
+numbering may differ from the printed book.
 
 | Passage | What to take into this project |
 |---|---|
@@ -49,9 +47,8 @@ other passages when a term is unfamiliar. Section 10.7 treats general curves
 despite the chapter's hyperelliptic title. The useful landmarks are
 Theorem 10.7.1, Theorem 10.7.5, Lemma 10.7.6, and Theorem 10.7.13.
 
-The reconstruction arguments start from the resulting polynomial facts.
-A reader can take the Weil and Tate theorems as given while learning the
-algorithm; proving those geometric theorems is a separate course of study.
+The reconstruction arguments start from the resulting polynomial facts;
+the Weil and Tate theorems can be taken as given while learning the algorithm.
 
 ## A notation guide
 
@@ -84,8 +81,7 @@ our $`c_j`$ denotes a polynomial coefficient.
 In [the reconstruction note](RECONSTRUCTION.md),
 $`L_m=\log(q^{gm}/K_m)`$ is a logarithmic datum, not Galbraith's polynomial
 $`L(t)`$. The canonical first-$`g`$ proof uses the opposite logarithm sign and
-states that convention explicitly. This distinction is recorded beside the
-formulas, so the two derivations can be read side by side.
+states that convention explicitly.
 
 ## Where the secondary anchor enters
 
@@ -108,11 +104,7 @@ Kedlaya's earlier reconstruction framework.
 
 The [source map](SOURCES.md) records the editions and passage locations.
 The broader [scientific background package](../research/manuscript_background_v1/README.md)
-contains the claim-level citations and literature context for future writing.
-
-## Purpose and contact
-
-This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
+contains the claim-level citations and literature context.
 
 ---
 

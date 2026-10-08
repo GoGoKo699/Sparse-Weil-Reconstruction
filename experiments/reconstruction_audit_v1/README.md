@@ -1,9 +1,8 @@
 # Proof audit of sparse Weil reconstruction
 
 This is the executable companion to [Note 29](../../exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md).
-The Note-28 theorem survives this internal audit without changing its query set,
-field range, or sufficient genus threshold. This is not external peer review,
-a formal proof certificate, or an exhaustive priority guarantee.
+This internal audit covers the theorem's proof, numerical bit complexity and
+exact reconstruction on an independently constructed irreducible polynomial.
 
 ```sh
 python experiments/reconstruction_audit_v1/verify.py
@@ -33,7 +32,4 @@ exponents, series length, intermediate rational lengths and operation count.
 The finite tests support the implementation; they do not establish the
 all-genus theorem by enumeration.
 
-Proposed separation: a classical `Sparse-Weil-Reconstruction` project, with the
-present audited theorem as its initial result. No new repository is created
-here. The parent quantum-discovery project retains its independent objective.
 See [SOURCES.md](SOURCES.md) for attribution and bounded search scope.

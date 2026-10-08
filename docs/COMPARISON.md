@@ -122,11 +122,7 @@ the mechanism; the [all-field reading edition](ALL_FIELD_PROOF.md)
 contains the proof. It complements the first-$`g`$ theorem by trading more
 supplied values for coverage of every field.
 
-## Reading the secondary anchor
-
-After Galbraith and the local foundations, read Chidambaram–Keller §§1–3 for
-the reconstruction setup, §§4–6 for their recovery proof, and Remark 7.12
-for the threshold question. Then follow the local coefficient argument.
+## Further reading
 
 The [full predecessor comparison](../research/manuscript_background_v1/WEIL_RECONSTRUCTION.md)
 and [contribution assessment](../research/contribution_assessment_v1/ASSESSMENT.md)
