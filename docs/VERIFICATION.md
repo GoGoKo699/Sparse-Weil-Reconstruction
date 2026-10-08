@@ -33,7 +33,7 @@ attribution issue. Its two presentation suggestions—removing a repeated
 reading table and using one monic-polynomial symbol—were incorporated.
 These checks concern the new exposition and retained reproducibility;
 the [scientific audit](../research/consolidation_v1/AUDIT.md) records the
-proof review. Manuscript preparation remains on hold.
+proof review.
 
 ## Presentation pass
 

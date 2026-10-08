@@ -8,7 +8,7 @@ in selected supplied data over the consecutive-count reconstruction. It is a
 modest adaptation of established reconstruction machinery. It is not the first
 polynomial-time reconstruction theorem, and it is not the fewest-count theorem
 in every field-size regime. Publication priority and significance sufficient for
-publication remain unestablished. Manuscript preparation remains on hold.
+publication remain unestablished.
 
 The comparison also led to a separately proved
 [first-$`g`$ companion theorem](../first_g_reconstruction_v1/THEOREM.md) with a
@@ -202,7 +202,7 @@ obstruction is present when the contraction condition fails. A sufficient
 contraction bound failing is not nonuniqueness. Any claimed necessity must have
 a construction or proof, not a census or extrapolation from this upper bound.
 The current result does not restore the parent project's closed twist-resource
-claim. Manuscript preparation stays on hold.
+claim.
 
 ## 7. Evidence and scope of this continuation
 

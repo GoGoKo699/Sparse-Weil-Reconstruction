@@ -652,4 +652,4 @@ alone does not authenticate a transcript or bind it to a claimed curve.
 The constant 65,536 is sufficient, not sharp. Failure of its inequality is not
 proof that first-g reconstruction fails. The theorem coexists with the
 preserved sparse all-field guarantee; neither subsumes the other over the
-entire parameter range. Manuscript preparation remains on hold.
+entire parameter range.

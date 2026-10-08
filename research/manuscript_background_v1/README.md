@@ -2,7 +2,7 @@
 
 28 September 2026 (Asia/Shanghai). Scientific background for the two
 reconstruction guarantees, with sources checked against the current project.
-This is a research resource; manuscript drafting remains on hold.
+This is a research resource.
 
 ## What the background must explain
 

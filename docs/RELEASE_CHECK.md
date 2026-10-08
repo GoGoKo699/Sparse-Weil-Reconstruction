@@ -52,8 +52,7 @@ no mobile whole-page check is claimed.
 ## Surgical cleanup and discovery
 
 - Replaced repeated checkpoint narratives in the work order with the current
-  STATUS index and retained its operational requirements. Removed repeated
-  manuscript-hold sentences within STATUS.
+  STATUS index and retained its operational requirements.
 - Kept theorem hypotheses in standalone teaching pages, both complementary
   bibliography files, and independent determinant/resultant routines. These
   repetitions serve readers or validation; merging them would remove context

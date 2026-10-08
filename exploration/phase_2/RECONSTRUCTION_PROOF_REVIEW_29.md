@@ -1,7 +1,7 @@
 # Reconstruction theorem: proof audit and separation decision
 
 27 September 2026. Reviewed baseline: `4fc01966db525ff761fc6c1b363ef3bd9dfb1023`
-on `research/prx-quantum-phase2`. Manuscript preparation remains on hold.
+on `research/prx-quantum-phase2`.
 
 **Audit conclusion:** the Note 28 reconstruction theorem survives a fresh proof
 derivation, an explicit bit-size analysis, and an independently constructed
@@ -13,7 +13,7 @@ verification. Publication priority remains qualified by the search scope below.
 **Project decision:** there is now a distinct classical reconstruction-theory
 project worth separating from the parent quantum-discovery exploration. Proposed
 repository name: `Sparse-Weil-Reconstruction`. No repository has been created,
-no other repository has been modified, and no manuscript has been started.
+and no other repository has been modified.
 The original quantum capability and the previously closed twist-resource
 comparison must not be recast as new consequences of this theorem.
 
@@ -296,7 +296,7 @@ cyclic-resultant data, exact reconstruction, bit complexity, and transparent
 predecessor comparisons. Its starting theorem is Note 28 as audited here. It must
 not claim a new quantum speedup, solve the generic first-g+1-resultants conjecture,
 assume that arbitrary Weil polynomials are curve Jacobians, or turn consistency
-checks into order authentication. Manuscript drafting remains a later decision.
+checks into order authentication.
 
 A new repository should preserve the tested Note-28 source/report and the present
 audit before any refactoring. The parent repository should retain a compact record

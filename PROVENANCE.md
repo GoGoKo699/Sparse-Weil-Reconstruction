@@ -12,8 +12,10 @@ The preserved set is deliberately small:
 - The complete `experiments/reconstruction_audit_v1/` directory.
 - The MIT license.
 
-These are 17 files. Their contents, expected reports, and internal manifests are
-unchanged. Keeping the original paths preserves relative links and the audit's
+These are 17 files. Notes 28 and 29 have documentation-only amendments recorded
+in the manifest; their original imported identities are retained there. All
+mathematical content, executable files, expected reports, and experiment
+manifests are unchanged. Keeping the original paths preserves relative links and the audit's
 pinned dependency on the sibling reconstruction decoder. No earlier experiment
 is required to run these two verifiers.
 

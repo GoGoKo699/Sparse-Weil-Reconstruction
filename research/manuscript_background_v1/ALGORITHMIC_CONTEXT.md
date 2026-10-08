@@ -1,8 +1,7 @@
 # Analytic and algorithmic background
 
-28 September 2026. Background and attribution for a future manuscript;
-manuscript drafting remains on hold. The existing theorems, precision schedules,
-and executable controls are unchanged.
+28 September 2026. Background and attribution for the reconstruction methods.
+The existing theorems, precision schedules, and executable controls are unchanged.
 
 This note separates standard algebra and numerical analysis from the estimates
 specific to this reconstruction problem. The guarantee is deterministic
@@ -188,7 +187,7 @@ See the [application note](../finite_field_application_v1/COROLLARIES.md)
 for why a fully expanded abelian-variety zeta function is a different,
 potentially exponential-sized output.
 
-## 6. Wording to preserve when drafting resumes
+## 6. Precise statement of the results
 
 - State the true-count, integrality, reciprocity, modulus, genus, and field-size
   promises with the theorem. The parameter-only runtime bound applies to
