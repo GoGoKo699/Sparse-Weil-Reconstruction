@@ -8,7 +8,7 @@
 first-g theorem. The focused primary-source comparison continues to support the
 quadratic sufficient threshold as the candidate main contribution. The current
 two-theorem scope is ready for consolidation; an additional discovery is not a
-prerequisite. Manuscript preparation remains on hold.
+prerequisite.
 
 This is a fresh internal AI review, divided between mathematical and finite
 arithmetic audits, with the findings checked together. It is not external peer

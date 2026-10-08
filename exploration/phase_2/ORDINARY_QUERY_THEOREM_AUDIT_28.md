@@ -1,7 +1,7 @@
 # Ordinary-count reconstruction without a large-field hypothesis
 
 27 September 2026. Base commit: `63a617d3302f1ef1df52febe7b8d231c15a2ead6`,
-branch `research/prx-quantum-phase2`. Manuscript preparation remains on hold.
+branch `research/prx-quantum-phase2`.
 
 **Result derived in this continuation:** for genus at least 32, the ordinary
 query set from Note 26 reconstructs the Weil polynomial over every finite field,
@@ -293,7 +293,7 @@ ALL-FIELD theorem, including its numerical bit complexity and precise oracle
 interpretation. Do not optimize the numerical threshold 32 or launch a general
 arithmetic compiler as a substitute. A separate repository is not requested for
 this checkpoint; it becomes appropriate when that candidate survives the audit
-and warrants an independent research programme. Manuscript stays on hold.
+and warrants an independent research programme.
 
 Primary links and inspection records: [SOURCES.md](../../experiments/all_field_reconstruction_v1/SOURCES.md).
 Executable source and reproduction: [README.md](../../experiments/all_field_reconstruction_v1/README.md).

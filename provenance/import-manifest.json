@@ -18,16 +18,26 @@
     {
       "path": "exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md",
       "source_path": "exploration/phase_2/ORDINARY_QUERY_THEOREM_AUDIT_28.md",
-      "size_bytes": 13262,
-      "sha256": "3249bda2edfa3353751eae61067ce3349d22aa39bdcb02a87f22684fddd240ec",
-      "git_blob": "fdc9f0f5bdf5a101359cb39e21c815922e398a47"
+      "size_bytes": 13196,
+      "sha256": "703669e6515ec985cf834b0c9b82a6e8293c800f28e00438eb18bebb1f414a3b",
+      "git_blob": "dc1503fb0031dc5a097b200de66f7cf09fc2ea0b",
+      "imported_identity": {
+        "size_bytes": 13262,
+        "sha256": "3249bda2edfa3353751eae61067ce3349d22aa39bdcb02a87f22684fddd240ec",
+        "git_blob": "fdc9f0f5bdf5a101359cb39e21c815922e398a47"
+      }
     },
     {
       "path": "exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md",
       "source_path": "exploration/phase_2/RECONSTRUCTION_PROOF_REVIEW_29.md",
-      "size_bytes": 16143,
-      "sha256": "88a8f07fee7567b4f28c189387f7a41f4b80744f74121927ce24e9d17f595182",
-      "git_blob": "091850ca19221afd0837481aa6796d7c6a224454"
+      "size_bytes": 16025,
+      "sha256": "80487b8b584803ab116180d7d6ea46de007dd7e58222c0676b3ab289434b31d7",
+      "git_blob": "a1fa2a3d304ad1f62bca32eafc6414c371f0e435",
+      "imported_identity": {
+        "size_bytes": 16143,
+        "sha256": "88a8f07fee7567b4f28c189387f7a41f4b80744f74121927ce24e9d17f595182",
+        "git_blob": "091850ca19221afd0837481aa6796d7c6a224454"
+      }
     },
     {
       "path": "experiments/all_field_reconstruction_v1/MANIFEST.json",
@@ -127,5 +137,11 @@
       "sha256": "ac3e145deee6e19a2b944c739a88c69396676118c6b59c2d33bfd7a61f68c5a4",
       "git_blob": "8bbe05b7e6ef2d04e963433d4ce9444fd40a6021"
     }
-  ]
+  ],
+  "current_integrity": "The files entries verify the current baseline. Original imported identities are retained as imported_identity for the two documentation-only amendments.",
+  "documentation_amendment": {
+    "date": "2026-10-08",
+    "baseline_commit": "2a02dbc18c8b4da9da1786f672f815f9c3fa2211",
+    "scope": "Obsolete editorial status sentences removed from Notes 28 and 29; mathematical content, code, fixtures, reference reports, and license unchanged."
+  }
 }

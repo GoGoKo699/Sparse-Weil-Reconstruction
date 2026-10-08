@@ -76,5 +76,5 @@ Keep the true-count promise, selected versus consecutive indices, q-reciprocity,
 integrality, inverse-root modulus, and genus/field thresholds visible. Preserve
 the distinctions between reconstruction, acquisition, authentication, and
 curve realization. No quantum implementation, external messages, paid
-computation, manuscript drafting, release tags, or unrelated changes are part
+computation, release tags, or unrelated changes are part
 of this work order.

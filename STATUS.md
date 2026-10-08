@@ -118,8 +118,9 @@ implementation, source, reproducibility, and presentation review. The
 [retrieval guide](llms.txt) maps relevant questions to canonical files;
 [citation metadata](CITATION.cff) identifies the repository as research software.
 
-All 17 baseline files remain byte-identical to the entries in the
-[preservation manifest](provenance/import-manifest.json).
+All 17 baseline files match the integrity entries in the
+[preservation manifest](provenance/import-manifest.json), which also retains
+the original identities of the two editorially amended research notes.
 The preserved theorem, audit, fixtures, decoder, reports, and license were not
 refactored. Their exact reports reproduce.
 

@@ -4,7 +4,7 @@
   "date_utc": "2026-09-27",
   "baseline_commit": "9b1738d0e8f243e0362e4c105328959d0cffce84",
   "baseline_tree": "30bdef2613387a492e7ced72b87b4d33f59c58a2",
-  "scope": "Manuscript scientific background, primary-source comparison, claim map, bibliography, and navigation. Manuscript drafting remains on hold; no theorem, decoder, fixture, or pinned report changes.",
+  "scope": "Manuscript scientific background, primary-source comparison, claim map, bibliography, and navigation. No theorem, decoder, fixture, or pinned report changes.",
   "before_changes": {
     "command": "python3 verify.py",
     "exit_code": 0,
